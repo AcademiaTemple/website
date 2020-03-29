@@ -1,0 +1,58 @@
+{
+  "name": "gatsby-theme-courses",
+  "description": "",
+  "version": "1.0.0",
+  "author": "Daniel Seoane <hello@dseoane.com>",
+  "homepage": "https://github.com/daniel-seoane/gatsby-theme-courses",
+  "repository": "https://github.com/daniel-seoane/gatsby-theme-courses",
+  "bugs": {
+    "url": "https://github.com/daniel-seoane/gatsby-theme-courses/issues"
+  },
+  "main": "index.js",
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "develop": "gatsby develop"
+  },
+  "peerDependencies": {
+    "@mdx-js/react": "^1.5.7",
+    "gatsby": "^2.19.21",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@mdx-js/react": "^1.5.7",
+    "gatsby": "^2.19.21",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.5.7",
+    "@theme-ui/match-media": "^0.3.1",
+    "@theme-ui/prism": "^0.3.0",
+    "gatsby-image": "^2.2.41",
+    "gatsby-plugin-mdx": "^1.0.74",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-remark-copy-linked-files": "^2.1.37",
+    "gatsby-remark-images": "^3.1.44",
+    "gatsby-remark-smartypants": "^2.1.21",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-sharp": "^2.3.14",
+    "gatsby-transformer-yaml": "^2.3.1",
+    "mdx-utils": "^0.2.0",
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.9.0",
+    "react-player": "^1.15.3",
+    "react-use": "^13.27.1",
+    "remark-slug": "^5.1.2",
+    "theme-ui": "^0.3.1"
+  }
+}
