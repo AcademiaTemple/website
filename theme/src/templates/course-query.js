@@ -22,7 +22,6 @@ export const query = graphql`
         link
       }
       lessons {
-        id
         slug
         title
         number

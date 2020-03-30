@@ -4,7 +4,7 @@ import { jsx, Flex, Grid, Text } from "theme-ui";
 import { MdAccessTime as DurationIcon } from "react-icons/md";
 import Link from "../components/link";
 
-const LessonsList = ({ lessons, id }) => {
+const LessonsList = ({ lessons, slug }) => {
   const lessonRef = useRef();
 
   useEffect(() => {
@@ -17,16 +17,16 @@ const LessonsList = ({ lessons, id }) => {
   }, [lessonRef]);
 
   return lessons.map((lesson, index) => {
-    const active = lesson.id === id;
+    const active = lesson.slug === slug;
     return (
-      <div ref={active ? lessonRef : null}>
+      <div ref={active ? lessonRef : null} key={lesson.slug}>
         <Grid
           as={Link}
           to={lesson.slug}
           gap={2}
           columns={[1, 1, 1, 1, "1fr 70px"]}
           p={3}
-          mx={id ? 0 : -3}
+          mx={slug ? 0 : -3}
           bg={active ? "gray.1" : "transparent"}
           sx={{
             "&&:hover": {

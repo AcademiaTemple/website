@@ -14,7 +14,7 @@ const Lesson = ({ data, pageContext: { lessons }, ...props }) => {
       <Flex sx={{ p: 3, flexDirection: ["column", "column", "column", "row"] }}>
         <Box sx={{ width: ["100%", "100%", "100%", "70%"], bg: "#fafafa" }}>
           <AspectRatio ratio={16 / 9} ref={ref}>
-            <Player url={data.lesson.video} />
+            <Player slug={data.lesson.slug} url={data.lesson.video} />
           </AspectRatio>
         </Box>
         <Box
@@ -31,7 +31,7 @@ const Lesson = ({ data, pageContext: { lessons }, ...props }) => {
             borderBottomColor: "gray.2"
           }}
         >
-          <LessonsList lessons={lessons} id={data.lesson.id} />
+          <LessonsList lessons={lessons} slug={data.lesson.slug} />
         </Box>
       </Flex>
       <Container>
