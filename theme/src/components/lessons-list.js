@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
-/** @jsx jsx */
-import { jsx, Flex, Grid, Text } from "theme-ui";
-import { MdAccessTime as DurationIcon } from "react-icons/md";
+import { Flex, Grid, Text } from "theme-ui";
 import Link from "../components/link";
 
 const LessonsList = ({ lessons, slug }) => {
@@ -11,7 +9,7 @@ const LessonsList = ({ lessons, slug }) => {
     if (lessonRef.current) {
       lessonRef.current.scrollIntoView({
         behavior: "auto",
-        block: "start"
+        block: "start",
       });
     }
   }, [lessonRef]);
@@ -31,8 +29,8 @@ const LessonsList = ({ lessons, slug }) => {
           sx={{
             "&&:hover": {
               bg: ["transparent", "gray.0"],
-              borderRadius: 4
-            }
+              borderRadius: 4,
+            },
           }}
         >
           <Flex sx={{ flexDirection: "column" }}>
@@ -44,30 +42,31 @@ const LessonsList = ({ lessons, slug }) => {
                   alignItems: "center",
                   justifyContent: "center",
                   bg: "gray.2",
-                  color: "gray.7",
+                  color: "text",
                   px: 2,
                   mr: 2,
                   borderRadius: 4,
-                  fontSize: 1
+                  fontSize: 1,
                 }}
               >
                 {index + 1}
               </Text>
-              <Text variant="body" sx={{ fontWeight: "bold" }}>
+              <Text
+                variant="body"
+                sx={{ fontWeight: "bold", color: "heading" }}
+              >
                 {lesson.title}
               </Text>
             </Flex>
-            <Text variant="body" sx={{ color: "gray.7" }}>
-              {lesson.description}
-            </Text>
+            <Text variant="body">{lesson.description}</Text>
           </Flex>
           <Flex
             sx={{
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
-              color: "gray.7",
-              display: ["none", "none", "none", "none", "flex"]
+              color: "text",
+              display: ["none", "none", "none", "none", "flex"],
             }}
           >
             <Flex
@@ -76,10 +75,9 @@ const LessonsList = ({ lessons, slug }) => {
                 justifyContent: "center",
                 bg: "gray.2",
                 px: 1,
-                borderRadius: 4
+                borderRadius: 4,
               }}
             >
-              <DurationIcon sx={{ mr: 1 }} />
               <Text as="time" variant="caps" sx={{ fontSize: 1 }}>
                 {lesson.duration}
               </Text>

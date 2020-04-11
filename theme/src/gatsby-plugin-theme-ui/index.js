@@ -34,12 +34,14 @@ export default {
   text: {
     body: {
       fontSize: 3,
+      color: "text",
       fontFamily: "body",
       lineHeight: "body",
       fontWeight: "body"
     },
     heading: {
       fontSize: 5,
+      color: "heading",
       fontFamily: "heading",
       lineHeight: "heading",
       fontWeight: "heading"

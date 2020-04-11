@@ -8,7 +8,7 @@ const TotalDuration = ({ totalDuration }) => {
   return (
     <Flex sx={{ alignItems: "center" }}>
       <DurationIcon sx={{ color: "primary", mr: 2 }} />
-      <Text as="time" variant="caps" sx={{ fontSize: 2 }}>
+      <Text as="time" variant="caps" sx={{ color: "heading", fontSize: 2 }}>
         {totalDuration}
       </Text>
     </Flex>

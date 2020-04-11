@@ -7,7 +7,7 @@ const TotalLessons = ({ totalLessons }) => {
   return (
     <Flex sx={{ alignItems: "center" }} mr={4}>
       <LessonsIcon sx={{ color: "primary", mr: 2 }} />
-      <Text variant="caps" sx={{ fontSize: 2 }}>
+      <Text variant="caps" sx={{ color: "heading", fontSize: 2 }}>
         {totalLessons} lessons
       </Text>
     </Flex>

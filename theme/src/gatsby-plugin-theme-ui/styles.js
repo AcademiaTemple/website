@@ -2,48 +2,50 @@ import prismPreset from "./prism-preset";
 
 export default {
   root: {
+    WebkitFontSmoothing: "antialiased",
+    MozOsxFontSmoothing: "grayscale",
     fontFamily: "body",
     lineHeight: "body",
     fontWeight: "body",
     fontSize: 3
   },
   h1: {
-    color: "text",
+    color: "heading",
     fontFamily: "heading",
     lineHeight: "heading",
     fontWeight: "heading",
     fontSize: 6
   },
   h2: {
-    color: "text",
+    color: "heading",
     fontFamily: "heading",
     lineHeight: "heading",
     fontWeight: "heading",
     fontSize: 5
   },
   h3: {
-    color: "text",
+    color: "heading",
     fontFamily: "heading",
     lineHeight: "heading",
     fontWeight: "heading",
     fontSize: 4
   },
   h4: {
-    color: "text",
+    color: "heading",
     fontFamily: "heading",
     lineHeight: "heading",
     fontWeight: "heading",
     fontSize: 3
   },
   h5: {
-    color: "text",
+    color: "heading",
     fontFamily: "heading",
     lineHeight: "heading",
     fontWeight: "heading",
     fontSize: 2
   },
   h6: {
-    color: "text",
+    color: "heading",
     fontFamily: "heading",
     lineHeight: "heading",
     fontWeight: "heading",
@@ -55,17 +57,20 @@ export default {
     fontWeight: "body",
     lineHeight: "body"
   },
+  strong: {
+    color: "heading"
+  },
   a: {
     color: "primary",
     textDecoration: "none",
     fontWeight: "semibold",
     borderBottomStyle: "solid",
-    borderBottomWidth: 2,
+    borderBottomWidth: 1,
     borderBottomColor: "primary",
     "&&:hover": {
       color: "secondary",
       borderBottomStyle: "solid",
-      borderBottomWidth: 2,
+      borderBottomWidth: 1,
       borderBottomColor: "secondary"
     }
   },

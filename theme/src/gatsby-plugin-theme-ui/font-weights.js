@@ -1,7 +1,7 @@
 export default {
-  body: 400,
-  heading: 700,
   light: 300,
+  body: 400,
   semibold: 600,
-  bold: 700
+  heading: 700,
+  bold: 700,
 };
