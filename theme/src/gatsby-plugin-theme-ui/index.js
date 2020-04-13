@@ -7,6 +7,7 @@ import lineHeights from "./line-heights";
 import letterSpacings from "./letter-spacings";
 import colors from "./colors";
 import layout from "./layout";
+import forms from "./forms";
 import styles from "./styles";
 
 export default {
@@ -20,6 +21,7 @@ export default {
   colors,
   styles,
   layout,
+  forms,
   buttons: {
     primary: {
       display: "flex",
@@ -27,9 +29,9 @@ export default {
       justifyContent: "center",
       cursor: "pointer",
       "&:hover": {
-        bg: "secondary"
-      }
-    }
+        bg: "secondary",
+      },
+    },
   },
   text: {
     body: {
@@ -37,19 +39,19 @@ export default {
       color: "text",
       fontFamily: "body",
       lineHeight: "body",
-      fontWeight: "body"
+      fontWeight: "body",
     },
     heading: {
       fontSize: 5,
       color: "heading",
       fontFamily: "heading",
       lineHeight: "heading",
-      fontWeight: "heading"
+      fontWeight: "heading",
     },
     caps: {
       textTransform: "uppercase",
       letterSpacing: "wider",
-      fontWeight: "semibold"
-    }
-  }
+      fontWeight: "semibold",
+    },
+  },
 };

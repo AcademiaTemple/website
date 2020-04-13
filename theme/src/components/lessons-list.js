@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Flex, Grid, Text } from "theme-ui";
+import { Flex, Box, Grid, Text } from "theme-ui";
 import Link from "../components/link";
 
 const LessonsList = ({ lessons, slug }) => {
@@ -60,13 +60,13 @@ const LessonsList = ({ lessons, slug }) => {
             </Flex>
             <Text variant="body">{lesson.description}</Text>
           </Flex>
-          <Flex
+          <Box
             sx={{
+              display: ["none", "none", "none", "none", "flex"],
               flexDirection: "row",
               alignItems: "center",
               justifyContent: "center",
               color: "text",
-              display: ["none", "none", "none", "none", "flex"],
             }}
           >
             <Flex
@@ -82,7 +82,7 @@ const LessonsList = ({ lessons, slug }) => {
                 {lesson.duration}
               </Text>
             </Flex>
-          </Flex>
+          </Box>
         </Grid>
       </div>
     );

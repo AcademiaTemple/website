@@ -28,7 +28,7 @@ const Lesson = ({ data, pageContext: { lessons }, ...props }) => {
             borderTopColor: "gray.2",
             borderBottomWidth: 1,
             borderBottomStyle: "solid",
-            borderBottomColor: "gray.2"
+            borderBottomColor: "gray.2",
           }}
         >
           <LessonsList lessons={lessons} slug={data.lesson.slug} />
