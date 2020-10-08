@@ -113,6 +113,10 @@ If you want to thank me or support this project you can buy me a coffee
 
 Issues and pull requests are welcome
 
+## ✨Modified by
+
+- Academia Temple students
+
 ## License
 
 [MIT](LICENSE)
