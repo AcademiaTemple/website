@@ -6,7 +6,6 @@ import foto from "../img/Banner4.jpg"
 export default function teachers() {
   return (
     <div >
-        <Header />
         <Carrusele />
         <div className="teacher-container">
         <Card_Teacher
