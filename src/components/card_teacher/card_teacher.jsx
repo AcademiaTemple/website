@@ -6,7 +6,7 @@ export default function Card_Teacher(props) {
     <div className="card border-info rounded">
       <div className="card-body">
         <div className="row">
-          <div className="col-sm">
+          <div className="col-sm-2" width="20%">
             <img
               src={props.rutafoto}
               className="rounded-circle"
@@ -14,7 +14,7 @@ export default function Card_Teacher(props) {
               height="136"
             />
           </div>
-          <div className="col-sm">
+          <div className="col-sm-9">
             <h4>
               <b>{props.name}</b>
             </h4>
