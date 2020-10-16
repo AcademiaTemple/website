@@ -7,7 +7,6 @@ export default function teachers() {
     <div >
         <Header />
         <Carrusele />
-
         <div className="teacher-container">
         <Card_Teacher
           name="Juan Perez"
@@ -19,6 +18,18 @@ export default function teachers() {
         />
         <Card_Teacher
           name="Gage Waelchi"
+          description= "Docente del curso de Angular React Vuejs"
+        />
+        <Card_Teacher
+          name="Ronaldo Waelchi"
+          description= "Docente del curso de Angular React Vuejs"
+        />
+        <Card_Teacher
+          name="Jett Waelchi"
+          description= "Docente del curso de Angular React Vuejs"
+        />
+        <Card_Teacher
+          name="Ron Waelchi"
           description= "Docente del curso de Angular React Vuejs"
         />
         </div>
