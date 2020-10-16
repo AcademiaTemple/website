@@ -1,14 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
 html {
-    color: white;
-    background-color: #4dc6f3;
+  color: white;
+  background-color: #4dc6f3;
 }
 
 .courses-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact-form {
-    margin: 100px auto;
-    margin-left: 40%;
+  margin: 100px auto;
+  margin-left: 40%;
 }
