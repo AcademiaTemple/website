@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class teacher_detail {
+export default function teacher_detail() {
         return (
             <div>
-                
+                hello
             </div>
         )
 }
