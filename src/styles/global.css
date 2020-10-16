@@ -12,3 +12,24 @@ html {
     margin: 100px auto;
     margin-left: 40%;
 }
+
+
+.teacher-container {
+    padding: 10%;
+    justify-content: space-between;
+    padding-bottom: 20%;
+    height: 100%;
+    width: 100%;
+    
+}
+.header {
+  
+    height: 100%;
+    width: 100%;
+}
+.carrusel {
+    background-color: rgb(149, 151, 46);
+    height: 100%;
+    width: 100%;
+    
+}
