@@ -10,8 +10,7 @@ import slide04 from "../../img/Banner4.jpg"
 
 export default function Carrusele() {
   return (
-  
-      <div className="content">
+  <div className="content">
         <Carousel>
           <CarouselItem> 
             <img className="h-25 d-inline-block  d-block w-100" src={slide01} alt="Primer Banner" />
