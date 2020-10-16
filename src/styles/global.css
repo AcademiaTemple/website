@@ -1,35 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
 html {
-    color: white;
-    background-color: #4dc6f3;
+  color: white;
+  background-color: #4dc6f3;
 }
 
 .courses-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .contact-form {
-    margin: 100px auto;
-    margin-left: 40%;
+  margin: 100px auto;
+  margin-left: 40%;
 }
-
 
 .teacher-container {
-    padding: 10%;
-    justify-content: space-between;
-    padding-bottom: 20%;
-    height: 100%;
-    width: 100%;
-    
+  padding: 10%;
+  justify-content: space-between;
+  padding-bottom: 20%;
+  height: 100%;
+  width: 100%;
 }
 .header {
-  
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 .carrusel {
-    background-color: rgb(149, 151, 46);
-    height: 100%;
-    width: 100%;
-    
+  background-color: rgb(149, 151, 46);
+  height: 100%;
+  width: 100%;
 }
