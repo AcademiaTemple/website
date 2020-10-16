@@ -6,7 +6,7 @@ import { CarouselItem } from "react-bootstrap"
 import slide01 from "../../img/Banner1.jpg"
 import slide02 from "../../img/Banner2.jpg"
 import slide03 from "../../img/Banner3.jpg"
-import slide04 from "../../img/Banner2.jpg"
+import slide04 from "../../img/Banner4.jpg"
 
 export default function Carrusele() {
   return (
