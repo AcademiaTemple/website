@@ -1,11 +1,10 @@
 import React from "react"
-import Headerpage from "../components/headerpage/headerpage"
 
 
 export default function Contact() {
   return (
     <div>
-       <Headerpage/>
+    
       <form className="contact-form">
         <div>
           <label htmlFor="name">Name</label>

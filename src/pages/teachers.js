@@ -2,11 +2,11 @@ import React from "react"
 import Carrusele from "../components/carrusel/carrusele"
 import Card_Teacher from "../components/card_teacher/card_teacher"
 import foto from "../img/Banner4.jpg"
-import Headerpage from "../components/headerpage/headerpage"
+import Navbar from "../components/navbar/navbar"
 export default function teachers() {
   return (
     <div >
-        <Headerpage/>
+        <Navbar/>
         <Carrusele />
         <div className="teacher-container">
         <Card_Teacher
