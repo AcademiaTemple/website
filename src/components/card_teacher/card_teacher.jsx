@@ -15,9 +15,9 @@ export default function Card_Teacher(props) {
             />
           </div>
           <div className="col-sm-9">
-            <h4>
+            <h2>
               <b>{props.name}</b>
-            </h4>
+            </h2>
             <p>{props.description}</p>
           </div>
         </div>

@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import Header from "../components/header/header"
 import CalendarA from "../components/calendar/CalendarA"
+import Header from "../components/header/header"
+
 export default function Home() {
   return <div>
     <Header />
