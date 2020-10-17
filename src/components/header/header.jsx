@@ -10,26 +10,10 @@ export default function Header() {
           <h2>El secreto para salir adelante es simplemente empezar</h2>
           <div className="d-flex justify-content-end">
             <button type="button" className="btn btn-outline-primary btn-lg">
-              Cursos
+            <Link to="/courses">Cursos</Link>
             </button>
           </div>
         </div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Inicio</Link>
-            </li>
-            <li>
-              <Link to="/about">Acerca de</Link>
-            </li>
-            <li>
-              <Link to="/courses">Cursos</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contacto</Link>
-            </li>
-          </ul>
-        </nav>
       </div>
     </header>
   )
