@@ -33,7 +33,7 @@ const Navbar=() => {
             <ul>
               <li><Link to="/">Temple</Link></li>
               <li><Link to="/courses">Cursos</Link></li>
-              <li><Link to="/docentes">Docentes</Link></li>
+              <li><Link to="/teachers">Docentes</Link></li>
             </ul>
         </nav>
 

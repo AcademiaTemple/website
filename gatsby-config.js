@@ -6,5 +6,17 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+            `Raleway\:400`,
+            `Roboto\:400`,
+            `Montserrat\:400`
+        ]
+      }
+    }
+
+  ],
 }
