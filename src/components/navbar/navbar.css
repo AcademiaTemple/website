@@ -1,7 +1,6 @@
 .navbar {
     top: 0;
     left: 0;
-    position: fixed;
     width: 100%;
     max-width: 100%;
     min-height: 6vh;
@@ -13,11 +12,15 @@
     transition: all .2s ease;
     height: 100px;
     padding-right: 120px;
-    z-index: 1001
 }
 
 .scrolled {
     background-color: #0C2239;
+}
+
+.logo,
+.logo img {
+    box-sizing: content-box;
 }
 
 .logo img {

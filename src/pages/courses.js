@@ -1,11 +1,12 @@
 import React from "react"
 import Card from "../components/card/card"
-import Headerpage from "../components/headerpage/headerpage"
+import Navbar from "../components/navbar/navbar"
 
 export default function Courses() {
   return (
     <div>
-      <Headerpage/>
+      <Navbar />
+     
       <h1>Cursos disponibles</h1>
       <div className="courses-container">
         <Card

@@ -19,14 +19,14 @@ const Navbar=() => {
     window.addEventListener('scroll',handleScroll)
   })
 
-  let x = ['navbar'];
+  let x = ['navbar fixed-top'];
   if(scrolled){
     x.push('scrolled');
   }
   return (
     <header className={x.join(" ")}>
         <div className="logo">
-          <img src={Logo} alt="Logo" title="Logo" />
+            <Link to="/"><img src={Logo} alt="Logo" title="Logo" /></Link>
         </div>
 
         <nav className="navigation">
