@@ -5,3 +5,41 @@ ul {
     margin: 0;
     padding: 0;
 }
+
+.bg-img {
+    background: linear-gradient(rgba(12, 34, 57, 0.7), rgba(12, 34, 57, 0.6)), url("../../img/banner_main.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.ctn-text {
+    top: 30%;
+    right: 3%;
+    max-width: 700px;
+    opacity: 1;
+    padding: 50px;
+}
+
+.ctn-text h2 {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    text-align: end;
+    font-weight: 700;
+}
+
+.btn-outline-primary {
+    color: #4dc6f3 !important;
+    border: 5px solid #4dc6f3 !important;
+    border-radius: 50px !important;
+    box-sizing: border-box !important;
+    width: 200px !important;
+}
+
+.btn-outline-primary a {
+    color: #4dc6f3;
+}
+
+.btn-outline-primary a:hover {
+    text-decoration: none;
+    color: #4dc6f3;
+}
