@@ -1,0 +1,14 @@
+html {
+    color: white;
+    background-color: #4dc6f3;
+}
+
+.courses-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form {
+    margin: 100px auto;
+    margin-left: 40%;
+}

@@ -1,3 +1,0 @@
-# Academia Temple
-
-Hola chamos
