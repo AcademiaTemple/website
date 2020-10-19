@@ -1,0 +1,93 @@
+.contenerdor {
+  max-width: 1440px !important;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .contenerdor {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contenerdor {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contenerdor {
+    max-width: 960px;
+  }
+}
+
+footer {
+  width: 100%;
+  max-width: 100%;
+  min-height: 20vh;
+  background-color: #0c2239;
+  color: white;
+  height: 100%;
+}
+
+.LogoFooter {
+  border-radius: 50px;
+  width: 50px;
+  margin-top: 10%;
+  margin-top: 10%;
+}
+
+.Info,
+.RedesGrupos,
+.Terminos {
+  margin: auto;
+  padding: 10px;
+}
+
+.correo {
+  margin-top: 40px;
+}
+
+.Terminos {
+  margin-top: 10%;
+}
+
+.Terminos > p > a {
+  text-decoration: none;
+  color: white;
+}
+
+.redes {
+  margin-top: 10%;
+  height: 50%;
+}
+
+.grupos {
+  margin-top: 10%;
+  height: 50%;
+}
+
+.icons {
+  display: flex;
+  list-style-type: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+a > i {
+  color: white;
+}
+
+ul li:nth-child(2) {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+a > .fab {
+  font-size: 45px;
+}
