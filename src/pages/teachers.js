@@ -1,7 +1,7 @@
 import React from "react"
 import Carrusele from "../components/carrusel/carrusele"
 import Card_Teacher from "../components/card_teacher/card_teacher"
-import foto from "../img/Banner4.jpg"
+import foto from "../img/Profe1.jpg"
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
 export default function teachers() {
