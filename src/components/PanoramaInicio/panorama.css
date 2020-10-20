@@ -13,9 +13,9 @@ ul {
 }
 
 .ctn-text {
-    top: 30%;
+    top: 40%;
     right: 3%;
-    max-width: 700px;
+    max-width: 50%;
     opacity: 1;
     padding: 50px;
 }
@@ -25,21 +25,28 @@ ul {
     color: white;
     text-align: end;
     font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
 }
 
-.btn-outline-primary {
-    color: #4dc6f3 !important;
-    border: 5px solid #4dc6f3 !important;
-    border-radius: 50px !important;
-    box-sizing: border-box !important;
-    width: 200px !important;
-}
-
-.btn-outline-primary a {
+.boton {
     color: #4dc6f3;
+    border: 5px solid #4dc6f3;
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding: 3px 70px;
+    background: transparent;
+    text-decoration: none;
 }
 
-.btn-outline-primary a:hover {
+.boton a {
+    color: #4dc6f3;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.boton a:hover {
     text-decoration: none;
     color: #4dc6f3;
 }
