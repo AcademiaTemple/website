@@ -115,7 +115,17 @@
       background: #0C2239;
       padding: 35px 50px;
       font-family: 'Raleway', sans-serif;
+      width: 300px;
+      height: 420px;
   }
+
+  .calendar__courses h3{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 40px;
+}
 
   .calendar__calendar{
       background: white;
@@ -129,7 +139,19 @@
   }
 
   .calendar__imagecourse{
-    width: 49px;
-    height: 42px;
+    width: 25px;
+    height: 25px;
     margin-left: 20px;    
-  }  
+  }
+
+  .calendar-courses {
+    margin-bottom: 30px;
+  }
+
+  .calendar-courses h3 {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0px;
+  }

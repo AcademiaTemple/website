@@ -71,11 +71,9 @@ const CalendarA = () => {
     <div className="calendar">
       <div className="calendar__container">
         <div className="calendar__courses" >
-          <h3>Cursos del Día</h3>
+          <h3>Cursos del día</h3>
           {
-            day.courses.map(item => {
-              return (<CalendarCourses id={item.id} name={item.name} time={item.time} url={item.url} />)
-            })
+            day.courses.map(item => (<CalendarCourses id={item.id} name={item.name} time={item.time} url={item.url} />))
           }
         </div>
         <div className="calendar__calendar">
