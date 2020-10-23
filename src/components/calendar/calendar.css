@@ -1,11 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 
+.calendar {
+  display: flex;
+  justify-content: center;
+}
+
+.calendar-month {
+  font-family: "Raleway", sans-serif;
+  color: #000;
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.react-calendar__tile {
+  font-family: "Raleway", sans-serif;
+  color: #000;
+  text-align: center;
+  font-weight: 550;
+  font-size: 18px;
+}
+
 .react-calendar {
     width: 550px;
     max-width: 100%;
     background: white;
     line-height: 1.125em;
+    border: none !important;
   }
+
   .react-calendar,
   .react-calendar *,
   .react-calendar *:before,
@@ -34,8 +58,12 @@
   }
   .react-calendar__month-view__weekdays__weekday {
     padding: 0.5em;
+    font-family: "Raleway", sans-serif;
+    color: #000;
+    font-weight: 900;
+    font-size: 18px;
   }
- 
+  
   .react-calendar__month-view__days__day--weekend {
     color: #d10000;
   }
@@ -80,13 +108,25 @@
       display: flex;
       flex-wrap: wrap;
       position: static;
+      box-shadow: 0px 6px 12px 6px rgba(0, 0, 0, 0.25);
   }
+
   .calendar__courses{
       background: #0C2239;
       padding: 35px 50px;
       font-family: 'Raleway', sans-serif;
-
+      width: 300px;
+      height: 420px;
   }
+
+  .calendar__courses h3{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 40px;
+}
+
   .calendar__calendar{
       background: white;
       color: black;
@@ -95,11 +135,23 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      
+      padding: 22px 60px 18px;
   }
+
   .calendar__imagecourse{
-    width: 49px;
-    height: 42px;
-    margin-left: 20px;
-    
-  }  
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;    
+  }
+
+  .calendar-courses {
+    margin-bottom: 30px;
+  }
+
+  .calendar-courses h3 {
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0px;
+  }
