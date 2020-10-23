@@ -1,6 +1,6 @@
 .statistics-container {
     height: 500px;
     padding: 20px 30px;
-    background: blue;
+    background: linear-gradient(90deg, #4DC8F3, #0C2239);
     color: white;
 }

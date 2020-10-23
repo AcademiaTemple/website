@@ -1,3 +1,7 @@
+h1,h2,h3,h4,h5,h6{
+  font-family: Raleway, Roboto, Arial, Helvetica, sans-serif;
+}
+
 .txt-subtitle {
   color:#000;
   font-weight: 700;
