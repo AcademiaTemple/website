@@ -36,17 +36,17 @@ const Footer = () => {
                   <ul className="icons">
                     <li>
                       <a href="#">
-                        <i class="fab fa-facebook"></i>
+                        <i className="fab fa-facebook"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="fab fa-whatsapp"></i>
+                        <i className="fab fa-whatsapp"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="fab fa-discord"></i>
+                        <i className="fab fa-discord"></i>
                       </a>
                     </li>
                   </ul>
@@ -58,17 +58,17 @@ const Footer = () => {
                   <ul className="icons">
                     <li>
                       <a href="#">
-                        <i class="fab fa-telegram"></i>
+                        <i className="fab fa-telegram"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="fab fa-discord"></i>
+                        <i className="fab fa-discord"></i>
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <i class="fab fa-whatsapp"></i>
+                        <i className="fab fa-whatsapp"></i>
                       </a>
                     </li>
                   </ul>

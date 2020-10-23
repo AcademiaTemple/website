@@ -47,7 +47,8 @@ export default function Card_Teacher(props) {
             ></img>
             Patreon
             <br></br>
-            <a className="text-info">{props.patreon}</a>
+            {/* <a className="text-info">{props.patreon}</a> */}
+            <Link className="text-info" to={props.urlpatreon}> {props.patreon} </Link>
             <br></br>
             <img
               className="p-2"
@@ -57,7 +58,8 @@ export default function Card_Teacher(props) {
             ></img>
             Facebook
             <br></br>
-            <a className="text-info">{props.facebook}</a>
+            {/* <a className="text-info">{props.facebook}</a> */}
+            <Link className="text-info" to={props.urlfacebook}> {props.facebook} </Link>
             <br></br>
             <img
               className="p-2"
@@ -67,24 +69,31 @@ export default function Card_Teacher(props) {
             ></img>
             Instagram
             <br></br>
-            <a className="text-info">{props.instagram}</a>
+            {/* <a className="text-info">{props.instagram}</a> */}
+            <Link className="text-info" to={props.urlinstagram}> {props.instagram} </Link>
           </div>
         </div>
-
+    
         <div className="row">
           <div className="col-sm-2" width="20%"></div>
           <div className="col-sm-9">
-            <a href="#" class="btn btn-outline-info rounded-pill btn-sm">
+
+          <Link className="btn btn-outline-info rounded-pill btn-sm" to={props.urlhashta1}> {props.hashta1} </Link>
+
+            {/* <a href="#" className="btn btn-outline-info rounded-pill btn-sm">
               {props.hashta1}
-            </a>
+            </a> */}
             <a> </a>
-            <a href="#" class="btn btn-outline-info rounded-pill btn-sm">
+            <Link className="btn btn-outline-info rounded-pill btn-sm" to={props.urlhashta2}> {props.hashta2} </Link>
+
+            {/* <a href="#" className="btn btn-outline-info rounded-pill btn-sm">
               {props.hashta2}
-            </a>
+            </a> */}
             <a> </a>
-            <a href="#" class="btn btn-outline-info rounded-pill btn-sm">
+            <Link className="btn btn-outline-info rounded-pill btn-sm" to={props.urlhashta3}> {props.hashta3} </Link>
+            {/* <a href="#" className="btn btn-outline-info rounded-pill btn-sm">
               {props.hashta3}
-            </a>
+            </a> */}
           </div>
         </div>
         <br />
