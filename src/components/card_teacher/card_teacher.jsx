@@ -4,18 +4,21 @@ import imgcarazon from "../../../static/corazon.svg"
 import imgpatreon from "../../../static/patreon.svg"
 import imgfacebook from "../../../static/facebook.svg"
 import imginstagram from "../../../static/instagram.svg"
+import Img from "gatsby-image"
+import { Link } from "gatsby"
 export default function Card_Teacher(props) {
   return (
     <div className="card card-blue">
       <div className="card-body">
         <div className="row">
           <div className="col-sm-2" width="20%">
-            <img
+            <Img fixed={props.rutafoto} className="rounded-circle" />
+            {/* <img
               src={props.rutafoto}
               className="rounded-circle"
               width="136"
               height="136"
-            />
+            /> */}
           </div>
 
           <div className="col-sm-6">
@@ -24,10 +27,9 @@ export default function Card_Teacher(props) {
             </h2>
             <p>{props.description}</p>
           </div>
-          
-          
+
           <div className="col-sm-2">
-            <h1 className="display-1 p-2">98</h1>
+            <h1 className="display-1 p-2">{props.seguidores}</h1>
             <img
               className="p-2"
               src={imgcarazon}
@@ -45,7 +47,7 @@ export default function Card_Teacher(props) {
             ></img>
             Patreon
             <br></br>
-            <a className="text-info">Carladev</a>
+            <a className="text-info">{props.patreon}</a>
             <br></br>
             <img
               className="p-2"
@@ -55,7 +57,7 @@ export default function Card_Teacher(props) {
             ></img>
             Facebook
             <br></br>
-            <a className="text-info">Carladev</a>
+            <a className="text-info">{props.facebook}</a>
             <br></br>
             <img
               className="p-2"
@@ -65,7 +67,7 @@ export default function Card_Teacher(props) {
             ></img>
             Instagram
             <br></br>
-            <a className="text-info">@Carladev</a>
+            <a className="text-info">{props.instagram}</a>
           </div>
         </div>
 
@@ -73,15 +75,15 @@ export default function Card_Teacher(props) {
           <div className="col-sm-2" width="20%"></div>
           <div className="col-sm-9">
             <a href="#" class="btn btn-outline-info rounded-pill btn-sm">
-              #html
+              {props.hashta1}
             </a>
             <a> </a>
             <a href="#" class="btn btn-outline-info rounded-pill btn-sm">
-              #html
+              {props.hashta2}
             </a>
             <a> </a>
             <a href="#" class="btn btn-outline-info rounded-pill btn-sm">
-              #html
+              {props.hashta3}
             </a>
           </div>
         </div>
@@ -89,9 +91,13 @@ export default function Card_Teacher(props) {
         <div className="row">
           <div className="col-sm-2" width="20%"></div>
           <div className="col-sm-9">
-            <a href="#" class="btn btn-primary rounded-pill btn-lg">
+            {/* <a href="#" class="btn btn-primary rounded-pill btn-lg">
               Conocer Cursos
-            </a>
+            </a> */}
+
+            <Link className="btn btn-primary rounded-pill btn-lg" to={props.urlconocercurso}>
+              Conocer Cursos
+            </Link>
           </div>
         </div>
       </div>
