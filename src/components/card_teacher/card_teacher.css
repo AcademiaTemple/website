@@ -1,3 +1,10 @@
+.card-blue {
+    background: #FFFFFF;
+    border: 2px solid #4DC6F3 !important;
+    box-sizing: border-box;
+    border-radius: 35px !important;
+}
+
 h2 {
     font-family: 'Montserrat', sans-serif;
     size: 24px;
