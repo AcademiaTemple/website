@@ -26,7 +26,7 @@ export default function Carrusele(props) {
 
         <CarouselItem>
           {/* <img className="h-25 d-inline-block d-block w-100" src={slide03} alt="Tercer Banner" />  */}
-          <Img fluid={props.imgbanner2} />
+          <Img fluid={props.imgbanner3} />
         </CarouselItem>
 
         <CarouselItem>
