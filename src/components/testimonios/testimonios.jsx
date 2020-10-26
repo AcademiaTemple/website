@@ -14,8 +14,8 @@ export default function Testimonios() {
                 </div>
             </div>
             <div className="row">
-                { list.map( item => (
-                    <div className="col">
+                {list.map((item, index) => (
+                    <div className="col" key={index}>
                         <Card image={image} name={item.name} course={item.course} testimonio={item.testimonio} rating={item.rating} />
                     </div>
                 ))}

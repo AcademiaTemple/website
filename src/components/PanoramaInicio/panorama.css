@@ -1,0 +1,47 @@
+.bg-img {
+    background: linear-gradient(rgba(12, 34, 57, 0.7), rgba(12, 34, 57, 0.6)), url("../../img/banner_main.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.ctn-text {
+    padding-top: 30%;
+    right: 3%;
+    opacity: 1;
+}
+
+.ctn-text h2 {
+    font-family: "Raleway", sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.boton {
+    color: #4dc6f3;
+    border: 5px solid #4dc6f3;
+    border-radius: 50px;
+    box-sizing: border-box;
+    padding: 3px 70px;
+    background: transparent;
+    text-decoration: none;
+}
+
+.boton a {
+    color: #4dc6f3;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.boton a:hover {
+    text-decoration: none;
+    color: #4dc6f3;
+}
+
+@media only screen and (max-width: 600px) {
+    .ctn-text {
+        padding-top: 90%;
+    }
+}

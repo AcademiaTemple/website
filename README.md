@@ -1,6 +1,12 @@
 # Sitio oficial de la Academia Temple 👨‍🏫👩‍🏫
+[![Netlify Status](https://api.netlify.com/api/v1/badges/15685988-a20d-41b2-a61d-d927d3a616b5/deploy-status)](https://app.netlify.com/sites/academiatemple/deploys)
 
 Bienvenido a la academia Temple, el primer espacio en internet donde el aprendizaje ocurre de manera **colaborativa** entre profesores y alumnos que aman **aportar a la comunidad.**
+
+&nbsp;
+## **¡Mira el despliegue en vivo!**
+https://academiatemple.netlify.app/
+
 &nbsp;
 ## **Edición Hacktober Fest** 🎃👻
 La marca Digital Ocean ha lanzado un concurso mundial en el que puedes participar si haces un mínimo de 4 pull request a un proyecto de código abierto. ¿Quieres participar con nuestra organización?

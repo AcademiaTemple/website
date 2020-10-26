@@ -7,11 +7,10 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     background-color: transparent;
     transition: all .2s ease;
-    height: 100px;
-    padding-right: 120px;
+    height: 150px;
+    padding-top: 20px !important;
 }
 
 .scrolled {
@@ -24,8 +23,13 @@
 }
 
 .logo img {
-    width: 50px;
+    width: 80px;
     padding-left: 120px;
+}
+
+.navigation {
+    position: relative;
+    padding-right: 120px;
 }
 
 .navigation ul {
@@ -35,16 +39,17 @@
     min-height: 6vh;
     justify-content: flex-end;
     align-items: center;
+    margin-bottom: 0px;
 }
 
 .navigation ul li {
     text-align: center;
-    padding: 1.5rem;
+    padding: 0 1.5rem;
     cursor: pointer;
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 28px;
     color: #FFFFFF;
 }

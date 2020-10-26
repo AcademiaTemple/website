@@ -1,19 +1,20 @@
 import React from "react"
 import "./card_teacher.css"
-
+import imgcarazon from "../../../static/corazon.svg"
+import imgpatreon from "../../../static/patreon.svg"
+import imgfacebook from "../../../static/facebook.svg"
+import imginstagram from "../../../static/instagram.svg"
+import Img from "gatsby-image"
+import { Link } from "gatsby"
 export default function Card_Teacher(props) {
   return (
-    <div className="card rounded">
+    <div className="card card-blue">
       <div className="card-body">
         <div className="row">
-          <div className="col-sm-2 center" width="20%">
-            <img
-              src={props.rutafoto}
-              className="rounded-circle"
-              width="136"
-              height="136"
-            />
+          <div className="col-sm-2" width="20%">
+            <Img fixed={props.rutafoto} className="rounded-circle" />
           </div>
+
           <div className="col-sm-6">
             <h2>
               <b>{props.name}</b>
