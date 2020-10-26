@@ -53,21 +53,21 @@ p {
 }
 
 .Etiquetas {
-  color: #84d8f7;
+  color: #4dc6f3;
   text-align: center;
   white-space: middle;
   vertical-align: middle;
   user-select: none;
-  border: 2px solid #84d8f7;
+  border: 2px solid#4dc6f3;
   border-radius: 1rem;
   padding-right: 1rem;
   padding-left: 1rem;
-  background-color: #dff6ff;
+  background-color: white;
 }
 
 .Etiquetas:hover {
-  background-color: #84d8f7;
-  border: 2px solid #84d8f7;
+  background-color: #4dc6f3;
+  border: 2px solid #4dc6f3;
   color: white;
 }
 
@@ -90,6 +90,6 @@ p {
 }
 
 .Conocer:hover {
-  background-color: gray;
+  background-color: #4dc6f3;
   color: white;
 }
