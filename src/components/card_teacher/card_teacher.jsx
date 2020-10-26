@@ -13,12 +13,6 @@ export default function Card_Teacher(props) {
         <div className="row">
           <div className="col-sm-2" width="20%">
             <Img fixed={props.rutafoto} className="rounded-circle" />
-            {/* <img
-              src={props.rutafoto}
-              className="rounded-circle"
-              width="136"
-              height="136"
-            /> */}
           </div>
 
           <div className="col-sm-6">
@@ -26,87 +20,47 @@ export default function Card_Teacher(props) {
               <b>{props.name}</b>
             </h2>
             <p>{props.description}</p>
+            <div className="btn-toolbar">
+              <div className="btn-group mr-2">
+                <button type="button" className="Etiquetas">
+                  #html
+                </button>
+              </div>
+              <div className="btn-group mr-2">
+                <button type="button" className="Etiquetas">
+                  #html
+                </button>
+              </div>
+              <div className="btn-group" role="group" aria-label="Third group">
+                <button type="button" className="Etiquetas">
+                  #html
+                </button>
+              </div>
+            </div>
+            <button type="button" className="Conocer">
+              Conocer cursos
+            </button>
           </div>
-
-          <div className="col-sm-2">
-            <h1 className="display-1 p-2">{props.seguidores}</h1>
-            <img
-              className="p-2"
-              src={imgcarazon}
-              width="50px"
-              height="48px"
-            ></img>
+          <div className="col-sm-2 Likes">
+            <h6>98</h6>
+            <i className="fas fa-heart"></i>
           </div>
-          <div className="col-sm-2">
-            <h3> </h3>
-            <img
-              className="p-2"
-              src={imgpatreon}
-              width="24px"
-              height="24px"
-            ></img>
-            Patreon
-            <br></br>
-            {/* <a className="text-info">{props.patreon}</a> */}
-            <Link className="text-info" to={props.urlpatreon}> {props.patreon} </Link>
-            <br></br>
-            <img
-              className="p-2"
-              src={imgfacebook}
-              width="24px"
-              height="24px"
-            ></img>
-            Facebook
-            <br></br>
-            {/* <a className="text-info">{props.facebook}</a> */}
-            <Link className="text-info" to={props.urlfacebook}> {props.facebook} </Link>
-            <br></br>
-            <img
-              className="p-2"
-              src={imginstagram}
-              width="24px"
-              height="24px"
-            ></img>
-            Instagram
-            <br></br>
-            {/* <a className="text-info">{props.instagram}</a> */}
-            <Link className="text-info" to={props.urlinstagram}> {props.instagram} </Link>
-          </div>
-        </div>
-    
-        <div className="row">
-          <div className="col-sm-2" width="20%"></div>
-          <div className="col-sm-9">
-
-          <Link className="btn btn-outline-info rounded-pill btn-sm" to={props.urlhashta1}> {props.hashta1} </Link>
-
-            {/* <a href="#" className="btn btn-outline-info rounded-pill btn-sm">
-              {props.hashta1}
-            </a> */}
-            <a> </a>
-            <Link className="btn btn-outline-info rounded-pill btn-sm" to={props.urlhashta2}> {props.hashta2} </Link>
-
-            {/* <a href="#" className="btn btn-outline-info rounded-pill btn-sm">
-              {props.hashta2}
-            </a> */}
-            <a> </a>
-            <Link className="btn btn-outline-info rounded-pill btn-sm" to={props.urlhashta3}> {props.hashta3} </Link>
-            {/* <a href="#" className="btn btn-outline-info rounded-pill btn-sm">
-              {props.hashta3}
-            </a> */}
-          </div>
-        </div>
-        <br />
-        <div className="row">
-          <div className="col-sm-2" width="20%"></div>
-          <div className="col-sm-9">
-            {/* <a href="#" class="btn btn-primary rounded-pill btn-lg">
-              Conocer Cursos
-            </a> */}
-
-            <Link className="btn btn-primary rounded-pill btn-lg" to={props.urlconocercurso}>
-              Conocer Cursos
-            </Link>
+          <div className="col-sm-2 RedesSociales">
+            <div className="redesDocentes">
+              <i className="fab fa-patreon"></i>
+              Patreon
+              <p className="userRedes">@hola</p>
+            </div>
+            <div className="redesDocentes">
+              <i className="fab fa-facebook-square"></i>
+              Facebook
+              <p className="userRedes">@hola</p>
+            </div>
+            <div className="redesDocentes">
+              <i className="fab fa-instagram"></i>
+              Instagram
+              <p className="userRedes">@hola</p>
+            </div>
           </div>
         </div>
       </div>

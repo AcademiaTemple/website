@@ -19,28 +19,12 @@ export default function teachers({ data }) {
         <Card_Teacher
           rutafoto={data.foto1.childImageSharp.fixed}
           name="Juan Perez"
-          description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-          The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content 
-          here, content here', making it look like readable English. It is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-          distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-          seguidores="97"
-
-          patreon="Juandev"
-          urlpatreon="/courses"
-          facebook="Juandev"
-          urlfacebook="/courses"
-          instagram="@juandev"
-          urlinstagram="/courses"
-
-          hashta1="#Angular"
-          urlhashta1="/courses"
-          hashta2="#Vuejs"
-          urlhashta2="/courses"
-          hashta3="#React"
-          urlhashta3="/courses"
-
-          urlconocercurso="/courses"
+          description="Docente del curso de Angular React Vuejs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, ab
+        doloribus. Autem, quibusdam. Quibusdam, ducimus voluptate enim similique
+        ipsa repudiandae placeat laudantium eligendi cupiditate id, doloribus
+        vitae provident dignissimos obcaecati minus asperiores mollitia!
+        Deserunt eveniet quae in velit quasi totam adipisci ducimus earum?
+        Voluptatem quam ex, deserunt soluta a reprehenderit."
         />
 
         <Card_Teacher
