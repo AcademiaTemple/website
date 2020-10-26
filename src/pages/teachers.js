@@ -13,8 +13,14 @@ export default function teachers() {
         <Card_Teacher
           rutafoto={foto}
           name="Juan Perez"
-          description="Docente del curso de Angular React Vuejs"
+          description="Docente del curso de Angular React Vuejs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, ab
+        doloribus. Autem, quibusdam. Quibusdam, ducimus voluptate enim similique
+        ipsa repudiandae placeat laudantium eligendi cupiditate id, doloribus
+        vitae provident dignissimos obcaecati minus asperiores mollitia!
+        Deserunt eveniet quae in velit quasi totam adipisci ducimus earum?
+        Voluptatem quam ex, deserunt soluta a reprehenderit."
         />
+
         <Card_Teacher
           rutafoto={foto}
           name="Vickie Schamberger"
