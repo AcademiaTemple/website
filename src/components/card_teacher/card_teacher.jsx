@@ -36,7 +36,7 @@ export default function Card_Teacher(props) {
                 </button>
               </div>
             </div>
-            <button type="button" class="Conocer">
+            <button type="button" className="Conocer">
               Conocer cursos
             </button>
           </div>
