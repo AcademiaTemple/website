@@ -48,3 +48,36 @@
   color: white;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
+
+.stars-outer {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ffd600;
+  margin: auto;
+  display: inline-block;
+  position: relative;
+  font-family: FontAwesome;
+}
+
+.stars-inner {
+  color: #ffd600;
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0%;
+}
+
+@media only screen and (max-width: 574px) {
+  .rounded-img {
+    border-radius: 0 0rem 2rem 2rem !important;
+  }
+  .info-course > h2 {
+    text-align: center;
+  }
+  .rounded-course {
+    border-radius: 2rem !important;
+    margin-bottom: 12%;
+  }
+}

@@ -3,6 +3,9 @@ import "./course_teacher.css"
 import { Link } from "gatsby"
 
 export default function Card_Teacher(props) {
+  const starPorcentaje = (props.star / 5) * 100
+  const starPorcentajeRedondeado = `${Math.round(starPorcentaje / 10) * 10}%`
+
   return (
     <div className="card rounded-course">
       <div className="row no-gutters">
@@ -15,9 +18,33 @@ export default function Card_Teacher(props) {
           </h2>
           <p>{props.description}</p>
 
-          <button type="button" className="ingresar-course">
-            Ingresar
-          </button>
+          <div className="row">
+            <div className="col-sm-3 center mb-2">
+              <button type="button" className="ingresar-course">
+                Ingresar
+              </button>
+            </div>
+            <div className="col-sm-3"></div>
+            <div className="col-sm-6 center mb-2">
+              <div className="stars-outer">
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+                <div
+                  className="stars-inner"
+                  style={{ width: starPorcentajeRedondeado }}
+                >
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="col-sm-1"></div>
         <div className="col-sm-2">
