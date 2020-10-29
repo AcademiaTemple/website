@@ -1,0 +1,50 @@
+.rounded-course {
+  border-radius: 2rem !important;
+  margin-bottom: 3%;
+}
+
+.rounded-img {
+  border-radius: 0 2rem 2rem 0 !important;
+}
+
+.col-sm-2 > .fa-github {
+  font-size: 10rem;
+}
+
+.icono-course {
+  text-align: center;
+  margin: auto;
+}
+
+.info-course {
+  padding: 3% !important;
+  /* padding-top: 3%;
+  padding-bottom: 3%; */
+}
+
+.info-course > h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+.ingresar-course {
+  color: black;
+  text-align: center;
+  white-space: middle;
+  vertical-align: middle;
+  border: 2px solid black;
+  user-select: none;
+  border-radius: 2rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  background-color: transparent;
+  box-shadow: 0 2px 2px 0 rgb(255, 255, 255), 0 4px 2px 0 rgba(0, 0, 0, 0.2),
+    inset 0 2px 2px 0 white, inset 0 2px 2px 0 rgba(0, 0, 0, 0.6);
+}
+
+.ingresar-course:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
