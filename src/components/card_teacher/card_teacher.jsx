@@ -37,9 +37,11 @@ export default function Card_Teacher(props) {
                 </button>
               </div>
             </div>
-            <button type="button" className="Conocer">
-              Conocer cursos
-            </button>
+            <Link to="/teacher_detail">
+              <button type="button" className="Conocer">
+                Conocer cursos
+              </button>
+            </Link>
           </div>
           <div className="col-sm-2 Likes">
             <h6>98</h6>
