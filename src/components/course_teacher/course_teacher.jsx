@@ -10,7 +10,7 @@ export default function Card_Teacher(props) {
     <div className="card rounded-course">
       <div className="row no-gutters">
         <div className="col-sm-2 icono-course">
-          <i class="fab fa-github"></i>
+          <i className="fab fa-github"></i>
         </div>
         <div className="col-sm-7 info-course">
           <h2>
@@ -27,20 +27,20 @@ export default function Card_Teacher(props) {
             <div className="col-sm-3"></div>
             <div className="col-sm-6 center mb-2">
               <div className="stars-outer">
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
+                <i className="far fa-star"></i>
+                <i className="far fa-star"></i>
+                <i className="far fa-star"></i>
+                <i className="far fa-star"></i>
+                <i className="far fa-star"></i>
                 <div
                   className="stars-inner"
                   style={{ width: starPorcentajeRedondeado }}
                 >
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
+                  <i className="fas fa-star"></i>
                 </div>
               </div>
             </div>
