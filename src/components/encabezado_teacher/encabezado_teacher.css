@@ -1,0 +1,78 @@
+.perfil-Docente {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  margin: 10px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  size: 24px;
+}
+p {
+  font-family: "Roboto", sans-serif;
+  size: 18px;
+}
+
+.center-perfil-docente {
+  text-align: center;
+  margin: auto;
+}
+
+.rounded-circle {
+  border: 2px solid rgb(71, 178, 255) !important;
+}
+
+.Likes {
+  margin: auto;
+  text-align: center;
+}
+
+.Likes > h6 {
+  text-align: center;
+  font-family: "Roboto", cursive;
+  font-weight: 1000 !important;
+  font-size: 80px;
+}
+.Likes > i {
+  font-size: 30px;
+}
+
+.RedesSociales {
+  margin: auto;
+}
+
+.redesDocentes > p {
+  color: rgb(35, 156, 244);
+  margin-left: 10%;
+  font-size: 12px;
+}
+
+.redesDocentes > i {
+  margin-right: 5px;
+}
+
+.Etiquetas {
+  color: #4dc6f3;
+  text-align: center;
+  white-space: middle;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid#4dc6f3;
+  border-radius: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: white;
+}
+
+.Etiquetas:hover {
+  background-color: #4dc6f3;
+  border: 2px solid #4dc6f3;
+  color: white;
+}
