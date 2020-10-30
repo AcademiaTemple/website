@@ -2,13 +2,25 @@ import React from "react"
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
 import CourseTeacher from "../components/course_teacher/course_teacher"
+import EncabezadoTeacher from "../components/encabezado_teacher/encabezado_teacher"
 import foto from "../img/Profe3.jpg"
+import teacher from "../img/Profe1.jpg"
 
 export default function teacher_detail() {
   return (
     <>
       <Navbar />
       <div className="course-teacher">
+        <EncabezadoTeacher
+          country="Mexico"
+          perfil={teacher}
+          name="Juan Perez"
+          titulos={[
+            "Desarrollador Frontend",
+            "Deseñador de interfaces",
+            "Desarrollador Backend",
+          ]}
+        />
         <CourseTeacher
           star={4.5}
           rutafoto={foto}
