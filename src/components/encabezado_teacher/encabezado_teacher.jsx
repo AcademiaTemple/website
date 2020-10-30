@@ -2,18 +2,56 @@ import React, { useState, useEffect } from "react"
 import "./encabezado_teacher.css"
 
 export default prop => {
+  const listTitles = prop.titulos.map((titulo, index) => (
+    <p key={index}>{titulo}</p>
+  ))
+
+  const api = "https://restcountries.eu/rest/v2/all"
+
+  const GetCountry = () => {
+    const [mydata, setData] = useState([])
+
+    useEffect(() => {
+      fetch(api)
+        .then(response => response.json())
+        .then(data => setData(data))
+    }, [])
+
+    return mydata
+  }
+
+  const paises = GetCountry()
+  const mostrar = () =>
+    paises.map(pais => {
+      if (pais.name == prop.country)
+        return (
+          <div>
+            <p>
+              {pais.name}
+              <img src={pais.flag} alt="" width="30px" />
+            </p>
+          </div>
+        )
+    })
+
   return (
     <div className="perfil-Docente">
       <div className="row">
         <div className="col-sm-2 center-perfil-docente" width="20%">
-          <img className="rounded-circle" width="200" height="200" />
+          <img
+            src={prop.perfil}
+            className="rounded-circle"
+            width="200"
+            height="200"
+          />
         </div>
 
         <div className="col-sm-6">
           <h2>
-            <b>Hola mundo</b>
+            <b>{prop.name}</b>
           </h2>
-          <div>Titulos</div>
+          {mostrar()}
+          <div>{listTitles}</div>
 
           <div className="btn-toolbar">
             <div className="btn-group mr-2">
