@@ -5,29 +5,3 @@
   width: 100%;
   padding-bottom: 5%;
 }
-
-.container-info {
-  margin-bottom: 5%;
-}
-
-.container-title {
-  margin-bottom: 2%;
-}
-
-.container-info > p {
-  text-align: justify;
-}
-
-.titulo-docente:before {
-  content: "";
-  display: inline;
-  position: absolute;
-  top: 100%;
-  border-bottom: 3px solid black;
-  width: 50%;
-}
-
-.titulo-docente {
-  display: inline;
-  position: relative;
-}

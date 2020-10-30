@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react"
-import "./encabezado_teacher.css"
+import "./tarjeta_teacher.css"
 
 export default prop => {
   const listTitles = prop.titulos.map((titulo, index) => (
-    <p key={index}>{titulo}</p>
+    <p key={index} className="titulo-carrera">
+      {titulo}
+    </p>
   ))
 
   const api = "https://restcountries.eu/rest/v2/all"
@@ -28,7 +30,7 @@ export default prop => {
           <div>
             <p>
               {pais.name}
-              <img src={pais.flag} alt="" width="30px" />
+              <img className="flag" src={pais.flag} alt="" width="30px" />
             </p>
           </div>
         )
@@ -51,7 +53,7 @@ export default prop => {
             <b>{prop.name}</b>
           </h2>
           {mostrar()}
-          <div>{listTitles}</div>
+          <div className="titulos-docente">{listTitles}</div>
 
           <div className="btn-toolbar">
             <div className="btn-group mr-2">
