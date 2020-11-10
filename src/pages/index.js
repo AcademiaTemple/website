@@ -11,7 +11,8 @@ import Testimonios from "../components/testimonios/testimonios"
 import Footer from "../components/footer/footer"
 
 // Estilos
-import "./index.css"
+import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-.contenerdor {
+.contenedor {
   max-width: 1440px !important;
   width: 100%;
   padding-right: 15px;
@@ -8,19 +8,19 @@
 }
 
 @media only screen and (min-width: 576px) {
-  .contenerdor {
+  .contenedor {
     max-width: 540px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .contenerdor {
+  .contenedor {
     max-width: 720px;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .contenerdor {
+  .contenedor {
     max-width: 960px;
   }
 }
@@ -83,7 +83,7 @@ a > i {
   color: white;
 }
 
-ul li:nth-child(2) {
+.contenedor ul li:nth-child(2) {
   margin-left: 20px;
   margin-right: 20px;
 }
