@@ -1,47 +1,45 @@
 .bg-img {
     background: linear-gradient(rgba(12, 34, 57, 0.7), rgba(12, 34, 57, 0.6)), url("../../img/banner_main.jpg");
+    background-position: center center;
     background-size: cover;
     height: 100vh;
+    min-height: 80rem;
 }
 
-.ctn-text {
-    padding-top: 30%;
-    right: 3%;
-    opacity: 1;
+.contenido-header {
+    padding-top: 40rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.ctn-text h2 {
+.contenido-header h1 {
     font-family: "Raleway", sans-serif;
     color: white;
     font-weight: 700;
-    font-size: 40px;
-    margin-bottom: 40px;
+    font-size: 4.8rem;
     letter-spacing: 2px;
 }
 
-.boton {
-    color: #4dc6f3;
-    border: 5px solid #4dc6f3;
-    border-radius: 50px;
-    box-sizing: border-box;
-    padding: 3px 70px;
-    background: transparent;
+.boton-header-curso {
+    border: 5px solid #4DC6F3;
+    padding: 0.2rem 10rem;
+    font-size: 3.2rem;
+    color: #4DC6F3;
     text-decoration: none;
+    transition: all 300ms ease;
 }
 
-.boton a {
-    color: #4dc6f3;
-    font-size: 30px;
-    font-weight: 600;
-}
-
-.boton a:hover {
+.boton-header-curso:hover {
     text-decoration: none;
-    color: #4dc6f3;
+    color: white;
+    border: 5px solid white;
 }
 
 @media only screen and (max-width: 600px) {
-    .ctn-text {
-        padding-top: 90%;
+    .boton-header-curso {
+        padding: 0.6rem 8rem;
     }
 }

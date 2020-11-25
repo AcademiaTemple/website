@@ -1,9 +1,14 @@
+.contenedor-navbar {
+    padding: 2.2rem 0;
+}
+
 .navbar {
     transition: all .2s ease;
+    padding: 5rem 0;
 }
 
 .navbar-dark .navbar-toggler-icon{
-    padding: 20px !important;
+    padding: 2rem !important;
   }
  
 .scrolled {
@@ -13,14 +18,14 @@
 .logo,
 .logo img {
     box-sizing: content-box;
-    width: 60px;
+    width: 6rem;
 }
 
 @media only screen and (min-width: 576px) {
     .logo,
     .logo img {
         box-sizing: content-box;
-        width: 80px;
+        width: 8rem;
     }
 }
 
@@ -35,9 +40,14 @@
     font-family: Raleway;
     font-style: normal;
     font-weight: bold;
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
     color: #FFFFFF;
+    margin-right: 2rem;
+}
+
+#collapsibleNavbar ul li:last-of-type {
+    margin-right: 0;
 }
 
 #collapsibleNavbar ul li:hover {
@@ -47,4 +57,5 @@
 #collapsibleNavbar ul li a {
     text-decoration: none;
     color: inherit;
+    font-size: 2.4rem;
 }

@@ -1,8 +1,107 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@100;300;400;600&display=swap');
+
+body {
+  font-family: Raleway, Roboto, Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
 html {
   color: white;
   background-color: #4dc6f3;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /** Reset para REMS - 62.5% = 10px de 16px **/
 }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+/** Globales **/
+
+img {
+  max-width: 100%;
+}
+
+.contenedor {
+  max-width: 144rem !important;
+  width: 85%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 576px) {
+  .contenedor {
+    max-width: 540px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contenedor {
+    max-width: 720px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contenedor {
+    max-width: 960px;
+  }
+}
+
+h1 {
+  font-size: 3.8rem !important;
+}
+
+h2 {
+  font-size: 3.4rem !important;
+}
+
+h3 {
+  font-size: 3rem !important;
+}
+
+h4 {
+  font-size: 2.6rem !important;
+}
+
+/** Utilidades **/
+
+.seccion {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.d-block {
+  display: block!important;
+}
+
+.boton {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.8rem;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+}
+
+/*Inicio*/
 
 .courses-container {
   display: flex;
@@ -10,7 +109,7 @@ html {
 }
 
 .contact-form {
-  margin: 100px auto;
+  margin: 10rem auto;
   margin-left: 40%;
 }
 
@@ -26,8 +125,42 @@ html {
   height: 100%;
   width: 100%;
 }
+
 .carrusel {
   background-color: rgb(149, 151, 46);
   height: 100%;
   width: 100%;
 }
+
+.txt-subtitle {
+  color: #000;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.txt-our-courses {
+  margin-top: 3rem;
+  margin-bottom: 6.5rem;
+}
+
+.txt-dont-miss {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+.cuerpo-pagina {
+  padding-top: 15rem;
+}
+
+.course-teacher {
+  padding: 10%;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 5%;
+}
+
+/*Docentes*/
+
+/*Perfil*/
