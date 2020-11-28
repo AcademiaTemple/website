@@ -1,30 +1,3 @@
-.contenerdor {
-  max-width: 1440px !important;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media only screen and (min-width: 576px) {
-  .contenerdor {
-    max-width: 540px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .contenerdor {
-    max-width: 720px;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .contenerdor {
-    max-width: 960px;
-  }
-}
-
 footer {
   width: 100%;
   max-width: 100%;
@@ -83,7 +56,7 @@ a > i {
   color: white;
 }
 
-ul li:nth-child(2) {
+.contenedor-footer ul li:nth-child(2) {
   margin-left: 20px;
   margin-right: 20px;
 }

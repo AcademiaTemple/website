@@ -1,6 +1,99 @@
-.statistics-container {
-    height: 500px;
-    padding: 20px 30px;
+.contenedor-estadisticas {
+    padding: 5rem 0 6rem 0;
     background: linear-gradient(90deg, #4DC8F3, #0C2239);
     color: white;
+}
+
+.contenido-estadisticas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenido-estadisticas h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+}
+
+.contenido-estadisticas p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.contenido-estadisticas>div {
+    flex-basis: calc(50%);
+    position: relative;
+}
+
+.linea-vertical {
+    border-left: 3px solid rgba(255, 255, 255, 0.19);
+    height: 90%;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.contenido-estadisticas .descripcion {
+    padding-right: 8rem;
+}
+
+.contenido-estadisticas .mision-vision {
+    padding-left: 12.8rem;
+}
+
+.contenido-estadisticas .iconos {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.contenido-estadisticas .iconos .icono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-estadisticas .numero-estadistica {
+    font-size: 3.6rem;
+    font-family: Raleway;
+    font-weight: 700;
+}
+
+.contenedor-estadisticas .texto-estadistica {
+    font-size: 2.4rem;
+    font-family: Raleway;
+    font-weight: 700;
+    margin-top: 1.5rem;
+}
+
+.contenedor-estadisticas .imagen-estadistica {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid white;
+    background: transparent;
+}
+
+.contenedor-estadisticas .mision-vision {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contenedor-estadisticas .contenedor-mision-vision>div {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+}
+
+.contenedor-estadisticas .contenedor-mision-vision>div h2 {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin: 0;
+    margin-left: 2rem;
 }

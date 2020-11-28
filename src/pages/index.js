@@ -11,13 +11,15 @@ import Testimonios from "../components/testimonios/testimonios"
 import Footer from "../components/footer/footer"
 
 // Estilos
-import "./index.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
-      <PanoramaInicio />
+      <header>
+        <Navbar />
+        <PanoramaInicio />
+      </header>
       <Estadisticas />
       <h4 className='txt-subtitle txt-our-courses'>¡Nuestros cursos!</h4>
       <NuestrosCursos />

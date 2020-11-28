@@ -68,28 +68,33 @@ const CalendarA = () => {
   const mes = moment(fecha).format('MMMM');
 
   return (
-    <div className="calendar">
-      <div className="calendar__container">
-        <div className="calendar__courses" >
-          <h3>Cursos del día</h3>
-          {
-            day.courses.map(item => (<CalendarCourses id={item.id} name={item.name} time={item.time} url={item.url} />))
-          }
+    
+  <div className="container container-calendar">
+      <div className="row calendar__container">
+        <div className="col col-sm-4 col-nopadding">
+          <div className="calendar__courses" >
+            <h3>Cursos del día</h3>
+            {
+              day.courses.map(item => (<CalendarCourses id={item.id} name={item.name} time={item.time} url={item.url} />))
+            }
+          </div>
         </div>
-        <div className="calendar__calendar">
-          <h4 className='calendar-month'>{mes[0].toUpperCase() + mes.substr(1, mes.length - 1)}</h4>
-          <Calendar
-            onChange={estFecha}
-            calendarType={'US'}
-            showNavigation={false}
-            formatShortWeekday={formatShortWeekday}
-            // Usar esta propiedad para cambiar la fecha dinámicamente
-            //activeStartDate={fecha}
-            //onClickDay={() => {
-            //}}
-            // maxDetail=" "
-            showNeighboringMonth={false}
-          />
+        <div className="col col-sm-8">
+          <div className="calendar__calendar">
+            <h4 className='calendar-month'>{mes[0].toUpperCase() + mes.substr(1, mes.length - 1)}</h4>
+            <Calendar
+              onChange={estFecha}
+              calendarType={'US'}
+              showNavigation={false}
+              formatShortWeekday={formatShortWeekday}
+              // Usar esta propiedad para cambiar la fecha dinámicamente
+              //activeStartDate={fecha}
+              //onClickDay={() => {
+              //}}
+              // maxDetail=" "
+              showNeighboringMonth={false}
+            />
+          </div>
         </div>
       </div>
     </div>
