@@ -9,110 +9,111 @@ export default function teachers({ data }) {
   return (
     <div>
       <Navbar />
-      <Carrusele
-      imgbanner1={data.fotobanner1.childImageSharp.fluid}
-      imgbanner2={data.fotobanner2.childImageSharp.fluid}
-      imgbanner3={data.fotobanner3.childImageSharp.fluid}
-      imgbanner4={data.fotobanner4.childImageSharp.fluid}
-      />
-      <div className="teacher-container">
-        <Card_Teacher
-          rutafoto={data.foto1.childImageSharp.fixed}
-          name="Juan Perez"
-          description="Docente del curso de Angular React Vuejs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, ab
+      <div className="cuerpo-pagina">
+        <Carrusele
+          imgbanner1={data.fotobanner1.childImageSharp.fluid}
+          imgbanner2={data.fotobanner2.childImageSharp.fluid}
+          imgbanner3={data.fotobanner3.childImageSharp.fluid}
+          imgbanner4={data.fotobanner4.childImageSharp.fluid}
+        />
+        <div className="teacher-container">
+          <Card_Teacher
+            rutafoto={data.foto1.childImageSharp.fixed}
+            name="Juan Perez"
+            description="Docente del curso de Angular React Vuejs Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, ab
         doloribus. Autem, quibusdam. Quibusdam, ducimus voluptate enim similique
         ipsa repudiandae placeat laudantium eligendi cupiditate id, doloribus
         vitae provident dignissimos obcaecati minus asperiores mollitia!
         Deserunt eveniet quae in velit quasi totam adipisci ducimus earum?
         Voluptatem quam ex, deserunt soluta a reprehenderit."
-        />
+          />
 
-        <Card_Teacher
-          rutafoto={data.foto2.childImageSharp.fixed}
-          name="Vickie Schamberger"
-          description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+          <Card_Teacher
+            rutafoto={data.foto2.childImageSharp.fixed}
+            name="Vickie Schamberger"
+            description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
           The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content 
           here, content here', making it look like readable English. It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
           distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-          seguidores="99"
-          
-          patreon="Vickie"
-          urlpatreon="/courses"
-          facebook="Vickie"
-          urlfacebook="/courses"
-          instagram="@Vickie"
-          urlinstagram="/courses"
+            seguidores="99"
 
-          hashta1="#Gatsby"
-          urlhashta1="/courses"
-          hashta2="#Angular"
-          urlhashta2="/courses"
-          hashta3="#React"
-          urlhashta3="/courses"
+            patreon="Vickie"
+            urlpatreon="/courses"
+            facebook="Vickie"
+            urlfacebook="/courses"
+            instagram="@Vickie"
+            urlinstagram="/courses"
 
-          urlconocercurso="/courses"
+            hashta1="#Gatsby"
+            urlhashta1="/courses"
+            hashta2="#Angular"
+            urlhashta2="/courses"
+            hashta3="#React"
+            urlhashta3="/courses"
 
-        />
+            urlconocercurso="/courses"
 
-<Card_Teacher
-          rutafoto={data.foto3.childImageSharp.fixed}
-          name="Jorge Stiedemann"
-          description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+          />
+
+          <Card_Teacher
+            rutafoto={data.foto3.childImageSharp.fixed}
+            name="Jorge Stiedemann"
+            description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
           The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content 
           here, content here', making it look like readable English. It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
           distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-          seguidores="99"
-          
-          patreon="Jorge"
-          urlpatreon="/courses"
-          facebook="Jorge"
-          urlfacebook="/courses"
-          instagram="@Jorge"
-          urlinstagram="/courses"
+            seguidores="99"
 
-          hashta1="#Gatsby"
-          urlhashta1="/courses"
-          hashta2="#Angular"
-          urlhashta2="/courses"
-          hashta3="#React"
-          urlhashta3="/courses"
+            patreon="Jorge"
+            urlpatreon="/courses"
+            facebook="Jorge"
+            urlfacebook="/courses"
+            instagram="@Jorge"
+            urlinstagram="/courses"
 
-          urlconocercurso="/courses"
+            hashta1="#Gatsby"
+            urlhashta1="/courses"
+            hashta2="#Angular"
+            urlhashta2="/courses"
+            hashta3="#React"
+            urlhashta3="/courses"
 
-        />
+            urlconocercurso="/courses"
 
-<Card_Teacher
-          rutafoto={data.foto4.childImageSharp.fixed}
-          name="Israel Wunsch"
-          description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+          />
+
+          <Card_Teacher
+            rutafoto={data.foto4.childImageSharp.fixed}
+            name="Israel Wunsch"
+            description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
           The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content 
           here, content here', making it look like readable English. It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
           distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
-          seguidores="99"
-          
-          patreon="Israel"
-          urlpatreon="/courses"
-          facebook="Israel"
-          urlfacebook="/courses"
-          instagram="@Israel"
-          urlinstagram="/courses"
+            seguidores="99"
 
-          hashta1="#Gatsby"
-          urlhashta1="/courses"
-          hashta2="#Angular"
-          urlhashta2="/courses"
-          hashta3="#React"
-          urlhashta3="/courses"
+            patreon="Israel"
+            urlpatreon="/courses"
+            facebook="Israel"
+            urlfacebook="/courses"
+            instagram="@Israel"
+            urlinstagram="/courses"
 
-          urlconocercurso="/courses"
+            hashta1="#Gatsby"
+            urlhashta1="/courses"
+            hashta2="#Angular"
+            urlhashta2="/courses"
+            hashta3="#React"
+            urlhashta3="/courses"
 
-        />
+            urlconocercurso="/courses"
+
+          />
 
 
-        {/* <Card_Teacher
+          {/* <Card_Teacher
           rutafoto={foto}
           name="Vickie Schamberger"
           description="Docente del curso de Angular React Vuejs"
@@ -137,8 +138,9 @@ export default function teachers({ data }) {
           name="Ron Waelchi"
           description="Docente del curso de Angular React Vuejs"
         /> */}
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   )
 }

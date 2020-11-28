@@ -7,8 +7,6 @@ import ParrafoTeacher from "../components/parrafo_teacher/parrafo_teacher"
 import foto from "../img/Profe3.jpg"
 import teacher from "../img/Profe1.jpg"
 
-import "./teacher_detail.css"
-
 export default function teacher_detail() {
   return (
     <>
