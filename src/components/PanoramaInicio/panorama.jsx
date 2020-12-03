@@ -1,16 +1,16 @@
 import React from "react"
+import Navbar from "../../components/navbar/navbar"
 import { Link } from "gatsby"
 import "./panorama.css"
 
 export default function Header() {
   return (
-    <div className="position-relative bg-img">
-      <div className="contenedor">
-        <div className="contenido-header">
-          <h1>El secreto para salir adelante <br /> es simplemente empezar.</h1>
-          <Link class="boton boton-header-curso" to="/courses">Cursos</Link>
-        </div>
+    <header className="bg-img">
+      <Navbar />
+      <div className="contenedor contenido-header">
+        <h1>El secreto para salir adelante <br /> es simplemente empezar.</h1>
+        <Link class="boton boton-header-curso" to="/courses">Cursos</Link>
       </div>
-    </div>
+    </header>
   )
 }
