@@ -13,33 +13,29 @@ export default function Estadisticas() {
       <div className="contenedor contenedor-85 contenido-estadisticas">
         <div className="descripcion">
           <h2>Conocimiento sin fronteras</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum cumque veritatis reiciendis quaerat saepe. Vitae ex, optio molestiae non sapiente aperiam quas qui doloremque at blanditiis voluptate dignissimos sequi nemo. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente quos est necessitatibus deserunt quod quaerat consequuntur laudantium beatae? Labore, assumenda? Molestias asperiores eaque, hic minus sint dolorum unde natus debitis!</p>
+          <p>Somos la primera academia de internet que une a profesores y alumnos voluntarios de la comunidad para organizar cursos enteros de programación. ¡Únete a la academia Temple y disfruta de las mejores clases en vivo!</p>
           <div className="iconos">
             <div className="icono">
-              <p className="numero-estadistica">540</p>
+              <p className="numero-estadistica">5000+</p>
               <div className="contenedor-img">
                 <div className="imagen-estadistica">
                   <img src={logoUsuario} alt="logo-alumnos" />
                 </div>
               </div>
-
-              <p className="texto-estadistica">Alumnos</p>
+              <p className="texto-estadistica">Miembros</p>
             </div>
             <div className="icono">
-              <p className="numero-estadistica">540</p>
+              <p className="numero-estadistica">22</p>
               <div className="contenedor-img">
-
                 <div className="imagen-estadistica">
                   <img src={logoLentes} alt="logo-alumnos" />
                 </div>
               </div>
-
               <p className="texto-estadistica">Docentes</p>
             </div>
             <div className="icono">
-              <p className="numero-estadistica">540</p>
+              <p className="numero-estadistica">27</p>
               <div className="contenedor-img">
-
                 <div className="imagen-estadistica">
                   <img src={logoLibros} alt="logo-curso" />
                 </div>

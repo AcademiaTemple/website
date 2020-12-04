@@ -63,11 +63,6 @@ h4 {
 
 /** Utilidades **/
 
-.seccion {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
 .fw-300 {
   font-weight: 300;
 }
@@ -92,6 +87,20 @@ h4 {
   border-radius: 50px;
 }
 
+.seccion {
+  padding: 1.6rem 0;
+  background: white;
+  color: black;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
 /*Inicio*/
 
 .btn-alternador-vista {
@@ -102,9 +111,17 @@ h4 {
   color: #0C2239;
 }
 
-.btn-alternador-vista span {
-  font-weight: 600;
-  font-size: 1.2rem;
+.btn-alternador-vista:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-alternador-vista img {
+  transition: all 500ms ease;
+}
+
+.rotacion-flechita {
+  transform: rotate(90deg);
 }
 
 .courses-container {
@@ -134,11 +151,6 @@ h4 {
   background-color: rgb(149, 151, 46);
   height: 100%;
   width: 100%;
-}
-
-.txt-dont-miss {
-  margin-top: 10rem;
-  margin-bottom: 5rem;
 }
 
 .cuerpo-pagina {

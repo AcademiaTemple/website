@@ -25,9 +25,9 @@ export default function Header() {
   ]
 
   return (
-    <div className="contenedor-nuestros-cursos">
+    <div className="seccion">
       <div className="contenedor contenedor-85">
-        <h2>¡Nuestros cursos en vivo!</h2>
+        <h2 className="titulo-seccion">¡Algunos de nuestros cursos!</h2>
         <div className="nuestros-cursos">
           {
             cursos.map(curso => (
