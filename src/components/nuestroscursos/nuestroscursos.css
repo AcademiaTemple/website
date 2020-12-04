@@ -1,6 +1,41 @@
-.our-courses-container {
-    height: 350px;
-    padding: 20px 30px;
-    background: red;
+.contenedor-nuestros-cursos {
+    padding: 1.6rem 0;
+    background: white;
+    color: black;
+}
+
+.contenedor-nuestros-cursos h2 {
+    font-size: 2rem;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.nuestros-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: linear-gradient(236.89deg, #FF171B -26.25%, #FF7779 252.45%);;
+}
+
+.curso-muestra {
+    display: flex;
+    flex-direction: column;
+    height: 12.5rem;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
     color: white;
+}
+
+.curso-muestra h3 {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.curso-muestra .contenedor-img {
+    width: 3.2rem;
+    margin-bottom: 1rem;
 }
