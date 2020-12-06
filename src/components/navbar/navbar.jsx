@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import './navbar.css';
 import Logo from '../../../static/logo.png';
 
-const Navbar = () => {
+const Navbar = ({ usarTransparencia }) => {
   const [scrolled, setScrolled] = React.useState(false);
 
   const handleScroll = () => {
@@ -15,12 +15,14 @@ const Navbar = () => {
       setScrolled(false);
     }
   }
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-  })
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  })
+  console.log(scrolled)
   let x = ['fixed-top'];
-  if (scrolled) {
+  if (!usarTransparencia || scrolled) {
     x.push('scrolled');
   }
 
