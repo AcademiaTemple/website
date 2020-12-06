@@ -1,14 +1,20 @@
-export const testimoniosList = [
-    { 
-        name: 'Carol Rodri G.', 
-        course: 'Curso de React', 
-        testimonio: 'Sin duda un curso que te lleva desde lo basico hasto lo avanzado. Me ayudo muchisimo...!', 
-        rating: 4 
+import AvatarTestimonio from '../../../static/person.svg'
+
+export const testimonios = [
+    {
+        id: 1,
+        nombre: 'Yayo Gonzales',
+        cargo: 'Alumno de inglés',
+        avatar: AvatarTestimonio,
+        contenido: 'Me enseñaron a hablar inglés desde conocimiento cero. Muchas gracias Academia Temple!',
+        numEstrellas: 4
     },
-    { 
-        name: 'Carol Rodri G.', 
-        course: 'Curso de React', 
-        testimonio: 'Sin duda un curso que te lleva desde lo basico hasto lo avanzado. Me ayudo muchisimo...!', 
-        rating: 3 
+    {
+        id: 2,
+        nombre: 'Mila Luna',
+        cargo: 'Alumna de Bootstrap',
+        avatar: AvatarTestimonio,
+        contenido: 'El mejor lugar para aprender a programar. Yo los amo con todo mi corazón',
+        numEstrellas: 5
     }
 ]

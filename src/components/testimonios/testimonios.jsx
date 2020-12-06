@@ -1,28 +1,8 @@
 import React from "react"
-import Card from "./card/card"
+import Card from "./card/Card"
 import "./testimonios.css"
-import AvatarTestimonio from '../../../static/person.svg'
 import ImgEstrella from '../../../static/estrella.svg'
-import { testimoniosList } from "./testimonios-data"
-
-const testimonios = [
-    {
-        id: 1,
-        nombre: 'Yayo Gonzales',
-        cargo: 'Alumno de inglés',
-        avatar: AvatarTestimonio,
-        contenido: 'Me enseñaron a hablar inglés desde conocimiento cero. Muchas gracias Academia Temple!',
-        numEstrellas: 4
-    },
-    {
-        id: 2,
-        nombre: 'Mila Luna',
-        cargo: 'Alumna de Bootstrap',
-        avatar: AvatarTestimonio,
-        contenido: 'El mejor lugar para aprender a programar. Yo los amo con todo mi corazón',
-        numEstrellas: 5
-    }
-]
+import { testimonios } from "./testimonios-data"
 
 export default function Testimonios() {
     //const list = testimoniosList  
