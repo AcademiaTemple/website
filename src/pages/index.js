@@ -24,7 +24,8 @@ export default function Home() {
       <NuestrosCursos />
       <div className="contenedor contenedor-85 d-flex justify-content-end pb-4">
         <a className="btn-alternador-vista" onClick={alternarVerTodo}>
-          Ver todo  <img src={imgFlechita} className={verTodo && 'rotacion-flechita'} alt="flechita"></img>
+          {verTodo ? 'Viendo todo ' : 'Ver todo '}
+          <img src={imgFlechita} className={verTodo && 'rotacion-flechita'} alt="flechita" />
         </a>
       </div>
       {
@@ -32,7 +33,6 @@ export default function Home() {
         <>
           <CalendarioCursos />
           <Testimonios />
-          <Link to="/about"> Entérate más sobre nosotros </Link>
           <Footer />
         </>
       }

@@ -13,7 +13,10 @@ export default function Estadisticas() {
       <div className="contenedor contenedor-85 contenido-estadisticas">
         <div className="descripcion">
           <h2>Conocimiento sin fronteras</h2>
-          <p>Somos la primera academia de internet que une a profesores y alumnos voluntarios de la comunidad para organizar cursos enteros de programación. ¡Únete a la academia Temple y disfruta de las mejores clases en vivo!</p>
+          <p>Somos la academia Temple, la primera gran escuela de programación en vivo formada por alumnos y profesores voluntarios de la comunidad informática</p>
+          <p>
+            ¡Incríbete a los cursos y talleres de tu interés, y entra a los grupos de enseñanza! ¡Por ahora es gratis!
+          </p>
           <div className="iconos">
             <div className="icono">
               <p className="numero-estadistica">5000+</p>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@100;300;400;600;700&family=Roboto:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Raleway:wght@100;300;400;600;700&family=Roboto:wght@500;600&display=swap');
 body {
   font-family: Raleway, Roboto, Arial, Helvetica, sans-serif !important;
   font-size: 1.6rem;
@@ -73,6 +73,10 @@ h4 {
 
 .d-block {
   display: block!important;
+}
+
+.r-180 {
+  transform: rotate(180deg);
 }
 
 .boton {
