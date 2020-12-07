@@ -1,25 +1,38 @@
 import React from "react"
-import Card from "./card/card"
+import Card from "./card/Card"
 import "./testimonios.css"
-import image from '../../../static/person.svg'
-import { testimoniosList } from "./testimonios-data"
+import ImgEstrella from '../../../static/estrella.svg'
+import { testimonios } from "./testimonios-data"
 
 export default function Testimonios() {
-    const list = testimoniosList
+    //const list = testimoniosList  
+
     return (
-        <div className="container container-testimonios">
-            <div className="row">
-                <div className="col">
-                    <p className="titulo"><span>Nuestros</span> alumnos y docentes</p>
+        <section className="seccion">
+            <div className="contenedor contenedor-85">
+                <h2 className="titulo-seccion">¿Qué opinan de nosotros?</h2>
+                <div className="testimonios">
+                    {
+                        testimonios.map(e => (
+                            <div key={e.id} className="testimonio">
+                                <img src={e.avatar} alt="img-testimonio" />
+                                <div className="datos-usuario-testimonio">
+                                    <h3>{e.nombre}</h3>
+                                    <p>{e.cargo}</p>
+                                </div>
+                                <p className="texto-testimonio">{e.contenido}</p>
+                                <div className="calificacion-testimonio">
+                                    {
+                                        Array(e.numEstrellas).fill().map(ee => (
+                                            <img src={ImgEstrella} alt="img-estrella" />
+                                        ))
+                                    }
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
-            <div className="row">
-                {list.map((item, index) => (
-                    <div className="col" key={index}>
-                        <Card image={image} name={item.name} course={item.course} testimonio={item.testimonio} rating={item.rating} />
-                    </div>
-                ))}
-            </div>
-        </div>
+        </section>
     )
 }

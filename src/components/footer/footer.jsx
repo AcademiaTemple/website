@@ -7,88 +7,57 @@ import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css"
 const Footer = () => {
   return (
     <footer className="">
-      <div className="contenedor">
-        <div className="row">
-          <div className="col-sm-4 ">
-            <div className="Info">
-              <div className="Logo">
-                <Link to="/">
-                  <img
-                    src={Logo}
-                    className="LogoFooter"
-                    alt="Logo"
-                    title="Logo"
-                  />
-                </Link>
-              </div>
-              <h3>Academia Temple</h3>
-              <div className="correo">
-                <p>Correo: </p>
-                <p>academia_temple@temple.com</p>
-              </div>
-            </div>
+      <div className="contenedor contenedor-footer">
+        <div className="logo-contacto">
+
+          <Link to="/">
+            <img
+              src={Logo}
+              className="logo-footer"
+              alt="logo"
+              title="logo"
+            />
+          </Link>
+
+          <div className="contacto-footer">
+            <h4>Academia Temple</h4>
+            <p>Correo</p>
+            <p>gricardov@gmail.com</p>
           </div>
-          <div className="col-sm-4 ">
-            <div className="RedesGrupos">
-              <div className="redes">
-                <h5>Redes</h5>
-                <div className="icons">
-                  <ul className="icons">
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-whatsapp"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-discord"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="grupos">
-                <h5>Grupos</h5>
-                <div className="icons">
-                  <ul className="icons">
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-telegram"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-discord"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i className="fab fa-whatsapp"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-4 ">
-            <div className="Terminos">
-              <p>
-                <a href="">Politicas de Privacidad</a>
-              </p>
-              <p>
-                <a href="">Creadores y Contribuidores</a>
-              </p>
-              <p>
-                <a href="">AcademiaTemple © 2020</a>
-              </p>
-            </div>
-          </div>
+
+        </div>
+        <div className="redes">
+          <p>Grupos</p>
+          <ul className="iconos-redes">
+            <li>
+              <a href="https://www.facebook.com/groups/academiatemple/">
+                <i className="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://discord.gg/4Hzhwfb8Pf">
+                <i className="fab fa-discord"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://t.me/joinchat/RjdRFRnHY0tR8vpkHxDNow">
+                <i className="fab fa-telegram"></i>
+              </a>
+            </li>
+          </ul>
+          <p>Redes</p>
+          <ul className="iconos-redes">
+            <li>
+              <a href="https://www.facebook.com/templealumnos/">
+                <i className="fab fa-facebook"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div className="administrativo">
+          <p>Política de privacidad</p>
+          <p>Creadores y contribuyentes</p>
+          <p>Temple ® - 2020</p>
         </div>
       </div>
     </footer>
