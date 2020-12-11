@@ -25,8 +25,8 @@ La marca Digital Ocean ha lanzado un concurso mundial en el que puedes participa
 &nbsp;
 ### 4. Cuando tengas tu repo descargado, agrega el upstream y el origin
 ``` 
-👉 git remote add origin https://github.com/AcademiaTemple/website
-👉 git remote add upstream https://github.com/tu-cuenta-de-github/website
+👉 git remote add origin https://github.com/tu-cuenta-de-github/website
+👉 git remote add upstream https://github.com/AcademiaTemple/website
 ```
 &nbsp;
 ### 5. **¡Listo!** Haz tus cambios localmente y hazle push a tu origin. Cuando te sientas listo, envíanos el pull request y te lo revisaremos con mucho amor.
