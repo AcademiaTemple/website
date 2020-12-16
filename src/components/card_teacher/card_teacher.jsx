@@ -16,7 +16,7 @@ export default function Card_Teacher(props) {
           </div>
 
           <div className="col-sm-8 col-md-8 col-lg-6">
-            <h2>
+            <h2 className="title-docente">
               <b>{props.name}</b>
             </h2>
             <p>{props.description}</p>
