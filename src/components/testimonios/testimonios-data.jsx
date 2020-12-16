@@ -16,5 +16,13 @@ export const testimonios = [
         avatar: AvatarTestimonio,
         contenido: 'El mejor lugar para aprender a programar. Yo los amo con todo mi corazón',
         numEstrellas: 5
+    },
+    {
+        id: 3,
+        nombre: 'Mila Luna',
+        cargo: 'Alumna de Bootstrap',
+        avatar: AvatarTestimonio,
+        contenido: 'El mejor lugar para aprender a programar. Yo los amo con todo mi corazón',
+        numEstrellas: 5
     }
 ]

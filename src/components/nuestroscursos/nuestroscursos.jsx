@@ -6,16 +6,19 @@ import logoGit from '../../../public/git.png';
 
 const cursos = [
   {
+    id: 1,
     fondo: 'linear-gradient(236.89deg, #FF171B -26.25%, #FF7779 252.45%)',
     nombre: 'Angular',
     icono: logoAngular
   },
   {
+    id: 2,
     fondo: 'linear-gradient(232.22deg, #048EF2 26.28%, #40FFFF 127.09%)',
     nombre: 'React',
     icono: logoReact
   },
   {
+    id: 3,
     fondo: 'linear-gradient(232.22deg, #F23D04 26.28%, #FFD540 127.09%)',
     nombre: 'Git',
     icono: logoGit
@@ -31,10 +34,8 @@ export default function Header() {
         <div className="nuestros-cursos">
           {
             cursos.map(curso => (
-              <div className="curso-muestra" style={{ background: curso.fondo }}>
-                <div className="contenedor-img">
-                  <img src={curso.icono} alt="logo-curso" />
-                </div>
+              <div key={curso.id} className="curso-muestra" style={{ background: curso.fondo }}>
+                <img src={curso.icono} alt="logo-curso" />
                 <h3>{curso.nombre}</h3>
               </div>
             ))

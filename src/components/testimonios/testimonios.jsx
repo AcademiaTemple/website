@@ -23,7 +23,7 @@ export default function Testimonios() {
                                 <p className="texto-testimonio">{e.contenido}</p>
                                 <div className="calificacion-testimonio">
                                     {
-                                        Array(e.numEstrellas).fill().map(ee => (
+                                        Array(e.numEstrellas).fill().map(_ => (
                                             <img src={ImgEstrella} alt="img-estrella" />
                                         ))
                                     }
