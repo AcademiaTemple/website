@@ -5,6 +5,11 @@
     text-align: center;
 }
 
+.contenido-estadisticas {
+    display: flex;
+    justify-content: space-between;
+}
+
 .contenido-estadisticas h2 {
     font-size: 2rem;
     font-weight: 600;
@@ -19,8 +24,13 @@
 }
 
 .contenido-estadisticas>div {
-    flex-basis: calc(50%);
-    position: relative;
+    flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+    .contenido-estadisticas>div {
+        flex-basis: calc(50% - 3rem);
+    }    
 }
 
 .linea-vertical {
@@ -73,6 +83,12 @@
 
 .contenedor-estadisticas .mision-vision {
     display: none;
+}
+
+@media (min-width: 768px) {
+    .contenedor-estadisticas .mision-vision {
+        display: block;
+    }
 }
 
 .contenedor-estadisticas .contenedor-mision-vision>div {

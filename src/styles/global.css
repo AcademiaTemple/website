@@ -113,6 +113,7 @@ h4 {
   font-weight: 500;
   font-size: 1.2rem;
   color: #0C2239;
+  cursor: pointer;
 }
 
 .btn-alternador-vista:hover {
