@@ -30,17 +30,17 @@ const Footer = () => {
           <p>Grupos</p>
           <ul className="iconos-redes">
             <li>
-              <a href="https://www.facebook.com/groups/academiatemple/">
+              <a target="_blank" href="https://www.facebook.com/groups/academiatemple/">
                 <i className="fab fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a href="https://discord.gg/4Hzhwfb8Pf">
+              <a target="_blank" href="https://discord.gg/4Hzhwfb8Pf">
                 <i className="fab fa-discord"></i>
               </a>
             </li>
             <li>
-              <a href="https://t.me/joinchat/RjdRFRnHY0tR8vpkHxDNow">
+              <a target="_blank" href="https://t.me/joinchat/RjdRFRnHY0tR8vpkHxDNow">
                 <i className="fab fa-telegram"></i>
               </a>
             </li>
@@ -48,7 +48,7 @@ const Footer = () => {
           <p>Redes</p>
           <ul className="iconos-redes">
             <li>
-              <a href="https://www.facebook.com/templealumnos/">
+              <a target="_blank" href="https://www.facebook.com/templealumnos/">
                 <i className="fab fa-facebook"></i>
               </a>
             </li>

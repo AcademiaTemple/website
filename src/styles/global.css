@@ -132,7 +132,7 @@ h4 {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #0C2239;
   cursor: pointer;
 }
@@ -144,6 +144,8 @@ h4 {
 
 .btn-alternador-vista img {
   transition: all 500ms ease;
+  width: 1rem;
+  height: 1.4rem;
 }
 
 .rotacion-flechita {
