@@ -1,0 +1,16 @@
+.card {
+    border: none !important;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto;
+}
+
+.card-title {
+    font-weight: 700;
+}
+
+.rounded-img-course {
+    border-radius: .5rem !important;
+}
