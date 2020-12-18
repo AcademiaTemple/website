@@ -34,7 +34,7 @@
     font-family: "Raleway", sans-serif;
     color: white;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     letter-spacing: 1px;
     margin-bottom: 2rem;
 }
@@ -49,6 +49,7 @@
     border: 2px solid #4DC6F3;
     color: #4DC6F3;
     text-decoration: none;
+    font-size: 2rem;
     transition: all 300ms ease;
 }
 

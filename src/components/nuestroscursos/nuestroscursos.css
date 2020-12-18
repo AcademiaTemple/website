@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: linear-gradient(236.89deg, #FF171B -26.25%, #FF7779 252.45%);;
+    background: linear-gradient(236.89deg, #FF171B -26.25%, #FF7779 252.45%);
+    ;
 }
 
 .curso-muestra {
@@ -13,6 +14,19 @@
     align-items: center;
     justify-content: center;
     color: white;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.curso-muestra:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+    .curso-muestra {
+        flex-basis: 33.3%;
+        height: 20rem;
+    }
 }
 
 .curso-muestra h3 {
@@ -21,7 +35,20 @@
     font-size: 1.8rem;
 }
 
-.curso-muestra .contenedor-img {
+@media (min-width: 768px) {
+    .curso-muestra h3 {
+        font-size: 2.2rem;
+    }    
+}
+
+.curso-muestra img {
     width: 3.2rem;
     margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .curso-muestra img {
+        width: 7rem;
+        margin-bottom: 2rem;
+    }
 }

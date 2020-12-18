@@ -1,10 +1,8 @@
 import React from "react"
 
-
 export default function Contact() {
   return (
     <div>
-    
       <form className="contact-form">
         <div>
           <label htmlFor="name">Name</label>

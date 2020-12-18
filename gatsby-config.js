@@ -10,12 +10,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Raleway\:400`,
-          `Roboto\:400`,
-          `Montserrat\:400`
-        ]
-      }
+        fonts: [`Raleway\:400`, `Roboto\:400`, `Montserrat\:400`],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
