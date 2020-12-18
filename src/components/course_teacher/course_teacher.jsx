@@ -1,6 +1,5 @@
 import React from "react"
 import "./course_teacher.css"
-import { Link } from "gatsby"
 
 export default function Card_Teacher(props) {
   const starPorcentaje = (props.star / 5) * 100
