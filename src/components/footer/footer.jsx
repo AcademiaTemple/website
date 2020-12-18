@@ -2,7 +2,6 @@ import React, { useEffect } from "react"
 import { Link } from "gatsby"
 import "./footer.css"
 import Logo from "../../../static/logo.png"
-import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css"
 
 const Footer = () => {
   return (
