@@ -5,6 +5,12 @@
     text-align: center;
 }
 
+@media (min-width: 768px) {
+    .contenedor-estadisticas {
+        padding: 5rem 0;
+    }
+}
+
 .contenido-estadisticas {
     display: flex;
     justify-content: space-between;
@@ -16,11 +22,25 @@
     margin-bottom: 2.2rem;
 }
 
+@media (min-width: 768px) {
+    .contenido-estadisticas h2 {
+        font-size: 2.2rem;
+        text-align: left;
+    }
+}
+
 .contenido-estadisticas p {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     text-align: left;
+}
+
+@media (min-width: 768px) {
+    .contenedor-estadisticas p {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
 }
 
 .contenido-estadisticas>div {
@@ -30,7 +50,14 @@
 @media (min-width: 768px) {
     .contenido-estadisticas>div {
         flex-basis: calc(50% - 3rem);
-    }    
+    }
+}
+
+@media (min-width: 768px) {
+    .descripcion {
+        padding-right: 4rem;
+        border-right: 3px solid rgba(255, 255, 255, 0.19);
+    }
 }
 
 .linea-vertical {
@@ -43,17 +70,40 @@
 
 .contenido-estadisticas .iconos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-estadisticas .iconos {
+        justify-content: space-between;
+    }
+}
+
+.contenido-estadisticas .iconos img {
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .contenedor-estadisticas .iconos {
+        margin-top: 5rem;
+    }
 }
 
 .contenido-estadisticas .iconos .contenedor-img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: .6rem;
+    padding: 1rem;
     border: .2rem solid white;
     border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .contenido-estadisticas .iconos .contenedor-img {
+        padding: 2rem;
+    }
 }
 
 .contenido-estadisticas .iconos .icono {
@@ -69,6 +119,13 @@
     margin-bottom: .5rem;
 }
 
+@media (min-width: 768px) {
+    .contenedor-estadisticas .numero-estadistica {
+        font-size: 2.7rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
 .contenedor-estadisticas .texto-estadistica {
     font-size: 1.4rem;
     font-family: Raleway;
@@ -76,31 +133,51 @@
     margin: .5rem;
 }
 
+@media (min-width: 768px) {
+    .contenedor-estadisticas .texto-estadistica {
+        font-size: 1.8rem;
+        margin-top: 1.5rem;
+    }
+}
+
 .contenedor-estadisticas .imagen-estadistica {
     border-radius: 50%;
-    width: 1.3rem;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+@media (min-width: 768px) {
+    .contenedor-estadisticas .imagen-estadistica {
+        width: 3rem;
+        height: 3rem;
+    }
 }
 
 .contenedor-estadisticas .mision-vision {
     display: none;
 }
 
+@media (min-width: 992px) {
+    .contenedor-estadisticas .mision-vision {
+        padding-left: 5rem;
+    }
+}
+
+.contenedor-estadisticas .mision-vision img {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
 @media (min-width: 768px) {
     .contenedor-estadisticas .mision-vision {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
 .contenedor-estadisticas .contenedor-mision-vision>div {
     display: flex;
     align-items: flex-end;
-    margin-bottom: 3rem;
-}
-
-.contenedor-estadisticas .contenedor-mision-vision>div h2 {
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 2.8rem;
-    margin: 0;
-    margin-left: 2rem;
+    margin-bottom: 2rem;
 }
