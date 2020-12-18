@@ -11,20 +11,37 @@ import imgFlechita from '../../static/flechita.png'
 
 export default function Home() {
   const [verTodo, estVerTodo] = useState(false);
+  const [ancho, estAncho] = useState(window.innerWidth);
 
   const alternarVerTodo = () => {
     estVerTodo(!verTodo);
   }
+
+  const actAncho = () => {
+    estAncho(window.innerWidth);
+  }
+
+  useEffect(() => {
+
+    if (ancho < 768) {
+      estVerTodo(false);
+    } else {
+      estVerTodo(true);
+    }
+
+    window.addEventListener('resize', actAncho);
+    return () => window.removeEventListener('resize', actAncho);
+  }, [ancho]);
 
   return (
     <div>
       <PanoramaInicio />
       <Estadisticas />
       <NuestrosCursos />
-      <div className="contenedor contenedor-85 d-flex justify-content-end pb-4">
+      <div className="contenedor contenedor-85 d-flex justify-content-end pb-4 d-md-none">
         <a className="btn-alternador-vista" onClick={alternarVerTodo}>
           {verTodo ? 'Viendo todo ' : 'Ver todo '}
-          <img src={imgFlechita} className={verTodo && 'rotacion-flechita'} alt="flechita" />
+          <img src={ImgFlechita} className={verTodo && 'rotacion-flechita'} alt="flechita" />
         </a>
       </div>
       {

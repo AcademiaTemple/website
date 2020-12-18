@@ -7,6 +7,7 @@
 }
 
 
+/*h2 {
 .title-docente {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem !important;
@@ -15,8 +16,8 @@
 p {
   text-align: justify;
   font-family: "Roboto", sans-serif;
-  font-size: 1.7rem;
-}
+  size: 18px;
+}*/
 
 .rounded {
   border-radius: 2rem !important;
@@ -117,13 +118,13 @@ p {
     display: none;
   }
 
-  p {
+  /*p {
     width: 100%;
     height: 9.8rem;
     overflow: hidden;
     white-space: break-word;
     text-overflow: ellipsis ellipsis;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 575px) {

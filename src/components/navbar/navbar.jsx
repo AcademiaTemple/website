@@ -19,8 +19,7 @@ const Navbar = ({ usarTransparencia }) => {
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  })
-  console.log(scrolled)
+  }, [scrolled])
   let x = ['fixed-top'];
   if (!usarTransparencia || scrolled) {
     x.push('scrolled');

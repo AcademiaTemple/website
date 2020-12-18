@@ -9,7 +9,7 @@ export default function PanoramaInicio() {
       <Navbar usarTransparencia={true} />
       <div className="contenedor contenido-header">
         <h1>El secreto para salir adelante <br /> es simplemente empezar</h1>
-        <Link class="boton boton-header-curso" to="/courses">Cursos</Link>
+        <Link className="boton boton-header-curso" to="/courses">Cursos</Link>
       </div>
     </header>
   )

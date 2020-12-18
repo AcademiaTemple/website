@@ -1,6 +1,5 @@
 footer {
   padding: 2rem;
-  min-height: 20vh;
   background-color: #0c2239;
   color: white;
 }
@@ -9,6 +8,12 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .contenedor-footer>div {
+    flex-basis: calc(33.3% - 1rem);
+  }
 }
 
 .logo-footer {
@@ -20,10 +25,24 @@ footer {
   flex-basis: calc(50% - 1rem);
 }
 
+@media (min-width: 768px) {
+  .redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }  
+}
+
 .redes p, .administrativo p {
   font-family: Montserrat;
   font-weight: 400;
   font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .redes p, .administrativo p {
+    font-size: 1.3rem;
+  }  
 }
 
 .logo-contacto {
@@ -31,6 +50,13 @@ footer {
   justify-content: space-between;
   margin-bottom: 2rem;
   flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  .logo-contacto {
+    margin: 0;
+    display: block;
+  }
 }
 
 .contacto-footer {
@@ -46,11 +72,24 @@ footer {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 768px) {
+  .contacto-footer h4 {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+  }  
+}
+
 .contacto-footer p {
   margin: 0;
   font-family: Roboto;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .contacto-footer p {
+    font-size: 1.3rem;
+  }  
 }
 
 .contacto-footer p:last-of-type {
@@ -82,6 +121,12 @@ footer {
 
 .iconos-redes .fab {
   font-size: 2.2rem;
+}
+
+@media (min-width: 768px) {
+  .iconos-redes .fab {
+    font-size: 3rem;
+  }  
 }
 
 .administrativo {

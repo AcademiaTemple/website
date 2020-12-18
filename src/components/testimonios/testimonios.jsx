@@ -4,7 +4,6 @@ import ImgEstrella from '../../../static/estrella.svg'
 import { testimonios } from "./testimonios-data"
 
 export default function Testimonios() {
-    //const list = testimoniosList  
 
     return (
         <section className="seccion">
@@ -22,8 +21,8 @@ export default function Testimonios() {
                                 <p className="texto-testimonio">{e.contenido}</p>
                                 <div className="calificacion-testimonio">
                                     {
-                                        Array(e.numEstrellas).fill().map(ee => (
-                                            <img src={ImgEstrella} alt="img-estrella" />
+                                        Array(e.numEstrellas).fill().map((e, i) => (
+                                            <img key={i} src={ImgEstrella} alt="img-estrella" />
                                         ))
                                     }
                                 </div>

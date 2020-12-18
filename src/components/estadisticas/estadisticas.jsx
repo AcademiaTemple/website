@@ -12,7 +12,7 @@ export default function Estadisticas() {
     <section className="contenedor-estadisticas">
       <div className="contenedor contenedor-85 contenido-estadisticas">
         <div className="descripcion">
-          <h2>Conocimiento sin fronteras</h2>
+          <h2 className="fw-600">Conocimiento sin fronteras</h2>
           <p>Somos la academia Temple, la primera gran escuela de programación en vivo formada por alumnos y profesores voluntarios de la comunidad informática</p>
           <p>
             ¡Incríbete a los cursos y talleres de tu interés, y entra a los grupos de enseñanza! ¡Por ahora es gratis!
@@ -51,17 +51,17 @@ export default function Estadisticas() {
           <div className="contenedor-mision-vision">
             <div>
               <img src={logoCheck} alt="logo-check" />
-              <h2>Misión</h2>
+              <h2 className="fw-700 m-0 ml-4">Misión</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis accusamus illum dolores nobis expedita dicta dolor dolore repellendus praesentium velit corporis voluptatum ipsam inventore, aperiam sint exercitationem. Ea, fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi blanditiis accusamus illum dolores nobis expedita dicta dolor dolore repellendus praesentium velit corporis voluptatum ipsam inventore.</p>
           </div>
 
           <div className="contenedor-mision-vision">
             <div>
               <img src={logoEstadistica} alt="logo-estadistica" />
-              <h2>Visión</h2>
+              <h2 className="fw-700 m-0 ml-4">Visión</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio modi itaque nihil doloribus officiis commodi provident harum nobis eaque, ratione consequuntur sed cum, id optio adipisci repellat labore cumque.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique distinctio modi itaque nihil doloribus officiis commodi provident harum nobis eaque, ratione consequuntur.</p>
           </div>
         </div>
       </div>
