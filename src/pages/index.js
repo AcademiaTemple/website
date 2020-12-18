@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 // Componentes
 import CalendarioCursos from "../components/calendario/CalendarioCursos"
-import PanoramaInicio from "../components/panoramainicio/panorama"
+import PanoramaInicio from "../components/PanoramaInicio/panorama"
 import Estadisticas from '../components/estadisticas/estadisticas'
 import NuestrosCursos from '../components/nuestroscursos/nuestroscursos'
 import Testimonios from "../components/testimonios/testimonios"
