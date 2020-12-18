@@ -25,7 +25,7 @@ export default prop => {
   const paises = GetCountry()
   const mostrar = () =>
     paises.map(pais => {
-      if (pais.name == prop.country)
+      if (pais.name === prop.country)
         return (
           <div>
             <p>

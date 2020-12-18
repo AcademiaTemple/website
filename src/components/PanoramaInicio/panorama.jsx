@@ -1,9 +1,9 @@
 import React from "react"
-import Navbar from "../navbar/Navbar"
+import Navbar from "../navbar/navbar"
 import { Link } from "gatsby"
 import "./panorama.css"
 
-export default function Header() {
+export default function PanoramaInicio() {
   return (
     <header className="bg-img">
       <Navbar usarTransparencia={true} />

@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 
 // Componentes
 import CalendarioCursos from "../components/calendario/CalendarioCursos"
