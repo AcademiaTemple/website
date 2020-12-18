@@ -1,8 +1,8 @@
 import React from "react"
 import "./nuestroscursos.css"
-import logoAngular from "../../../public/angular.png"
-import logoReact from "../../../public/react.png"
-import logoGit from "../../../public/git.png"
+import logoAngular from "../../../static/angular.png"
+import logoReact from "../../../static/react.png"
+import logoGit from "../../../static/git.png"
 
 const cursos = [
   {

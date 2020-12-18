@@ -1,20 +1,16 @@
-.card-docente {
-  padding: 2rem;
-  margin-bottom: 4rem;
-  background: #ffffff;
-  box-sizing: border-box;
-  border-radius: 2.1rem !important;
+.card-blue {
+    background: #FFFFFF;
+    border: 2px solid #4DC6F3 !important;
+    box-sizing: border-box;
+    border-radius: 35px !important;
 }
 
-
 /*h2 {
-.title-docente {
   font-family: "Montserrat", sans-serif;
-  font-size: 3rem !important;
+  size: 24px;
 }
 
 p {
-  text-align: justify;
   font-family: "Roboto", sans-serif;
   size: 18px;
 }*/
@@ -41,28 +37,27 @@ p {
   text-align: center;
   font-family: "Roboto", cursive;
   font-weight: 1000 !important;
-  font-size: 5rem;
+  font-size: 80px;
 }
 .Likes > i {
-  font-size: 5rem;
+  font-size: 30px;
 }
 
 .RedesSociales {
-  font-size: 2rem;
   margin: auto;
 }
 
 .redesDocentes > p {
   color: rgb(35, 156, 244);
   margin-left: 10%;
+  font-size: 12px;
 }
 
 .redesDocentes > i {
-  margin-right: 0.3rem;
+  margin-right: 5px;
 }
 
 .Etiquetas {
-  font-size: 1.7rem;
   color: #4dc6f3;
   text-align: center;
   white-space: middle;
@@ -82,7 +77,6 @@ p {
 }
 
 .Conocer {
-  font-size: 2rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   color: white;
@@ -97,7 +91,7 @@ p {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
   background-color: black;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .Conocer:hover {

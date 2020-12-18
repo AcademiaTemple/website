@@ -14,9 +14,7 @@ html {
   /** Reset para REMS - 62.5% = 10px de 16px **/
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
@@ -83,7 +81,7 @@ h4 {
 }
 
 .d-block {
-  display: block !important;
+  display: block!important;
 }
 
 .r-180 {
@@ -166,7 +164,7 @@ h4 {
 }
 
 .teacher-container {
-  padding: 15rem;
+  padding: 10%;
   justify-content: space-between;
   padding-bottom: 20%;
   height: 100%;
@@ -199,37 +197,3 @@ h4 {
 /*Docentes*/
 
 /*Perfil*/
-@media only screen and (min-width: 0px) {
-  .teacher-container {
-    padding: 1rem;
-  }
-}
-
-@media only screen and (min-width: 576px) {
-  .contenedor {
-    max-width: 540px;
-  }
-  .teacher-container {
-    padding: 1rem;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .contenedor {
-    max-width: 720px;
-  }
-
-  .teacher-container {
-    padding: 1rem;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .contenedor {
-    max-width: 960px;
-  }
-
-  .teacher-container {
-    padding: 15rem;
-  }
-}
