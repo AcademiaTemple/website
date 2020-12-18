@@ -16,6 +16,8 @@ const Navbar = ({ usarTransparencia }) => {
   }
 
   useEffect(() => {
+
+    
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [scrolled])
