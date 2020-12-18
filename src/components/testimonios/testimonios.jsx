@@ -1,5 +1,4 @@
 import React from "react"
-import Card from "./card/Card"
 import "./testimonios.css"
 import ImgEstrella from '../../../static/estrella.svg'
 import { testimonios } from "./testimonios-data"

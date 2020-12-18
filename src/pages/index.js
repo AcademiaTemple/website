@@ -7,7 +7,7 @@ import PanoramaInicio from "../components/panoramaInicio/panorama"
 import Estadisticas from '../components/estadisticas/estadisticas'
 import NuestrosCursos from '../components/nuestroscursos/nuestroscursos'
 import Testimonios from "../components/testimonios/testimonios"
-import Footer from "../components/footer/Footer"
+import Footer from "../components/footer/footer"
 import imgFlechita from '../../static/flechita.png'
 
 export default function Home() {
