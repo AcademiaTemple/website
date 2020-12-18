@@ -1,13 +1,12 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 
 // Componentes
 import CalendarioCursos from "../components/calendario/CalendarioCursos"
-import PanoramaInicio from "../components/panoramaInicio/Panorama"
-import Estadisticas from '../components/estadisticas/Estadisticas'
-import NuestrosCursos from '../components/nuestroscursos/Nuestroscursos'
-import Testimonios from "../components/testimonios/Testimonios"
-import Footer from "../components/footer/Footer"
+import PanoramaInicio from "../components/PanoramaInicio/panorama"
+import Estadisticas from '../components/estadisticas/estadisticas'
+import NuestrosCursos from '../components/nuestroscursos/nuestroscursos'
+import Testimonios from "../components/testimonios/testimonios"
+import Footer from "../components/footer/footer"
 import imgFlechita from '../../static/flechita.png'
 
 export default function Home() {
