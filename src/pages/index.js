@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 // Componentes
 import CalendarioCursos from "../components/calendario/CalendarioCursos"
-import PanoramaInicio from "../components/panoramaInicio/panorama"
+import PanoramaInicio from "../components/panoramainicio/panorama"
 import Estadisticas from '../components/estadisticas/estadisticas'
 import NuestrosCursos from '../components/nuestroscursos/nuestroscursos'
 import Testimonios from "../components/testimonios/testimonios"
