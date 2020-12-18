@@ -1,5 +1,6 @@
 import React from 'react'
-import './calendar.css'
+import './calendario.css'
+
 const CalendarCourses = (props) => {
     const { name, time, url } = props
     return (

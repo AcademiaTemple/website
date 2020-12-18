@@ -1,6 +1,27 @@
-.our-courses-container {
-    height: 350px;
-    padding: 20px 30px;
-    background: red;
+.nuestros-cursos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: linear-gradient(236.89deg, #FF171B -26.25%, #FF7779 252.45%);;
+}
+
+.curso-muestra {
+    display: flex;
+    flex-direction: column;
+    height: 12.5rem;
+    flex-basis: 100%;
+    align-items: center;
+    justify-content: center;
     color: white;
+}
+
+.curso-muestra h3 {
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.curso-muestra .contenedor-img {
+    width: 3.2rem;
+    margin-bottom: 1rem;
 }

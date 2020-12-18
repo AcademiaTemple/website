@@ -1,7 +1,8 @@
 .contenedor-estadisticas {
-    padding: 5rem 0 6rem 0;
-    background: linear-gradient(90deg, #4DC8F3, #0C2239);
+    padding: 1.6rem 0;
+    background: linear-gradient(92.48deg, #4DC8F3 -22.1%, #0C2239 119.58%);
     color: white;
+    text-align: center;
 }
 
 .contenido-estadisticas {
@@ -10,20 +11,26 @@
 }
 
 .contenido-estadisticas h2 {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 1.8rem;
+    margin-bottom: 2.2rem;
 }
 
 .contenido-estadisticas p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
+    text-align: left;
 }
 
 .contenido-estadisticas>div {
-    flex-basis: calc(50%);
-    position: relative;
+    flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+    .contenido-estadisticas>div {
+        flex-basis: calc(50% - 3rem);
+    }    
 }
 
 .linea-vertical {
@@ -34,18 +41,19 @@
     top: 0px;
 }
 
-.contenido-estadisticas .descripcion {
-    padding-right: 8rem;
-}
-
-.contenido-estadisticas .mision-vision {
-    padding-left: 12.8rem;
-}
-
 .contenido-estadisticas .iconos {
     display: flex;
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 2rem;
+}
+
+.contenido-estadisticas .iconos .contenedor-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .6rem;
+    border: .2rem solid white;
+    border-radius: 50%;
 }
 
 .contenido-estadisticas .iconos .icono {
@@ -55,33 +63,32 @@
 }
 
 .contenedor-estadisticas .numero-estadistica {
-    font-size: 3.6rem;
+    font-size: 1.7rem;
     font-family: Raleway;
     font-weight: 700;
+    margin-bottom: .5rem;
 }
 
 .contenedor-estadisticas .texto-estadistica {
-    font-size: 2.4rem;
+    font-size: 1.4rem;
     font-family: Raleway;
     font-weight: 700;
-    margin-top: 1.5rem;
+    margin: .5rem;
 }
 
 .contenedor-estadisticas .imagen-estadistica {
     border-radius: 50%;
-    width: 10rem;
-    height: 10rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid white;
-    background: transparent;
+    width: 1.3rem;
 }
 
 .contenedor-estadisticas .mision-vision {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .contenedor-estadisticas .mision-vision {
+        display: block;
+    }
 }
 
 .contenedor-estadisticas .contenedor-mision-vision>div {

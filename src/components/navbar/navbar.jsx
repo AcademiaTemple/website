@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import './navbar.css';
 import Logo from '../../../static/logo.png';
 
-const Navbar = () => {
+const Navbar = ({ usarTransparencia }) => {
   const [scrolled, setScrolled] = React.useState(false);
 
   const handleScroll = () => {
@@ -15,19 +15,21 @@ const Navbar = () => {
       setScrolled(false);
     }
   }
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-  })
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  })
+  console.log(scrolled)
   let x = ['fixed-top'];
-  if (scrolled) {
+  if (!usarTransparencia || scrolled) {
     x.push('scrolled');
   }
 
   return (
     <div className={x.join(" ")}>
       <div className="contenedor contenedor-navbar">
-        <nav className="navbar navbar-expand-xl navbar-dark">
+        <nav className="navbar navbar-expand-md navbar-dark">
           <Link className="navbar-brand logo" to="/"><img src={Logo} alt="Logo" title="Logo" /></Link>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span className="navbar-toggler-icon"></span>

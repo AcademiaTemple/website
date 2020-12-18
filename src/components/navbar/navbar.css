@@ -1,31 +1,39 @@
 .contenedor-navbar {
-    padding: 2.2rem 0;
+    padding: 1rem 0;
 }
 
 .navbar {
     transition: all .2s ease;
-    padding: 5rem 0;
 }
 
-.navbar-dark .navbar-toggler-icon{
+.navbar-dark .navbar-toggler-icon {
     padding: 2rem !important;
-  }
- 
+}
+
 .scrolled {
     background-color: #0C2239;
 }
 
-.logo,
-.logo img {
+.logo, .logo img {
     box-sizing: content-box;
-    width: 6rem;
+    width: 5rem;
 }
 
-@media only screen and (min-width: 576px) {
-    .logo,
-    .logo img {
+@media (min-width: 768px) {
+    .logo, .logo img {
         box-sizing: content-box;
         width: 8rem;
+    }
+}
+
+#collapsibleNavbar {
+    background: #0C2239;
+    padding: 2.5rem 0 1rem 0;
+}
+
+@media (min-width: 768px) {
+    #collapsibleNavbar {
+        background: transparent;
     }
 }
 
@@ -41,7 +49,7 @@
     font-style: normal;
     font-weight: bold;
     font-size: 2.2rem;
-    line-height: 2.8rem;
+    line-height: 1rem;
     color: #FFFFFF;
     margin-right: 2rem;
 }
@@ -57,5 +65,5 @@
 #collapsibleNavbar ul li a {
     text-decoration: none;
     color: inherit;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
 }

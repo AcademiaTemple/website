@@ -2,44 +2,66 @@
     background: linear-gradient(rgba(12, 34, 57, 0.7), rgba(12, 34, 57, 0.6)), url("../../img/banner_main.jpg");
     background-position: center center;
     background-size: cover;
-    height: 100vh;
-    min-height: 80rem;
+    height: 35rem;
+}
+
+@media (min-width: 768px) {
+    .bg-img {
+        height: 100vh;
+    }
 }
 
 .contenido-header {
-    padding-top: 40rem;
-    text-align: right;
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 8rem;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        padding-bottom: 0;
+        align-items: flex-end;
+        text-align: right;
+        justify-content: center;
+    }
 }
 
 .contenido-header h1 {
     font-family: "Raleway", sans-serif;
     color: white;
     font-weight: 700;
-    font-size: 4.8rem;
-    letter-spacing: 2px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .contenido-header h1 {
+        font-size: 3.6rem;
+    }
 }
 
 .boton-header-curso {
-    border: 5px solid #4DC6F3;
-    padding: 0.2rem 10rem;
-    font-size: 3.2rem;
+    border: 2px solid #4DC6F3;
     color: #4DC6F3;
     text-decoration: none;
     transition: all 300ms ease;
 }
 
+@media (min-width: 768px) {
+    .boton-header-curso {
+        border: 3px solid #4DC6F3;
+        font-size: 2.3rem;
+        padding: 0.3rem 8rem;
+    }
+}
+
 .boton-header-curso:hover {
     text-decoration: none;
     color: white;
-    border: 5px solid white;
-}
-
-@media only screen and (max-width: 600px) {
-    .boton-header-curso {
-        padding: 0.6rem 8rem;
-    }
+    border-color: white;
 }

@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@100;300;400;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Raleway:wght@100;300;400;600;700&family=Roboto:wght@500;600&display=swap');
 
 body {
-  font-family: Raleway, Roboto, Arial, Helvetica, sans-serif;
+  font-family: Raleway, Roboto, Arial, Helvetica, sans-serif !important;
   font-size: 1.6rem;
   line-height: 2;
 }
@@ -30,36 +30,41 @@ img {
 
 .contenedor {
   max-width: 144rem !important;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
-a {
+.contenedor-85 {
+  width: 85%;
+}
+
+a, a:hover, a:focus {
   text-decoration: none;
 }
 
+@media (min-width: 576px) {
+  .contenedor {
+    width: 85%;
+  }
+}
+
 h1 {
-  font-size: 3.8rem !important;
+  font-size: 3.8rem;
 }
 
 h2 {
-  font-size: 3.4rem !important;
+  font-size: 3.4rem;
 }
 
 h3 {
-  font-size: 3rem !important;
+  font-size: 3rem;
 }
 
 h4 {
-  font-size: 2.6rem !important;
+  font-size: 2.6rem;
 }
 
 /** Utilidades **/
-
-.seccion {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
 
 .fw-300 {
   font-weight: 300;
@@ -73,19 +78,59 @@ h4 {
   display: block !important;
 }
 
+.r-180 {
+  transform: rotate(180deg);
+}
+
 .boton {
   color: white;
   font-weight: 700;
   text-decoration: none;
-  font-size: 1.8rem;
-  padding: 1rem 3rem;
-  margin-top: 3rem;
+  font-size: 1.5rem;
+  padding: 0.4rem 4rem;
+  margin-top: 1rem;
   display: inline-block;
   text-align: center;
   border-radius: 50px;
 }
 
+.seccion {
+  padding: 1.6rem 0;
+  background: white;
+  color: black;
+}
+
+.titulo-seccion {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
 /*Inicio*/
+
+.btn-alternador-vista {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #0C2239;
+  cursor: pointer;
+}
+
+.btn-alternador-vista:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn-alternador-vista img {
+  transition: all 500ms ease;
+}
+
+.rotacion-flechita {
+  transform: rotate(90deg);
+}
 
 .courses-container {
   display: flex;
@@ -114,23 +159,6 @@ h4 {
   background-color: rgb(149, 151, 46);
   height: 100%;
   width: 100%;
-}
-
-.txt-subtitle {
-  color: #000;
-  font-weight: 700;
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-.txt-our-courses {
-  margin-top: 3rem;
-  margin-bottom: 6.5rem;
-}
-
-.txt-dont-miss {
-  margin-top: 10rem;
-  margin-bottom: 5rem;
 }
 
 .cuerpo-pagina {
