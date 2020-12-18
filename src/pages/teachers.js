@@ -37,19 +37,23 @@ export default function teachers({ data }) {
           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
           distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             seguidores="99"
+
             patreon="Vickie"
             urlpatreon="/courses"
             facebook="Vickie"
             urlfacebook="/courses"
             instagram="@Vickie"
             urlinstagram="/courses"
+
             hashta1="#Gatsby"
             urlhashta1="/courses"
             hashta2="#Angular"
             urlhashta2="/courses"
             hashta3="#React"
             urlhashta3="/courses"
+
             urlconocercurso="/courses"
+
           />
 
           <Card_Teacher
@@ -61,19 +65,23 @@ export default function teachers({ data }) {
           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
           distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             seguidores="99"
+
             patreon="Jorge"
             urlpatreon="/courses"
             facebook="Jorge"
             urlfacebook="/courses"
             instagram="@Jorge"
             urlinstagram="/courses"
+
             hashta1="#Gatsby"
             urlhashta1="/courses"
             hashta2="#Angular"
             urlhashta2="/courses"
             hashta3="#React"
             urlhashta3="/courses"
+
             urlconocercurso="/courses"
+
           />
 
           <Card_Teacher
@@ -85,20 +93,25 @@ export default function teachers({ data }) {
           readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
           distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             seguidores="99"
+
             patreon="Israel"
             urlpatreon="/courses"
             facebook="Israel"
             urlfacebook="/courses"
             instagram="@Israel"
             urlinstagram="/courses"
+
             hashta1="#Gatsby"
             urlhashta1="/courses"
             hashta2="#Angular"
             urlhashta2="/courses"
             hashta3="#React"
             urlhashta3="/courses"
+
             urlconocercurso="/courses"
+
           />
+
 
           {/* <Card_Teacher
           rutafoto={foto}
@@ -136,28 +149,28 @@ export const query = graphql`
   query {
     fotobanner1: file(relativePath: { eq: "Banner1.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth:1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     fotobanner2: file(relativePath: { eq: "Banner2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth:1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     fotobanner3: file(relativePath: { eq: "Banner3.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth:1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     fotobanner4: file(relativePath: { eq: "Banner4.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth:1000) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -1,9 +1,9 @@
 import React from "react"
-import logoUsuario from "../../../public/usuario.png"
-import logoLentes from "../../../public/lentes.png"
-import logoLibros from "../../../public/libro.png"
-import logoCheck from "../../../public/check.png"
-import logoEstadistica from "../../../public/estadistica.png"
+import logoUsuario from "../../../static/usuario.png"
+import logoLentes from "../../../static/lentes.png"
+import logoLibros from "../../../static/libro.png"
+import logoCheck from "../../../static/check.png"
+import logoEstadistica from "../../../static/estadistica.png"
 
 import "./estadisticas.css"
 
