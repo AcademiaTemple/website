@@ -2,7 +2,7 @@ import React from "react"
 import Carrusele from "../components/carrusel/carrusele"
 import Card_Teacher from "../components/card_teacher/card_teacher"
 import Navbar from "../components/navbar/navbar"
-import Footer from "../components/footer/Footer"
+import Footer from "../components/footer/footer"
 import { graphql } from "gatsby"
 
 export default function teachers({ data }) {
