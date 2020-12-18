@@ -8,14 +8,8 @@ const Footer = () => {
     <footer className="">
       <div className="contenedor contenedor-footer">
         <div className="logo-contacto">
-
           <Link to="/">
-            <img
-              src={Logo}
-              className="logo-footer"
-              alt="logo"
-              title="logo"
-            />
+            <img src={Logo} className="logo-footer" alt="logo" title="logo" />
           </Link>
 
           <div className="contacto-footer">
@@ -23,13 +17,15 @@ const Footer = () => {
             <p>Correo</p>
             <p>gricardov@gmail.com</p>
           </div>
-
         </div>
         <div className="redes">
           <p>Grupos</p>
           <ul className="iconos-redes">
             <li>
-              <a target="_blank" href="https://www.facebook.com/groups/academiatemple/">
+              <a
+                target="_blank"
+                href="https://www.facebook.com/groups/academiatemple/"
+              >
                 <i className="fab fa-facebook"></i>
               </a>
             </li>
@@ -39,7 +35,10 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://t.me/joinchat/RjdRFRnHY0tR8vpkHxDNow">
+              <a
+                target="_blank"
+                href="https://t.me/joinchat/RjdRFRnHY0tR8vpkHxDNow"
+              >
                 <i className="fab fa-telegram"></i>
               </a>
             </li>
