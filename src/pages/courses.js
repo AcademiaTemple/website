@@ -5,21 +5,24 @@ import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
 
 export default function Courses() {
-    return ( 
+    return (
         <div>
             <Navbar />
-            <div className = "cuerpo-pagina" >
-            <div className = "row" > 
-                {
-                    cursos.map((props, index) => ( 
-                        <div key = { index } className = "col-12 col-sm-3" >
-                            <Card {...props }/> 
-                        </div>
-                    ))
-                } 
-            </div> 
+            <div className="contenedor cuerpo-pagina">
+                <div className="centrar-texto">
+                    <h2 className="titulo-seccion">Inscríbete y disfruta nuestros cursos</h2>
+                </div>
+                <div className="row" >
+                    {
+                        cursos.map((props, index) => (
+                            <div key={index} className="col-12 col-md-6 col-lg-4" >
+                                <Card {...props} />
+                            </div>
+                        ))
+                    }
+                </div>
+            </div>
             <Footer />
-            </div> 
         </div>
     )
 }
