@@ -1,5 +1,12 @@
 .card {
     border: none !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px 0#cfe6ff , 0 6px 20px 0#b3d7fc;
 }
 
 .card-img-top {
@@ -8,7 +15,12 @@
 }
 
 .card-title {
+    font-size: 1.8rem;
     font-weight: 700;
+}
+
+.card-text {
+    font-size: 1.5rem;
 }
 
 .rounded-img-course {
