@@ -1,3 +1,7 @@
+.card {
+  margin-bottom: 3rem;
+}
+
 .card-blue {
     background: #FFFFFF;
     border: 2px solid #4DC6F3 !important;
