@@ -112,12 +112,12 @@ h4 {
 }
 
 .cuerpo-pagina {
-  padding-top: 12rem;
+  padding-top: 86px;
 }
 
 @media (min-width: 768px) {
   .cuerpo-pagina {
-    padding-top: 15rem;
+    padding-top: 116px;
   }
 }
 

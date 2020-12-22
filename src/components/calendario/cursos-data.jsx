@@ -73,7 +73,7 @@ export const cursos = [
   },
   {
     nombre: "Fundamentos de UI/UX",
-    dias: ["VI"],
+    dias: ["LU", "VI"],
     hInicioFin: ["21:00", "22:30"],
     fInicioFin: ["13/12/2020", "01/06/2021"],
     urlInscripcion:

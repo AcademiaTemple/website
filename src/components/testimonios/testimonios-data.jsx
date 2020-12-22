@@ -21,11 +21,11 @@ export const testimonios = [
   },
   {
     id: 3,
-    nombre: "Mila Luna",
-    cargo: "Alumna de Bootstrap",
+    nombre: "Alyah Frutencio",
+    cargo: "Alumna de arte",
     avatar: AvatarTestimonio,
     contenido:
-      "El mejor lugar para aprender a programar. Yo los amo con todo mi corazón",
+      "Aprendí bastante. Es la mejor academia online del mundo!",
     numEstrellas: 5,
   },
 ]

@@ -9,9 +9,7 @@ export default function Courses() {
         <div>
             <Navbar />
             <div className="contenedor cuerpo-pagina">
-                <div className="centrar-texto">
-                    <h2 className="titulo-seccion">Inscríbete y disfruta nuestros cursos</h2>
-                </div>
+                <h2 className="titulo-seccion mt-5">Inscríbete y disfruta nuestros cursos</h2>
                 <div className="row" >
                     {
                         cursos.map((props, index) => (

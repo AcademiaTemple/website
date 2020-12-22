@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Link } from "gatsby"
-import "./navbar.css"
 import Logo from "../../../static/logo.png"
+import "./navbar.css"
 
 const Navbar = ({ usarTransparencia }) => {
   const [scrolled, setScrolled] = React.useState(false)
@@ -16,8 +16,6 @@ const Navbar = ({ usarTransparencia }) => {
   }
 
   useEffect(() => {
-
-    
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [scrolled])

@@ -16,7 +16,7 @@ export default function teachers({ data }) {
           imgbanner3={data.fotobanner3.childImageSharp.fluid}
           imgbanner4={data.fotobanner4.childImageSharp.fluid}
         />
-        <div className="teacher-container">
+        <div className="contenedor my-5">
           <Card_Teacher
             rutafoto={data.foto1.childImageSharp.fixed}
             name="Juan Perez"
