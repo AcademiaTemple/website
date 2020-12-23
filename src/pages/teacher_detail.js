@@ -4,8 +4,8 @@ import Footer from "../components/footer/footer"
 import CourseTeacher from "../components/course_teacher/course_teacher"
 import EncabezadoTeacher from "../components/tarjeta_teacher/tarjeta_teacher"
 import ParrafoTeacher from "../components/parrafo_teacher/parrafo_teacher"
-import foto from "../img/Profe3.jpg"
-import teacher from "../img/Profe1.jpg"
+import foto from "../../static/carrusel/Profe3.jpg"
+import teacher from "../../static/carrusel/Profe1.jpg"
 
 export default function teacher_detail() {
   return (
