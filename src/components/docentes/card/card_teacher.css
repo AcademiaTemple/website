@@ -1,0 +1,172 @@
+.card {
+  margin-bottom: 3rem;
+}
+
+.avatar-card-teacher {
+  width: 13rem;
+  height: 13rem;
+}
+
+.card-teacher {
+  padding: 2rem;
+  border-radius: 30px;
+}
+
+@media (min-width: 768px) {
+  .card-teacher {
+    background: #FFFFFF;
+    border: 1px solid rgba(117, 117, 117, 0.6);
+    padding: 3.8rem 0;
+    box-sizing: border-box;
+  }
+}
+
+.card-teacher h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .card-teacher h2 {
+    text-align: left;
+  }
+  
+}
+
+.card-teacher p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-teacher .contenedor-img {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.rounded {
+  border-radius: 2rem !important;
+  margin-bottom: 2%;
+}
+
+.center {
+  text-align: center;
+}
+
+.rounded-circle {
+  border: 2px solid rgb(71, 178, 255) !important;
+}
+
+.likes {
+  margin: auto;
+  text-align: center;
+}
+
+.likes>h6 {
+  text-align: center;
+  font-family: "Roboto", cursive;
+  font-weight: 1000 !important;
+  font-size: 9rem;
+}
+
+.likes>i {
+  font-size: 4rem;
+}
+
+.redes-sociales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.redes-docentes>.red-social {
+  display: inline;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.redes-docentes>.red-usuario {
+  color: rgb(35, 156, 244);
+  font-size: 1.4rem;
+}
+
+.redes-docentes>i {
+  margin-right: .5rem;
+  font-size: 1.5rem;
+}
+
+.btn-toolbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+  .btn-toolbar {
+    justify-content: flex-start;
+  }
+}
+
+.btn-toolbar .etiquetas {
+  color: #4dc6f3;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid#4dc6f3;
+  border-radius: 30px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .btn-toolbar .etiquetas {
+    margin-right: 2rem;
+  }
+  .btn-toolbar .etiquetas:last-of-type {
+    margin-right: 0;
+  }  
+}
+
+.btn-toolbar .etiquetas:hover {
+  background-color: #4dc6f3;
+  border: 2px solid #4dc6f3;
+  color: white;
+}
+
+.btn-conocer {
+  display: block;
+  margin: 0;
+  color: white;
+  text-align: center;
+  border: none;
+  user-select: none;
+  border-radius: 20px;
+  padding: .8rem 0;
+  background-color: #071727;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .btn-conocer {
+    display: inline-block;
+    padding: .8rem 3rem;
+
+  }  
+}
+
+.btn-conocer:hover {
+  background-color: #4dc6f3;
+  color: white;
+}
+
+.link {
+  display: block;
+}
+
