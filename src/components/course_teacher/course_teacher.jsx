@@ -8,23 +8,23 @@ export default function Card_Teacher(props) {
   return (
     <div className="card rounded-course">
       <div className="row no-gutters">
-        <div className="col-sm-2 icono-course">
+        <div className="col-4 col-sm-4 col-lg-2 icono-course">
           <i className="fab fa-github"></i>
         </div>
-        <div className="col-sm-7 info-course">
+        <div className="col-8 col-sm-8 col-lg-7 info-course">
           <h2>
             <b>{props.name}</b>
           </h2>
           <p>{props.description}</p>
 
           <div className="row">
-            <div className="col-sm-3 center mb-2">
+            <div className="order-3 order-sm-1 col-sm-3 center mb-2">
               <button type="button" className="ingresar-course">
                 Ingresar
               </button>
             </div>
-            <div className="col-sm-3"></div>
-            <div className="col-sm-6 center mb-2">
+            <div className="order-2 order-sm-2 col-sm-3"></div>
+            <div className="order-1 order-sm-3 col-sm-6 center mb-2">
               <div className="stars-outer">
                 <i className="far fa-star"></i>
                 <i className="far fa-star"></i>
@@ -45,8 +45,8 @@ export default function Card_Teacher(props) {
             </div>
           </div>
         </div>
-        <div className="col-sm-1"></div>
-        <div className="col-sm-2">
+        <div className="col-lg-1"></div>
+        <div className="col-lg-2">
           <img
             src={props.rutafoto}
             className="card-img rounded-img"
