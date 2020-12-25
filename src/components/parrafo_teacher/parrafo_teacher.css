@@ -10,7 +10,7 @@
   font-weight: 900;
 }
 
-.container-info > p {
+.container-info > div > p {
   text-align: justify;
 }
 
@@ -24,6 +24,45 @@
 }
 
 .titulo-docente {
+  font-size: 3rem;
   display: inline;
   position: relative;
+}
+
+.text-content {
+  font-size: 1.5rem;
+}
+
+.Detalle {
+  display: inline;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 990px) {
+  .Detalle {
+    visibility: visible;
+  }
+
+  .Detalle > a > i {
+    color: black;
+    margin-left: 2rem;
+  }
+
+  .Ocultar {
+    display: none;
+  }
+
+  .Semi-Oculto {
+    width: 100%;
+    height: 9.1rem;
+    overflow: hidden;
+    white-space: break-word;
+    text-overflow: ellipsis ellipsis;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .titulo-docente {
+    font-size: 2rem;
+  }
 }

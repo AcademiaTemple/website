@@ -63,7 +63,7 @@ export default function teacher_detail() {
             semper ligula vitae porta hendrerit."
         />
 
-        <ParrafoTeacher titulo="Mis cursos" />
+        <ParrafoTeacher titulo="Mis cursos" parrafo={null} />
         <CourseTeacher
           star={4.5}
           rutafoto={foto}
