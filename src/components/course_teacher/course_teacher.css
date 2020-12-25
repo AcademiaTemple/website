@@ -107,6 +107,7 @@
 @media only screen and (max-width: 574px) {
   .info-course > h2 {
     text-align: center;
+    font-size: 2rem;
   }
   .rounded-course {
     border-radius: 2rem !important;
