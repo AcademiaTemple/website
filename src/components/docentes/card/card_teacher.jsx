@@ -27,8 +27,8 @@ export default function Card_Teacher(props) {
               #html
                 </button>
           </div>
-          <Link className="boton btn-conocer" to="/teacher_detail">
-            Conocer cursos
+          <Link className="boton btn-principal" to="/teacher_detail">
+            Ver perfil
           </Link>
         </div>
         <div className="col-12 col-md-2 d-none d-md-block likes">

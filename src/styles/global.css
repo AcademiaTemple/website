@@ -97,10 +97,40 @@ h4 {
   display: inline-block;
   text-align: center;
   border-radius: 50px;
+  transition: all 100ms ease-in-out;
+}
+
+.btn-principal {
+  display: block;
+  margin: 0;
+  color: white;
+  text-align: center;
+  border: none;
+  user-select: none;
+  border-radius: 20px;
+  padding: .8rem 0;
+  background-color: #071727;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .btn-principal {
+    display: inline-block;
+    padding: .8rem 3rem;
+  }
+}
+
+.btn-principal:hover {
+  background-color: #4dc6f3;
+  color: white;
+}
+
+.boton:hover {
+  text-decoration: none;
 }
 
 .seccion {
-  padding: 1.6rem 0;
+  padding: 2rem 0;
   background: white;
   color: black;
 }
@@ -122,11 +152,11 @@ h4 {
 }
 
 .titulo-seccion {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #000;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -199,6 +229,69 @@ h4 {
   height: 100%;
   width: 100%;
   padding-bottom: 5%;
+}
+
+/*Curso*/
+
+.titulo-curso {
+  font-size: 2.8rem;
+}
+
+.contenedor-controles-curso {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-controles-curso {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.descripcion-curso {
+  font-size: 1.6rem;
+  color: #646d7b;
+  margin-bottom: 2rem;
+}
+
+.btn-rep-curso {
+  font-size: 1.6rem;
+  padding: 0.8rem 4rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .btn-rep-curso {
+    margin: 0;
+  }
+}
+
+.contenedor-data-cursos {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+  .contenedor-data-cursos {
+    flex-basis: 50%;
+    justify-content: flex-end;
+  }
+}
+
+.contenedor-data-cursos>div {
+  font-size: 1.8rem;
+  color: #3a4048;
+  font-family: Roboto;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.contenedor-data-cursos>div i {
+  font-size: 1.8rem;
+  color: #071727;
 }
 
 /*Docentes*/

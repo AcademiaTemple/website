@@ -9,8 +9,8 @@ export default function Courses() {
         <div>
             <Navbar />
             <div className="contenedor cuerpo-pagina">
-                <h2 className="titulo-seccion mt-5">Inscríbete y disfruta nuestros cursos</h2>
-                <div className="row" >
+                <h2 className="titulo-seccion mt-5">Ingresa a nuestros cursos</h2>
+                <div className="row">
                     {
                         cursos.map((props, index) => (
                             <div key={index} className="col-12 col-md-6 col-lg-4" >
