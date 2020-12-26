@@ -1,5 +1,5 @@
 .bg-img {
-    background: linear-gradient(rgba(12, 34, 57, 0.7), rgba(12, 34, 57, 0.6)), url("../../img/banner_main.jpg");
+    background: linear-gradient(rgba(12, 34, 57, 0.7), rgba(12, 34, 57, 0.6)), url("../../../static/carrusel/banner_main.jpg");
     background-position: center center;
     background-size: cover;
     height: 35rem;

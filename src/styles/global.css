@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Raleway:wght@100;300;400;600;700&family=Roboto:wght@500;600&display=swap');
-
 body {
   font-family: Raleway, Roboto, Arial, Helvetica, sans-serif !important;
   font-size: 1.6rem;
@@ -112,6 +111,16 @@ h4 {
   }
 }
 
+.cuerpo-pagina {
+  padding-top: 86px;
+}
+
+@media (min-width: 768px) {
+  .cuerpo-pagina {
+    padding-top: 116px;
+  }
+}
+
 .titulo-seccion {
   font-size: 2rem;
   color: #000;
@@ -182,9 +191,7 @@ h4 {
   width: 100%;
 }
 
-.cuerpo-pagina {
-  padding-top: 15rem;
-}
+/*Cursos*/
 
 .course-teacher {
   padding: 10%;
