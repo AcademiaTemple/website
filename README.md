@@ -42,7 +42,7 @@ Gracias a estas maravillosas personas la página de la Academia Temple es posibl
 
 Este proyecto sigue la especificación [all-contributors](https://github.com/all-contributors/all-contributors). Contribuciones de todo tipo son bienvenidas!
 
-### Quiero entrar a nuestros cursos de programación en vivo
+### Quiero entrar a sus cursos de programación en vivo
 
 Únete aquí: [Grupo de la Academia Temple](https://www.facebook.com/groups/academiatemple)
 
