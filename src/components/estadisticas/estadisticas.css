@@ -17,21 +17,21 @@
 }
 
 .contenido-estadisticas h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     margin-bottom: 2.2rem;
 }
 
 @media (min-width: 768px) {
     .contenido-estadisticas h2 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
         text-align: left;
     }
 }
 
 .contenido-estadisticas p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 400;
     text-align: left;
 }
@@ -54,7 +54,7 @@
 }
 
 @media (min-width: 768px) {
-    .descripcion {
+    .contenido-estadisticas .descripcion {
         padding-right: 4rem;
         border-right: 3px solid rgba(255, 255, 255, 0.19);
     }

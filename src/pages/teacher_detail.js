@@ -9,10 +9,10 @@ import teacher from "../../static/carrusel/Profe1.jpg"
 
 export default function teacher_detail() {
   return (
-    <>
+    <div>
       <Navbar />
-      <div className="course-teacher">
-        <EncabezadoTeacher
+      <div className="contenedor cuerpo-pagina">
+        {/*<EncabezadoTeacher
           country="Mexico"
           perfil={teacher}
           name="Juan Perez"
@@ -21,7 +21,7 @@ export default function teacher_detail() {
             "Deseñador de interfaces",
             "Desarrollador Backend",
           ]}
-        />
+        />*/}
         <ParrafoTeacher
           titulo="Un poco de mi historia"
           parrafo="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ex
@@ -99,6 +99,6 @@ export default function teacher_detail() {
         />
       </div>
       <Footer />
-    </>
+    </div>
   )
 }

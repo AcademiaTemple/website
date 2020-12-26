@@ -38,12 +38,17 @@ export default function Home() {
     return () => window.removeEventListener('resize', actAncho);
   }, [ancho]);
 
+  let clasesContenedorVerTodo = 'contenedor contenedor-85 d-flex justify-content-end d-md-none';
+  if (!verTodo) {
+    clasesContenedorVerTodo += ' pb-4';
+  }
+
   return (
     <div>
       <PanoramaInicio />
       <Estadisticas />
       <NuestrosCursos />
-      <div className="contenedor contenedor-85 d-flex justify-content-end pb-4 d-md-none">
+      <div className={clasesContenedorVerTodo}>
         <a className="btn-alternador-vista" onClick={alternarVerTodo}>
           {verTodo ? 'Viendo todo ' : 'Ver todo '}
           <img src={ImgFlechita} className={verTodo && 'rotacion-flechita'} alt="flechita" />

@@ -31,8 +31,7 @@
 @media (min-width: 768px) {
   .card-teacher h2 {
     text-align: left;
-  }
-  
+  }  
 }
 
 .card-teacher p {
@@ -137,32 +136,6 @@
 .btn-toolbar .etiquetas:hover {
   background-color: #4dc6f3;
   border: 2px solid #4dc6f3;
-  color: white;
-}
-
-.btn-conocer {
-  display: block;
-  margin: 0;
-  color: white;
-  text-align: center;
-  border: none;
-  user-select: none;
-  border-radius: 20px;
-  padding: .8rem 0;
-  background-color: #071727;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-@media (min-width: 768px) {
-  .btn-conocer {
-    display: inline-block;
-    padding: .8rem 3rem;
-
-  }  
-}
-
-.btn-conocer:hover {
-  background-color: #4dc6f3;
   color: white;
 }
 
