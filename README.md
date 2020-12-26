@@ -10,7 +10,7 @@ https://academiatemple.netlify.app/
 
 ### ¿Cómo puedo ser colaborador?
 
-Puedes seguir las indicaciones en el archivo [CONTRIBUTING](CONTRIBURING.md)
+Puedes seguir las indicaciones en el archivo [CONTRIBUTING](CONTRIBUTING.md)
 
 ### Quiero entrar a sus cursos de programación en vivo
 
