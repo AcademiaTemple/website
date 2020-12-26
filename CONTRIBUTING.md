@@ -15,7 +15,7 @@
 ```
 👉 git remote add upstream https://github.com/AcademiaTemple/website
 ```
-> Esto con el objetivo que tu repositorio local se conecte con el repositorio original para poder optener los últimos cambios.
+> Esto con el objetivo que tu repositorio local se conecte con el repositorio original para poder obtener los últimos cambios.
 
 1. **¡Listo!** Haz tus cambios localmente y hazle push a tu repositorio. Cuando te sientas listo, envíanos el pull request y te lo revisaremos con mucho amor.
 
