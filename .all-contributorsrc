@@ -1,0 +1,82 @@
+{
+  "projectName": "website",
+  "projectOwner": "AcademiaTemple",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "israteneda",
+      "name": "Israel Teneda",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20668624?v=4",
+      "profile": "https://github.com/israteneda",
+      "contributions": [
+        "code",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Gricardov",
+      "name": "Gricardov",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20552678?v=4",
+      "profile": "https://github.com/Gricardov",
+      "contributions": [
+        "code",
+        "maintenance",
+        "ideas"
+      ]
+    },
+    {
+      "login": "anarquia17",
+      "name": "anarquia17",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/35509562?v=4",
+      "profile": "https://github.com/anarquia17",
+      "contributions": [
+        "code",
+        "ideas"
+      ]
+    },
+    {
+      "login": "Grover101",
+      "name": "Grover Limachi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/52429739?v=4",
+      "profile": "https://github.com/Grover101",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "edavot",
+      "name": "Enrique David Avalos Ortega",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7560812?v=4",
+      "profile": "https://github.com/edavot",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Babel78",
+      "name": "Axel Campos Salazar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/29358791?v=4",
+      "profile": "https://github.com/Babel78",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "GerardoQ-prog",
+      "name": "Gerardo Quispe Chavez",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/56100630?v=4",
+      "profile": "https://github.com/GerardoQ-prog",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
