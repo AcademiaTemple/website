@@ -28,10 +28,10 @@ export default prop => {
       if (pais.name === prop.country)
         return (
           <div>
-            <p>
+            <h3>
               {pais.name}
               <img className="flag" src={pais.flag} alt="" width="30px" />
-            </p>
+            </h3>
           </div>
         )
     })
@@ -39,7 +39,10 @@ export default prop => {
   return (
     <div className="perfil-Docente">
       <div className="row">
-        <div className="col-sm-2 center-perfil-docente" width="20%">
+        <div
+          className="col-4 col-sm-6 col-lg-3 center-perfil-docente"
+          width="20%"
+        >
           <img
             src={prop.perfil}
             className="rounded-circle"
@@ -47,9 +50,8 @@ export default prop => {
             height="200"
           />
         </div>
-
-        <div className="col-sm-6">
-          <h2>
+        <div className="col-8 col-sm-6 col-lg-4">
+          <h2 className="name-teacher">
             <b>{prop.name}</b>
           </h2>
           {mostrar()}
@@ -66,32 +68,34 @@ export default prop => {
                 #html
               </button>
             </div>
-            <div className="btn-group" role="group" aria-label="Third group">
+            <div className="btn-group mr-2">
               <button type="button" className="Etiquetas">
                 #html
               </button>
             </div>
           </div>
         </div>
-        <div className="col-sm-2 Likes">
-          <h6>98</h6>
-          <i className="fas fa-heart"></i>
-        </div>
-        <div className="col-sm-2 RedesSociales">
-          <div className="redesDocentes">
-            <i className="fab fa-patreon"></i>
-            Patreon
-            <p className="userRedes">@hola</p>
+        <div className="col-lg-5 row Redes-Perfil">
+          <div className="col-6 col-lg-6 Like-Perfil">
+            <h6>98</h6>
+            <i className="fas fa-heart"></i>
           </div>
-          <div className="redesDocentes">
-            <i className="fab fa-facebook-square"></i>
-            Facebook
-            <p className="userRedes">@hola</p>
-          </div>
-          <div className="redesDocentes">
-            <i className="fab fa-instagram"></i>
-            Instagram
-            <p className="userRedes">@hola</p>
+          <div className="col-6 col-lg-6 RedesSociales-Perfil">
+            <div className="redesDocentes">
+              <i className="fab fa-patreon"></i>
+              Patreon
+              <p className="userRedes">@hola</p>
+            </div>
+            <div className="redesDocentes">
+              <i className="fab fa-facebook-square"></i>
+              Facebook
+              <p className="userRedes">@hola</p>
+            </div>
+            <div className="redesDocentes">
+              <i className="fab fa-instagram"></i>
+              Instagram
+              <p className="userRedes">@hola</p>
+            </div>
           </div>
         </div>
       </div>
