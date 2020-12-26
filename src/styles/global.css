@@ -31,18 +31,21 @@ img {
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  .contenedor {
+    width: 85%;
+  }
+  .contenedor-60 {
+    width: 60%;
+  }
+}
+
 .contenedor-85 {
   width: 85%;
 }
 
 a, a:hover, a:focus {
   text-decoration: none;
-}
-
-@media (min-width: 576px) {
-  .contenedor {
-    width: 85%;
-  }
 }
 
 h1 {
@@ -250,8 +253,22 @@ h4 {
 }
 
 .descripcion-curso {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.6rem;
+  font-weight: 400;
   color: #646d7b;
+  margin-bottom: 1.8rem;
+}
+
+.descripcion-curso:last-of-type {
+  margin-bottom: 2.5rem;
+}
+
+.subtitulo-descripcion-curso {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #3a4048;
   margin-bottom: 2rem;
 }
 
@@ -261,6 +278,49 @@ h4 {
   border-radius: 30px;
   text-transform: uppercase;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-curso-profesor {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .contenedor-curso-profesor .contenedor-img {
+    margin-right: 2rem;
+  }
+}
+
+.contenedor-curso-profesor .contenedor-img img {
+  border-radius: 50px;
+  width: 70px;
+  height: 70px;
+  display: block;
+  margin: 0 auto 1.4rem auto;
+}
+
+@media (min-width: 768px) {
+  .contenedor-curso-profesor .contenedor-descripcion {
+    flex: 1
+  }
+}
+
+.contenedor-curso-profesor h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 600;
+  color: #0C2239;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contenedor-curso-profesor h4 {
+    text-align: left;
+  }
 }
 
 @media (min-width: 768px) {
@@ -294,6 +354,43 @@ h4 {
   color: #071727;
 }
 
-/*Docentes*/
+/*Reproductor curso*/
 
-/*Perfil*/
+.contenedor-reproductor {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .contenedor-reproductor {
+    display: flex;
+  }
+}
+
+.contenedor-reproductor .contenedor-video {
+  position: fixed;
+  height: 300px;
+  width: 100%;
+  background: #000;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .contenedor-reproductor .contenedor-video {
+    position: relative;
+    min-height: 90vh;
+    flex-basis: 75%;
+  }
+}
+
+.contenedor-reproductor .contenedor-acordeon {
+  padding-top: 300px;
+}
+
+@media (min-width: 768px) {
+  .contenedor-reproductor .contenedor-acordeon {
+    padding: 0;
+    flex-basis: 25%;
+    max-height: 90vh;
+    overflow: auto;
+  }
+}
