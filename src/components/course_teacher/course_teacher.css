@@ -1,19 +1,25 @@
 .rounded-course {
   border-radius: 2rem !important;
   margin-bottom: 3%;
+  box-shadow: 0 3px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-course:hover {
+  box-shadow: 0 3px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .rounded-img {
   border-radius: 0 2rem 2rem 0 !important;
 }
 
-.col-sm-2 > .fa-github {
-  font-size: 10rem;
+.col-sm-4 > .fa-github {
+  font-size: 16rem;
 }
 
 .icono-course {
   text-align: center;
   margin: auto;
+  padding: 0.5rem;
 }
 
 .info-course {
@@ -23,10 +29,24 @@
 }
 
 .info-course > h2 {
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.info-course > p {
+  text-align: justify;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-course > h2 {
+  font-size: 3rem;
   font-family: "Roboto", sans-serif;
 }
 
 .ingresar-course {
+  font-size: 1.5rem;
   color: black;
   text-align: center;
   white-space: middle;
@@ -51,7 +71,7 @@
 
 .stars-outer {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #ffd600;
   margin: auto;
   display: inline-block;
@@ -69,15 +89,32 @@
   width: 0%;
 }
 
-@media only screen and (max-width: 574px) {
+@media only screen and (max-width: 1000px) {
   .rounded-img {
-    border-radius: 0 0rem 2rem 2rem !important;
+    display: none;
+    border-radius: 0 0 2rem 2rem !important;
   }
+
+  .info-course > p {
+    width: 100%;
+    height: 9.1rem;
+    overflow: hidden;
+    white-space: break-word;
+    text-overflow: ellipsis ellipsis;
+  }
+}
+
+@media only screen and (max-width: 574px) {
   .info-course > h2 {
     text-align: center;
+    font-size: 2rem;
   }
   .rounded-course {
     border-radius: 2rem !important;
     margin-bottom: 12%;
+  }
+
+  .col-sm-4 > .fa-github {
+    font-size: 10rem;
   }
 }
