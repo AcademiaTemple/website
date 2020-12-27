@@ -1,6 +1,6 @@
 # Academia Temple 👨‍🏫👩‍🏫
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/15685988-a20d-41b2-a61d-d927d3a616b5/deploy-status)](https://app.netlify.com/sites/academiatemple/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/09ba99a2-c9d5-4e26-ba79-a4f299beb472/deploy-status)](https://app.netlify.com/sites/academiatemple/deploys)
 
 Bienvenido a la academia Temple, el primer espacio en internet donde el aprendizaje ocurre de manera **colaborativa** entre profesores y alumnos que aman **aportar a la comunidad.**
 
