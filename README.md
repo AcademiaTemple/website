@@ -10,7 +10,7 @@ https://academiatemple.netlify.app/
 
 ## Diseño de la página
 
-Puedes ver el diseño de la página realizado por el Profe de UI/UX: [Diseño de la página](https://www.figma.com/file/KnjnTglY03uWmKg3gFhQMM/Academia_Temple?node-id=0%3A1)
+Puedes ver el diseño de la página realizado por el Profe RickertRickert: [Diseño de la página](https://www.figma.com/file/KnjnTglY03uWmKg3gFhQMM/Academia_Temple?node-id=0%3A1)
 
 ### ¿Cómo puedo ser colaborador?
 
@@ -32,6 +32,9 @@ Gracias a estas maravillosas personas la página de la Academia Temple es posibl
     <td align="center"><a href="https://github.com/edavot"><img src="https://avatars0.githubusercontent.com/u/7560812?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Enrique David Avalos Ortega</b></sub></a><br /><a href="https://github.com/AcademiaTemple/website/commits?author=edavot" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Babel78"><img src="https://avatars1.githubusercontent.com/u/29358791?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Axel Campos Salazar</b></sub></a><br /><a href="https://github.com/AcademiaTemple/website/commits?author=Babel78" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/GerardoQ-prog"><img src="https://avatars1.githubusercontent.com/u/56100630?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gerardo Quispe Chavez</b></sub></a><br /><a href="https://github.com/AcademiaTemple/website/commits?author=GerardoQ-prog" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/Rickert-Gonzales"><img src="https://avatars2.githubusercontent.com/u/58580048?v=4?s=100" width="100px;" alt=""/><br /><sub><b>RickerDev</b></sub></a><br /><a href="#design-Rickert-Gonzales" title="Design">🎨</a> <a href="#ideas-Rickert-Gonzales" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 

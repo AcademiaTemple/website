@@ -76,6 +76,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Rickert-Gonzales",
+      "name": "RickerDev",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/58580048?v=4",
+      "profile": "https://github.com/Rickert-Gonzales",
+      "contributions": [
+        "design",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7
