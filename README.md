@@ -10,7 +10,7 @@ https://academiatemple.netlify.app/
 
 ## Diseño de la página
 
-Puedes ver el diseño de la página realizado por el Profe RickertRickert: [Diseño de la página](https://www.figma.com/file/KnjnTglY03uWmKg3gFhQMM/Academia_Temple?node-id=0%3A1)
+Puedes ver el diseño de la página realizado por el Profe Rickert: [Diseño de la página](https://www.figma.com/file/KnjnTglY03uWmKg3gFhQMM/Academia_Temple?node-id=0%3A1)
 
 ### ¿Cómo puedo ser colaborador?
 
@@ -35,6 +35,7 @@ Gracias a estas maravillosas personas la página de la Academia Temple es posibl
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Rickert-Gonzales"><img src="https://avatars2.githubusercontent.com/u/58580048?v=4?s=100" width="100px;" alt=""/><br /><sub><b>RickerDev</b></sub></a><br /><a href="#design-Rickert-Gonzales" title="Design">🎨</a> <a href="#ideas-Rickert-Gonzales" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/Israel2709"><img src="https://avatars3.githubusercontent.com/u/6852277?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Israel2709</b></sub></a><br /><a href="https://github.com/AcademiaTemple/website/commits?author=Israel2709" title="Code">💻</a> <a href="#ideas-Israel2709" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
