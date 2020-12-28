@@ -27,7 +27,6 @@ module.exports = {
     `gatsby-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
