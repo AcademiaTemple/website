@@ -52,7 +52,7 @@
 }
 
 .center {
-  text-align: center;
+  text-align: left;
 }
 
 .rounded-circle {
@@ -97,46 +97,6 @@
 .redes-docentes>i {
   margin-right: .5rem;
   font-size: 1.5rem;
-}
-
-.btn-toolbar {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-@media (min-width: 768px) {
-  .btn-toolbar {
-    justify-content: flex-start;
-  }
-}
-
-.btn-toolbar .etiquetas {
-  color: #4dc6f3;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  border: 2px solid#4dc6f3;
-  border-radius: 30px;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  background-color: white;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-@media (min-width: 768px) {
-  .btn-toolbar .etiquetas {
-    margin-right: 2rem;
-  }
-  .btn-toolbar .etiquetas:last-of-type {
-    margin-right: 0;
-  }  
-}
-
-.btn-toolbar .etiquetas:hover {
-  background-color: #4dc6f3;
-  border: 2px solid #4dc6f3;
-  color: white;
 }
 
 .link {

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import "./course_teacher.css"
 
 export default function Card_Teacher(props) {
@@ -19,12 +20,12 @@ export default function Card_Teacher(props) {
 
           <div className="row">
             <div className="order-3 order-sm-1 col-sm-3 center mb-2">
-              <button type="button" className="ingresar-course">
+              <Link className="boton btn-principal d-block" to="/course">
                 Ingresar
-              </button>
+              </Link>
             </div>
             <div className="order-2 order-sm-2 col-sm-3"></div>
-            <div className="order-1 order-sm-3 col-sm-6 center mb-2">
+            <div className="order-1 order-sm-3 col-sm-6 center mb-4 mb-md-2">
               <div className="stars-outer">
                 <i className="far fa-star"></i>
                 <i className="far fa-star"></i>
@@ -33,8 +34,7 @@ export default function Card_Teacher(props) {
                 <i className="far fa-star"></i>
                 <div
                   className="stars-inner"
-                  style={{ width: starPorcentajeRedondeado }}
-                >
+                  style={{ width: starPorcentajeRedondeado }}>
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>
                   <i className="fas fa-star"></i>

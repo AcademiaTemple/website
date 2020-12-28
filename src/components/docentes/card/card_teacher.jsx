@@ -1,6 +1,5 @@
 import React from "react"
 import "./card_teacher.css"
-import Img from "gatsby-image"
 import { Link } from "gatsby"
 
 export default function Card_Teacher(props) {
@@ -16,7 +15,7 @@ export default function Card_Teacher(props) {
             {props.name}
           </h2>
           <p className="mb-4">{props.description}</p>
-          <div className="btn-toolbar mb-5">
+          <div className="btn-toolbar justify-content-around mb-5">
             <button type="button" className="etiquetas">
               #html
                 </button>

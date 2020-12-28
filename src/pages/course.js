@@ -4,6 +4,7 @@ import Footer from "../components/footer/footer"
 import AcordeonEpisodio from "../components/episodio/acordeon_episodios"
 import { navigate } from "gatsby"
 import { Link } from "gatsby"
+import { episodios } from '../components/episodio/episodios-data';
 
 export default function Course() {
 
@@ -45,7 +46,7 @@ export default function Course() {
                     </div>
                     <div className="contenedor-descripcion">
                         <h4>
-                            Mila Luna
+                            Alyah Frutencio
                     </h4>
                         <p className="descripcion-curso">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -53,7 +54,9 @@ export default function Course() {
                     </div>
                 </div>
                 <h3 className="subtitulo-descripcion-curso">Lista de clases</h3>
-                <AcordeonEpisodio machucar={navegar} />
+                <AcordeonEpisodio
+                    episodios={episodios}
+                    machucar={navegar} />
             </div>
             <Footer />
         </div>

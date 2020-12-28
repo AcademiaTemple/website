@@ -8,7 +8,7 @@ const CardEpisodio = ({ idActivo, machucar, episodio }) => {
     if (idActivo == episodio.id) {
         estilos += " episodio-seleccionado";
     }
-
+    
     return (
         <div onClick={() => machucar(episodio.id)} className={estilos}>
             <div className="titulo">
@@ -16,12 +16,12 @@ const CardEpisodio = ({ idActivo, machucar, episodio }) => {
                     1
                 </span>
                 <h4>
-                    Nuestro primer hola mundo!
+                    {episodio.titulo}
                 </h4>
             </div>
             <div className="descripcion">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend nibh vel blandit interdum.
+                    {episodio.descripcion}
                 </p>
                 <span>
                     9:28

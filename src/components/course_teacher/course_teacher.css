@@ -12,7 +12,7 @@
   border-radius: 0 2rem 2rem 0 !important;
 }
 
-.col-sm-4 > .fa-github {
+.col-sm-4>.fa-github {
   font-size: 16rem;
 }
 
@@ -24,56 +24,28 @@
 
 .info-course {
   padding: 3% !important;
-  /* padding-top: 3%;
-  padding-bottom: 3%; */
 }
 
-.info-course > h2 {
+.info-course>h2 {
   font-size: 3rem;
   font-family: "Roboto", sans-serif;
 }
 
-.info-course > p {
-  text-align: justify;
-  font-size: 1.5rem;
+.info-course>p {
+  font-size: 1.6rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
-.info-course > h2 {
+.info-course>h2 {
   font-size: 3rem;
   font-family: "Roboto", sans-serif;
-}
-
-.ingresar-course {
-  font-size: 1.5rem;
-  color: black;
-  text-align: center;
-  white-space: middle;
-  vertical-align: middle;
-  border: 2px solid black;
-  user-select: none;
-  border-radius: 2rem;
-  padding-right: 3rem;
-  padding-left: 3rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  background-color: transparent;
-  box-shadow: 0 2px 2px 0 rgb(255, 255, 255), 0 4px 2px 0 rgba(0, 0, 0, 0.2),
-    inset 0 2px 2px 0 white, inset 0 2px 2px 0 rgba(0, 0, 0, 0.6);
-}
-
-.ingresar-course:hover {
-  background-color: black;
-  color: white;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .stars-outer {
   text-align: center;
   font-size: 2.5rem;
   color: #ffd600;
-  margin: auto;
   display: inline-block;
   position: relative;
   font-family: FontAwesome;
@@ -94,8 +66,7 @@
     display: none;
     border-radius: 0 0 2rem 2rem !important;
   }
-
-  .info-course > p {
+  .info-course>p {
     width: 100%;
     height: 9.1rem;
     overflow: hidden;
@@ -105,7 +76,7 @@
 }
 
 @media only screen and (max-width: 574px) {
-  .info-course > h2 {
+  .info-course>h2 {
     text-align: center;
     font-size: 2rem;
   }
@@ -113,8 +84,7 @@
     border-radius: 2rem !important;
     margin-bottom: 12%;
   }
-
-  .col-sm-4 > .fa-github {
+  .col-sm-4>.fa-github {
     font-size: 10rem;
   }
 }

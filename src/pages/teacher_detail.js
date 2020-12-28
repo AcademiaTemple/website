@@ -1,27 +1,100 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
 import CourseTeacher from "../components/course_teacher/course_teacher"
-import EncabezadoTeacher from "../components/tarjeta_teacher/tarjeta_teacher"
 import ParrafoTeacher from "../components/parrafo_teacher/parrafo_teacher"
 import foto from "../../static/carrusel/Profe3.jpg"
 import teacher from "../../static/carrusel/Profe1.jpg"
 
-export default function teacher_detail() {
+const api = "https://restcountries.eu/rest/v2/all";
+
+export default function Teacher_detail(props) {
+
+  const [pais, estPais] = useState({});
+
+  useEffect(() => {
+    fetch(api)
+      .then(response => response.json())
+      .then(paises => {
+        const encontrado = paises.find(pais => pais.name === 'Mexico');
+        estPais(encontrado);
+      })
+  }, []);
+
   return (
     <div>
       <Navbar />
       <div className="contenedor cuerpo-pagina">
-        {/*<EncabezadoTeacher
-          country="Mexico"
-          perfil={teacher}
-          name="Juan Perez"
-          titulos={[
-            "Desarrollador Frontend",
-            "Deseñador de interfaces",
-            "Desarrollador Backend",
-          ]}
-        />*/}
+        <div className="row encabezado-perfil-docente">
+          <div className="col-12 col-md-2">
+            <img
+              src={teacher}
+              className="rounded-circle img-perfil-profesor"              
+              alt="foto-perfil"
+            />
+          </div>
+          <div className="col-12 col-md-5 datos-perfil-docente">
+            <h2 className="name-teacher">
+              <b>Juan Perez</b>
+            </h2>
+            <div className="contenedor-nacionalidad-profesor">
+              <h3 className="pais-profesor">
+                {pais.name}
+              </h3>
+              <img className="banera-pais-profesor" src={pais.flag} alt="" width="30px" />
+            </div>
+            <div className="titulos-docente">{
+              [
+                "Desarrollador Frontend",
+                "Deseñador de interfaces",
+                "Desarrollador Backend",
+              ].map((titulo, index) => (
+                <p key={index} className="titulo-carrera">
+                  {titulo}
+                </p>
+              ))
+            }</div>
+
+            <div className="btn-toolbar contenedor-etiquetas-perfil">
+              <button type="button" className="etiquetas">
+                #html
+                </button>
+              <button type="button" className="etiquetas">
+                #html
+                </button>
+              <button type="button" className="etiquetas">
+                #html
+                </button>
+            </div>
+
+          </div>
+
+          <div className="col-12 col-md-2 d-none d-md-block likes">
+            <h6>98</h6>
+            <i className="fas fa-thumbs-up"></i>
+          </div>
+
+          <div className="col-12 col-md-2 d-none d-md-flex redes-sociales pr-5">
+            <div className="redes-docentes">
+              <i className="fab fa-patreon"></i>
+              <p className="red-social">Patreon</p>
+              <p className="red-usuario">@hola</p>
+            </div>
+            <div className="redes-docentes">
+              <i className="fab fa-facebook-square"></i>
+              <p className="red-social">Facebook</p>
+              <p className="red-usuario">@hola</p>
+            </div>
+            <div className="redes-docentes">
+              <i className="fab fa-instagram"></i>
+              <p className="red-social">Instagram</p>
+              <p className="red-usuario">@hola</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="contenedor">
         <ParrafoTeacher
           titulo="Un poco de mi historia"
           parrafo="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ex
@@ -98,6 +171,7 @@ export default function teacher_detail() {
         Voluptatem quam ex, deserunt soluta a reprehenderit."
         />
       </div>
+
       <Footer />
     </div>
   )

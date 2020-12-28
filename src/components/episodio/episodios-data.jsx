@@ -1,21 +1,32 @@
 export const episodios = [
-    {
-        idCurso: 'R003',
-        titulo: 'Vuélvete un experto en C++',
-        descripcion: 'En este curso aprenderás todas las bases para ser un experto en C++',
-        reglas: 'Debes participar',
-        linkInscripcion: 'https://',
-        profesor: {
-            nombre: 'Denis West',
-            imgUrl: 'https://',
-            sobreMi: 'Hola bola'
-        },
-        clases: [
             {
+                id: 1,
                 titulo: 'Nuestro primer hola mundo!',
-                descripcion: 'Veremos como hacer un hola mundo en C++',
-                link: 'https://'
+                descripcion: 'Veremos como hacer 1 hola mundo en C++',
+                link: '0hIbURilM7U'
+            },
+            {
+                id: 2,
+                titulo: 'Nuestro segundo hola mundo!',
+                descripcion: 'Veremos como hacer 2 hola mundo en C++',
+                link: '-NnI7WgCzQ8'
+            },
+            {
+                id: 3,
+                titulo: 'Nuestro tercer hola mundo!',
+                descripcion: 'Veremos como hacer 3 hola mundo en C++',
+                link: '7FbG5trcxGI&'
+            },
+            {
+                id: 4,
+                titulo: 'Nuestro cuarto hola mundo!',
+                descripcion: 'Veremos como hacer 4 hola mundo en C++',
+                link: '7LvayVk_7GU'
+            },
+            {
+                id: 5,
+                titulo: 'Nuestro quinto hola mundo!',
+                descripcion: 'Veremos como hacer 5 hola mundo en C++',
+                link: 'MEuhAFeuK58'
             }
-        ]
-    }
 ]

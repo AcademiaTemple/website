@@ -12,7 +12,7 @@ export const testimonios = [
   },
   {
     id: 2,
-    nombre: "Mila Luna",
+    nombre: "Alyoh Mascarita",
     cargo: "Alumna de Bootstrap",
     avatar: AvatarTestimonio,
     contenido:

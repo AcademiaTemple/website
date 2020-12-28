@@ -1,0 +1,86 @@
+{
+    "cursos": [
+        {
+            "id": "RCT-B01",
+            "titulo": "Vuélvete un experto en React",
+            "urlImg": "https://",
+            "dias": [
+                "LU",
+                "MI",
+                "VI"
+            ],
+            "hInicioFin": [
+                "18:00",
+                "21:00"
+            ],
+            "fInicioFin": [
+                "14/12/2020",
+                "31/12/2020"
+            ],
+            "excepciones": [
+                "17/12/2020"
+            ],
+            "cancelaciones": [],
+            "urlInscripcion": "https://docs.google.com/forms/d/1289uM5HpQJayebidAjXonLi8sCg_hT6wzPXCVfpMvD8/edit",
+            "descBreve": "Descripción breve del curso",
+            "descExtendida": "Descripción extendida del curso",
+            "requisitos": [
+                "Saber Javascript",
+                "Saber ES6"
+            ],
+            "objetivo": "Lograr convertirse en un experto en React",
+            "idProfesor": "RCT-001"
+        }
+    ],
+    "profesores": [
+        {
+            "id": "RCT-001",
+            "img": "https://",
+            "nombres": "Israel Mauricio",
+            "apellidos": "Teneda Sánchez",
+            "sobreMi": "Nací en México DF. Es un docente experto en el manejo de las tecnologías... (esto irá en el preview solamente)",
+            "experiencia": "Me desempeñé muchos años en el manejo de sistemas de información automatizados ...",
+            "etiquetas": [
+                "react",
+                "es6",
+                "sorgalim",
+                "milagros"
+            ],
+            "idsCursos": [
+                "RCT-B01",
+                "RCT-B02"
+            ],
+            "likes": 99,
+            "pais": "México",
+            "logros": [
+                "Bachiller en informática",
+                "Capitán de la NASA"
+            ],
+            "redes": {
+                "fb": "https://",
+                "gh": "https://",
+                "yt": "https://",
+                "pt": "https://"
+            }
+        }
+    ],
+    "clases": [
+        {
+            "idCurso": "RCT-B01",
+            "lista": [
+                {
+                    "titulo": "Nuestro primer hola mundo!",
+                    "descripcion": "Veremos como hacer un hola mundo en C++",
+                    "urlVideo": "https://",
+                    "duracion": "09:28",
+                    "recursos": [
+                        {
+                            "nombre": "Proyecto terminado",
+                            "url": "github.com/mila"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
