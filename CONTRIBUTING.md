@@ -1,5 +1,7 @@
 # ¿Cómo puedo ser colaborador?
 
+> **Importante:** Desde que se comenzo a utilizar [Contenful](https://www.contentful.com/) como plataforma de contenidos es necesario contar con el `spaceId` y `access token` de Contenful para obtener el contenido desde la plataforma. Para lo cuál es necesario solicitar estas credenciales a los administradores del repositorio.
+
 1. Hazle fork a este hermoso repositorio para que tengas una copia en tu cuenta.
 
 ![website fork](https://i.imgur.com/52oV0Ck.png)
@@ -17,7 +19,7 @@
 ```
 > Esto con el objetivo que tu repositorio local se conecte con el repositorio original para poder obtener los últimos cambios.
 
-1. **¡Listo!** Haz tus cambios localmente y hazle push a tu repositorio. Cuando te sientas listo, envíanos el pull request y te lo revisaremos con mucho amor.
+1. **¡Listo!** Haz tus cambios localmente y hazle push a tu repositorio. Cuando te sientas listo, envíanos el pull request a la rama de **desarrollo** y te lo revisaremos con mucho amor.
 
 **La verdad, estoy algo perdido. No sé como es esto de Gatsby ni de Git** 🤢
 
