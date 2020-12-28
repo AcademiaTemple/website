@@ -23,6 +23,7 @@
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-mdx": "^1.2.51",
     "gatsby-plugin-sharp": "^2.6.43",
+    "gatsby-source-contentful": "^4.3.1",
     "gatsby-source-filesystem": "^2.3.35",
     "gatsby-transformer-sharp": "^2.5.19",
     "jquery": "^3.5.1",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "all-contributors-cli": "^6.19.0",
+    "dotenv": "^8.2.0",
     "prettier": "2.1.2"
   },
   "repository": {
