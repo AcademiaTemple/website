@@ -1,6 +1,6 @@
 # ¿Cómo puedo ser colaborador?
 
-> **Importante:** Desde que se comenzo a usar [Contenful](https://www.contentful.com/) como plataforma de contenidos es necesario contar con el `spaceId` y `access token` de Contenful para poder obtener el contenido desde la plataforma. Para lo cuál es necesario solocitarlo a los administradores del repositorio.
+> **Importante:** Desde que se comenzo a utilizar [Contenful](https://www.contentful.com/) como plataforma de contenidos es necesario contar con el `spaceId` y `access token` de Contenful para obtener el contenido desde la plataforma. Para lo cuál es necesario solicitar estas credenciales a los administradores del repositorio.
 
 1. Hazle fork a este hermoso repositorio para que tengas una copia en tu cuenta.
 
