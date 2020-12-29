@@ -1,7 +1,7 @@
 export const cursos = [
   {
     nombre: "Lógica de programación",
-    dias: ["LU", "MI", "VI"],
+    dias: ["MA", "MI", "VI"],
     hInicioFin: ["18:00", "21:00"],
     fInicioFin: ["14/12/2020", "31/12/2020"],
     urlInscripcion:
@@ -26,7 +26,7 @@ export const cursos = [
   {
     nombre: "C++ - intermedio",
     dias: ["VI"],
-    hInicioFin: ["18:00", "19:00"],
+    hInicioFin: ["20:00", "21:00"],
     fInicioFin: ["11/12/2020", "01/06/2021"],
     urlInscripcion:
       "https://docs.google.com/forms/d/1ewRk2X9waGc00dby73563TWVsSS3eIxxoIB6vmSK1aA/edit",
@@ -38,7 +38,7 @@ export const cursos = [
   {
     nombre: "C# - básico",
     dias: ["SA"],
-    hInicioFin: ["18:00", "19:00"],
+    hInicioFin: ["20:00", "21:00"],
     fInicioFin: ["13/12/2020", "01/06/2021"],
     urlInscripcion:
       "https://docs.google.com/forms/d/1QYA9iQ8AJVQ-aKpNM4ulWa_hC6Yw8L7M2zNLPK_xG-U/edit",

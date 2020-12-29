@@ -28,5 +28,35 @@ export const episodios = [
                 titulo: 'Nuestro quinto hola mundo!',
                 descripcion: 'Veremos como hacer 5 hola mundo en C++',
                 link: 'MEuhAFeuK58'
+            },
+            {
+                id: 6,
+                titulo: 'Nuestro primer hola mundo!',
+                descripcion: 'Veremos como hacer 1 hola mundo en C++',
+                link: 'qehaFtmpEyQ'
+            },
+            {
+                id: 7,
+                titulo: 'Nuestro segundo hola mundo!',
+                descripcion: 'Veremos como hacer 2 hola mundo en C++',
+                link: '-NnI7WgCzQ8'
+            },
+            {
+                id: 8,
+                titulo: 'Nuestro tercer hola mundo!',
+                descripcion: 'Veremos como hacer 3 hola mundo en C++',
+                link: '7FbG5trcxGI&'
+            },
+            {
+                id: 9,
+                titulo: 'Nuestro cuarto hola mundo!',
+                descripcion: 'Veremos como hacer 4 hola mundo en C++',
+                link: '7LvayVk_7GU'
+            },
+            {
+                id: 10,
+                titulo: 'Nuestro quinto hola mundo!',
+                descripcion: 'Veremos como hacer 5 hola mundo en C++',
+                link: 'MEuhAFeuK58'
             }
 ]
