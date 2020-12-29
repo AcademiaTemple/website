@@ -1,19 +1,19 @@
 import React from 'react'
 import './card_episodio.css'
 
-const CardEpisodio = ({ idActivo, machucar, episodio }) => {
-
+const CardEpisodio = ({ indice, idActivo, machucar, episodio }) => {
+    
     let estilos = "contenedor-episodio";
 
     if (idActivo == episodio.id) {
         estilos += " episodio-seleccionado";
     }
-    
+
     return (
-        <div onClick={() => machucar(episodio.id)} className={estilos}>
+        <div onClick={() => machucar(episodio.id, episodio.link)} className={estilos}>
             <div className="titulo">
                 <span>
-                    1
+                    {indice + 1}
                 </span>
                 <h4>
                     {episodio.titulo}

@@ -1,8 +1,9 @@
 import React from "react"
-import "./nuestroscursos.css"
+import { Link } from 'gatsby'
 import logoAngular from "../../../static/angular.png"
 import logoReact from "../../../static/react.png"
 import logoGit from "../../../static/git.png"
+import "./nuestroscursos.css"
 
 const cursos = [
   {
@@ -32,14 +33,13 @@ export default function Header() {
         <h2 className="titulo-seccion">¡Algunos de nuestros cursos!</h2>
         <div className="nuestros-cursos">
           {cursos.map(curso => (
-            <div
-              key={curso.id}
+            <Link key={curso.id}
               className="curso-muestra"
               style={{ background: curso.fondo }}
-            >
+              to="/course">
               <img src={curso.icono} alt="logo-curso" />
               <h3>{curso.nombre}</h3>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

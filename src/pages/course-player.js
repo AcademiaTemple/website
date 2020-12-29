@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react"
+import Plyr from 'plyr'
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
-import queryString from 'query-string';
 import AcordeonEpisodio from "../components/episodio/acordeon_episodios"
-import Plyr from 'plyr';
-import { episodios } from '../components/episodio/episodios-data';
+import { episodios } from '../components/episodio/episodios-data'
 
 export default function Course(props) {
-    const episodioUrl = queryString.parse(props.location.search).episode;
-
-    const [idActivo, estIdActivo] = useState(1);
+    //const episodioUrl = queryString.parse(props.location.search).episode;
     const [urlVideo, estUrlVideo] = useState('');
+    const [idVideo, estIdVideo] = useState('');
 
-    const seleccionarEpisodio = (id) => {
-        estIdActivo(id);
+    const seleccionarEpisodio = (id, link) => {
+        estIdVideo(id);
+        estUrlVideo(`https://www.youtube.com/embed/${link}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1`);        
     }
 
     useEffect(() => {
@@ -22,14 +21,7 @@ export default function Course(props) {
             tooltips: { controls: false, seek: false }
         });
         window.player = player;
-    }, [])
-
-    useEffect(() => {
-        const episodio = episodios.find(episodio => episodio.id === idActivo);
-        if (episodio) {
-            estUrlVideo(`https://www.youtube.com/embed/${urlVideo}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1`);
-        }
-    }, [idActivo, urlVideo])
+    }, []);
 
     return (
         <div>
@@ -40,7 +32,7 @@ export default function Course(props) {
                         <div className="plyr__video-embed" id="player">
                             <iframe
                                 width="100%"
-                                frameborder="0"
+                                frameBorder="0"
                                 src={urlVideo}
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen></iframe>
@@ -49,7 +41,7 @@ export default function Course(props) {
                     <div className="contenedor-acordeon">
                         <AcordeonEpisodio
                             episodios={episodios}
-                            idActivo={idActivo}
+                            idActivo={idVideo}
                             machucar={seleccionarEpisodio} />
                     </div>
                 </div>

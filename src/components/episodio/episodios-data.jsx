@@ -3,7 +3,7 @@ export const episodios = [
                 id: 1,
                 titulo: 'Nuestro primer hola mundo!',
                 descripcion: 'Veremos como hacer 1 hola mundo en C++',
-                link: '0hIbURilM7U'
+                link: 'qehaFtmpEyQ'
             },
             {
                 id: 2,

@@ -2,20 +2,20 @@ import React from "react"
 import "./card_teacher.css"
 import { Link } from "gatsby"
 
-export default function Card_Teacher(props) {
+export default function Card_Teacher({ imgUrl, nombre, descripcion }) {
   return (
     <div className="card card-teacher">
       <div className="row">
         <div className="col-12 col-md-2 contenedor-img pb-4 pb-md-0">
-          <img src="/carrusel/Profe1.jpg" className="rounded-circle avatar-card-teacher" />
+          <img src={imgUrl} className="rounded-circle avatar-card-teacher" />
         </div>
 
         <div className="col-12 col-md-6 pl-md-0">
           <h2 className="mb-4">
-            {props.name}
+            {nombre}
           </h2>
-          <p className="mb-4">{props.description}</p>
-          <div className="btn-toolbar justify-content-around mb-5">
+          <p className="mb-4">{descripcion}</p>
+          <div className="btn-toolbar mb-5 etiquetas-card-teacher">
             <button type="button" className="etiquetas">
               #html
                 </button>

@@ -103,3 +103,13 @@
   display: block;
 }
 
+.etiquetas-card-teacher {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .etiquetas-card-teacher {
+    justify-content: flex-start;
+  }
+}
