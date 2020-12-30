@@ -106,9 +106,6 @@ export default function Teacher_detail(props) {
             }
           </div>
         </div>
-      </div>
-
-      <div className="contenedor">
         <ParrafoTeacher
           titulo="Un poco de mi historia"
           parrafo={profesor.sobreMi} />
@@ -130,7 +127,6 @@ export default function Teacher_detail(props) {
           ))
         }
       </div>
-
       <Footer />
     </div>
   )
