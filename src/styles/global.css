@@ -164,6 +164,7 @@ h4 {
 
 .cuerpo-pagina {
   padding-top: var(--espacio-superior-cuerpo-responsive);
+  min-height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -280,6 +281,15 @@ h4 {
   margin-bottom: 2rem;
 }
 
+.requisitos-curso {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #646d7b;
+  margin-bottom: 2.5rem;
+  padding-left: 3rem;
+}
+
 .btn-rep-curso {
   font-size: 1.6rem;
   padding: 0.8rem 4rem;
@@ -319,9 +329,9 @@ h4 {
 .contenedor-curso-profesor h4 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
+  color: #0C2239;
   text-align: center;
   font-weight: 600;
-  color: #0C2239;
   margin-bottom: 1rem;
 }
 
@@ -329,6 +339,11 @@ h4 {
   .contenedor-curso-profesor h4 {
     text-align: left;
   }
+}
+
+.contenedor-curso-profesor h4 a {
+  text-decoration: none;
+  color: #0C2239;
 }
 
 @media (min-width: 768px) {
@@ -384,10 +399,8 @@ h4 {
 }
 
 .contenedor-reproductor .contenedor-video {
-  position: fixed;
   width: 100%;
   background: #000;
-  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -398,7 +411,8 @@ h4 {
 }
 
 .contenedor-reproductor .contenedor-acordeon {
-  padding-top: 300px;
+  height: 300px;
+  overflow: auto;
 }
 
 @media (min-width: 768px) {

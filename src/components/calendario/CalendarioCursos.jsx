@@ -1,6 +1,8 @@
 import React, { useEffect } from "react"
 import { useState } from "react"
-import { cursos, diasSemana } from "./cursos-data"
+import { diasSemana } from "../cursos/cursos-data"
+import { obtCursosCalendario } from '../../api'
+import { navigate } from "gatsby"
 import Calendar from "react-calendar"
 import DatePicker from "react-datepicker"
 import moment from "moment"
@@ -10,13 +12,23 @@ import "react-calendar/dist/Calendar.css"
 import "./calendario.css"
 
 const Calendario = () => {
-  const [fecha, estFecha] = useState(new Date())
-  const [clasesActuales, estClasesActuales] = useState([])
+  const [cursos, estCursos] = useState([]);
+  const [fecha, estFecha] = useState(new Date());
+  const [clasesActuales, estClasesActuales] = useState([]);
+
+  useEffect(() => {
+    obtCursosCalendario()
+      .then(cursos => estCursos(cursos));
+  }, [])
 
   useEffect(() => {
     const clases = obtenerClasesPorFecha()
     estClasesActuales(clases)
   }, [fecha])
+
+  const navegar = (idCurso) => {
+    navigate(`/course/?id=${idCurso}`);
+  }
 
   const obtenerClasesPorFecha = () => {
     const clases = cursos.filter(
@@ -86,12 +98,12 @@ const Calendario = () => {
             <div className="cursos-calendario">
               {clasesActuales.map((e, i) => (
                 <div key={i} className="curso-calendario">
-                  <p className="titulo-curso-calendario">{e.nombre}</p>
+                  <p className="titulo-curso-calendario">{e.titulo}</p>
                   <div className="controles-curso">
                     <a target="_blank" href={e.urlInscripcion}>
                       <i className="fa fa-clipboard-list"></i>
                     </a>
-                    <i className="fa fa-eye"></i>
+                    <i onClick={() => navegar(e.id)} className="fa fa-eye"></i>
                   </div>
                   <p className="horario-curso-calendario">
                     {moment(e.hInicioFin[0], "HH:mm").format("hh:mm a") +

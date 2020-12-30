@@ -2,54 +2,61 @@ import React from "react"
 import "./card_teacher.css"
 import { Link } from "gatsby"
 
-export default function Card_Teacher({ imgUrl, nombre, descripcion }) {
+export default function Card_Teacher({ data }) {
   return (
     <div className="card card-teacher">
       <div className="row">
         <div className="col-12 col-md-2 contenedor-img pb-4 pb-md-0">
-          <img src={imgUrl} className="rounded-circle avatar-card-teacher" />
+          <img src={data.img} className="rounded-circle avatar-card-teacher" />
         </div>
 
         <div className="col-12 col-md-6 pl-md-0">
           <h2 className="mb-4">
-            {nombre}
+            {data.nombres + ' ' + data.apellidos}
           </h2>
-          <p className="mb-4">{descripcion}</p>
+          <p className="mb-4">{data.sobreMi}</p>
           <div className="btn-toolbar mb-5 etiquetas-card-teacher">
-            <button type="button" className="etiquetas">
-              #html
+            {
+              data.etiquetas.map((etiqueta,indice) => (
+                <button key={indice} type="button" className="etiquetas">
+                  {etiqueta}
                 </button>
-            <button type="button" className="etiquetas">
-              #html
-                </button>
-            <button type="button" className="etiquetas">
-              #html
-                </button>
+              ))
+            }
           </div>
-          <Link className="boton btn-principal" to="/teacher_detail">
+          <Link className="boton btn-principal" to={`/teacher_detail/?id=${data.id}`}>
             Ver perfil
           </Link>
         </div>
         <div className="col-12 col-md-2 d-none d-md-block likes">
-          <h6>98</h6>
+          <h6>{data.likes}</h6>
           <i className="fas fa-thumbs-up"></i>
         </div>
         <div className="col-12 col-md-2 d-none d-md-flex redes-sociales pr-5">
-          <div className="redes-docentes">
-            <i className="fab fa-patreon"></i>
-            <p className="red-social">Patreon</p>
-            <p className="red-usuario">@hola</p>
-          </div>
-          <div className="redes-docentes">
-            <i className="fab fa-facebook-square"></i>
-            <p className="red-social">Facebook</p>
-            <p className="red-usuario">@hola</p>
-          </div>
-          <div className="redes-docentes">
-            <i className="fab fa-instagram"></i>
-            <p className="red-social">Instagram</p>
-            <p className="red-usuario">@hola</p>
-          </div>
+          {
+            data.redes.pt &&
+            <div className="redes-docentes">
+              <i className="fab fa-patreon"></i>
+              <p className="red-social">Patreon</p>
+              <a target="_blank" href={data.redes.pt} className="red-usuario">Visitar</a>
+            </div>
+          }
+          {
+            data.redes.gh &&
+            <div className="redes-docentes">
+              <i className="fab fa-github"></i>
+              <p className="red-social">Github</p>
+              <a target="_blank" href={data.redes.gh} className="red-usuario">Visitar</a>
+            </div>
+          }
+          {
+            data.redes.yt &&
+            <div className="redes-docentes">
+              <i className="fab fa-youtube"></i>
+              <p className="red-social">Youtube</p>
+              <a target="_blank" href={data.redes.yt} className="red-usuario">Visitar</a>
+            </div>
+          }
         </div>
       </div>
     </div>

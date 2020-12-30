@@ -1,62 +1,116 @@
 export const episodios = [
+    {
+        idCurso: "1",
+        lista: [
             {
                 id: 1,
-                titulo: 'Nuestro primer hola mundo!',
-                descripcion: 'Veremos como hacer 1 hola mundo en C++',
-                link: 'qehaFtmpEyQ'
+                titulo: '',
+                descripcion: '',
+                urlVideo: 'Qzz1tAopaps',
+                duracion: '1h 50m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
             },
             {
                 id: 2,
                 titulo: 'Nuestro segundo hola mundo!',
                 descripcion: 'Veremos como hacer 2 hola mundo en C++',
-                link: '-NnI7WgCzQ8'
+                urlVideo: '-NnI7WgCzQ8',
+                duracion: '2h 21m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
             },
             {
                 id: 3,
                 titulo: 'Nuestro tercer hola mundo!',
                 descripcion: 'Veremos como hacer 3 hola mundo en C++',
-                link: '7FbG5trcxGI&'
+                urlVideo: '7FbG5trcxGI&',
+                duracion: '2h 20m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
             },
             {
                 id: 4,
                 titulo: 'Nuestro cuarto hola mundo!',
                 descripcion: 'Veremos como hacer 4 hola mundo en C++',
-                link: '7LvayVk_7GU'
+                urlVideo: '7LvayVk_7GU',
+                duracion: '2h 20m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
             },
             {
                 id: 5,
                 titulo: 'Nuestro quinto hola mundo!',
                 descripcion: 'Veremos como hacer 5 hola mundo en C++',
-                link: 'MEuhAFeuK58'
+                urlVideo: 'MEuhAFeuK58',
+                duracion: '2h 20m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
             },
             {
                 id: 6,
                 titulo: 'Nuestro primer hola mundo!',
                 descripcion: 'Veremos como hacer 1 hola mundo en C++',
-                link: 'qehaFtmpEyQ'
+                urlVideo: 'qehaFtmpEyQ',
+                duracion: '1h 15m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
             },
             {
                 id: 7,
                 titulo: 'Nuestro segundo hola mundo!',
                 descripcion: 'Veremos como hacer 2 hola mundo en C++',
-                link: '-NnI7WgCzQ8'
+                urlVideo: '-NnI7WgCzQ8',
+                duracion: '2h 20m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
             },
             {
                 id: 8,
                 titulo: 'Nuestro tercer hola mundo!',
                 descripcion: 'Veremos como hacer 3 hola mundo en C++',
-                link: '7FbG5trcxGI&'
+                urlVideo: '7FbG5trcxGI&',
+                duracion: '2h 20m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
             },
             {
                 id: 9,
                 titulo: 'Nuestro cuarto hola mundo!',
                 descripcion: 'Veremos como hacer 4 hola mundo en C++',
-                link: '7LvayVk_7GU'
+                urlVideo: '7LvayVk_7GU',
+                duracion: '3h 36m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
             },
             {
                 id: 10,
                 titulo: 'Nuestro quinto hola mundo!',
                 descripcion: 'Veremos como hacer 5 hola mundo en C++',
-                link: 'MEuhAFeuK58'
-            }
+                urlVideo: 'MEuhAFeuK58',
+                duracion: '2h 28m',
+                recursos: [{
+                    nombre: 'Proyecto',
+                    url: 'https://'
+                }]
+            }]
+    }
 ]

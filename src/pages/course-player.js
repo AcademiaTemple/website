@@ -4,28 +4,46 @@ import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
 import queryString from 'query-string'
 import AcordeonEpisodio from "../components/episodio/acordeon_episodios"
-import { episodios } from '../components/episodio/episodios-data'
+import { obtClasesCurso } from '../api'
 
-const construirUrlVideo = (idVideo) => {
-    return `https://www.youtube.com/embed/${idVideo}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1`;
+const construirUrlVideo = (urlVideo) => {
+    return `https://www.youtube.com/embed/${urlVideo}?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1`;
 }
 
 export default function Course(props) {
-    const idEpisodio = queryString.parse(props.location.search).episode;
+    const { id: idCurso, episode: idEpisodio } = queryString.parse(props.location.search);
 
-    const [urlVideo, estUrlVideo] = useState(construirUrlVideo(episodios.find(e => e.id == idEpisodio).link));
+    const [episodios, estEpisodios] = useState([]);
+    const [cargandoEpisodios, estCargandoEpisodios] = useState(true);
+    const [urlVideo, estUrlVideo] = useState('');
     const [idVideo, estIdVideo] = useState(idEpisodio);
 
-    const seleccionarEpisodio = (id, link) => {
+    const obtUrlPorIdVideo = (episodios, idEpisodio) => {
+        const encontrado = episodios.find(e => e.id == idEpisodio);
+        return encontrado && encontrado.urlVideo;
+    }
+
+    const seleccionarEpisodio = (id, urlVideo) => {
         estIdVideo(id);
-        estUrlVideo(construirUrlVideo(link));
+        estUrlVideo(construirUrlVideo(urlVideo));
     }
 
     useEffect(() => {
+        estCargandoEpisodios(true);
+        obtClasesCurso(idCurso)
+            .then(episodios => {
+                estEpisodios(episodios);
+                estUrlVideo(construirUrlVideo(obtUrlPorIdVideo(episodios, idEpisodio)));
+                estCargandoEpisodios(false);
+            })
+    }, [idCurso])
+
+    useEffect(() => {
         const player = new Plyr('#player', {
-            controls: ['play-large', 'play', 'progress', 'current-time', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen'],
-            tooltips: { controls: false, seek: false }
-        });       
+            controls: ['play-large', 'play', 'progress', 'current-time', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen', 'quality'],
+            tooltips: { controls: false, seek: false },
+            settings: ['captions', 'quality', 'speed', 'loop']
+        });
         window.player = player;
     }, [urlVideo]);
 

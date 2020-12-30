@@ -17,12 +17,12 @@ function Card(props) {
             </div>
           </div>
         }
-        <img onLoad={() => estCargandoImg(false)} src={props.img} className="card-img-top rounded-img-course" alt="img-curso" />
+        <img onLoad={() => estCargandoImg(false)} src={props.urlImg} className="card-img-top rounded-img-course" alt="img-curso" />
       </div>
       <div className="card-body">
-        <h5 className="card-title">{props.title}</h5>
-        <p className="card-text">{props.description}</p>
-        <Link className="boton btn-principal d-block" to="/course">
+        <h5 className="card-title">{props.titulo}</h5>
+        <p className="card-text">{props.descBreve}</p>
+        <Link className="boton btn-principal d-block" to={`/course/?id=${props.id}`}>
           Ingresar
         </Link>
       </div>

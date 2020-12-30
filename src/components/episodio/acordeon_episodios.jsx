@@ -3,8 +3,8 @@ import CardEpisodio from './card/card_episodio';
 
 const AcordeonEpisodio = ({ idActivo, machucar, episodios }) => {
 
-    const seleccionarEpisodio = (id, link) => {
-        machucar(id, link);
+    const seleccionarEpisodio = (id, urlVideo) => {
+        machucar(id, urlVideo);
     }
 
     return episodios.map((episodio, index) => (

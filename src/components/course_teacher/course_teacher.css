@@ -19,22 +19,25 @@
 .icono-course {
   text-align: center;
   margin: auto;
-  padding: 0.5rem;
+  padding: 2rem !important;
 }
 
 .info-course {
-  padding: 3% !important;
+  padding: 1.5rem 2rem !important;
+  display: flex;
+  flex-direction: column;
 }
 
 .info-course>h2 {
   font-size: 3rem;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 1rem;
 }
 
 .info-course>p {
   font-size: 1.6rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  max-height: 5rem;
+  overflow: hidden;
 }
 
 .info-course>h2 {
@@ -42,23 +45,8 @@
   font-family: "Roboto", sans-serif;
 }
 
-.stars-outer {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #ffd600;
-  display: inline-block;
-  position: relative;
-  font-family: FontAwesome;
-}
-
-.stars-inner {
-  color: #ffd600;
-  position: absolute;
-  top: 0;
-  left: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0%;
+.contenedor-btn-ingresar {
+  margin-top: auto;
 }
 
 @media only screen and (max-width: 1000px) {

@@ -2,7 +2,7 @@ import React from 'react'
 import './card_episodio.css'
 
 const CardEpisodio = ({ indice, idActivo, machucar, episodio }) => {
-    
+
     let estilos = "contenedor-episodio";
 
     if (idActivo == episodio.id) {
@@ -10,21 +10,21 @@ const CardEpisodio = ({ indice, idActivo, machucar, episodio }) => {
     }
 
     return (
-        <div onClick={() => machucar(episodio.id, episodio.link)} className={estilos}>
+        <div onClick={() => machucar(episodio.id, episodio.urlVideo)} className={estilos}>
             <div className="titulo">
                 <span>
                     {indice + 1}
                 </span>
                 <h4>
-                    {episodio.titulo}
+                    {episodio.titulo ? episodio.titulo : 'Clase ' + (indice + 1)}
                 </h4>
             </div>
             <div className="descripcion">
                 <p>
-                    {episodio.descripcion}
+                    {episodio.descripcion ? episodio.descripcion : 'Sin descripción disponible'}
                 </p>
                 <span>
-                    9:28
+                    {episodio.duracion}
                 </span>
             </div>
         </div>

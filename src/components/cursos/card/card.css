@@ -20,6 +20,8 @@
 
 .card-text {
     font-size: 1.5rem;
+    height: 44px;
+    overflow: hidden;
 }
 
 .rounded-img-course {
@@ -34,7 +36,7 @@
 
 .contenedor-spinner-img {
     position: relative;
-    min-height: 202px;
+    min-height: 136px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +44,7 @@
 
 @media (min-width: 768px) {
     .contenedor-spinner-img {
-        min-height: 287px;
+        min-height: 190px;
     }
 }
 
