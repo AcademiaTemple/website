@@ -13,7 +13,7 @@ export default function Home() {
 
   const [verTodo, estVerTodo] = useState(false);
   const [ancho, estAncho] = useState(0);
-
+ 
   const alternarVerTodo = () => {
     estVerTodo(!verTodo);
   }
@@ -23,7 +23,6 @@ export default function Home() {
   }
 
   useEffect(() => {
-
     if (ancho == 0) {
       estAncho(window.innerWidth);
     }

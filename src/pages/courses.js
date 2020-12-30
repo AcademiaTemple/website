@@ -1,10 +1,20 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Card from "../components/cursos/card/card"
-import cursos from "../components/cursos/cursos-data.jsx"
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
+import { obtCursosMuestra } from "../api"
 
 export default function Courses() {
+
+    const [cursos, estCursos] = useState([]);
+
+    useEffect(() => {
+        obtCursosMuestra()
+            .then(cursos => {
+                estCursos(cursos);
+            })
+    }, []);
+
     return (
         <div>
             <Navbar />

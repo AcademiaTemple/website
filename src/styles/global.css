@@ -1,4 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Raleway:wght@100;300;400;600;700&family=Roboto:wght@500;600&display=swap');
+:root {
+  --plyr-color-main: #4dc6f3;
+  --plyr-captions-background: #0C2239;
+  --plyr-control-icon-size: 1.5rem;
+  --plyr-control-spacing: 1rem;
+  --plyr-control-radius: 50px;
+  --plyr-video-controls-background: #0C2239;
+  --espacio-superior-cuerpo-responsive: 86px;
+  --espacio-superior-cuerpo: 116px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --plyr-control-icon-size: 2.5rem;
+    --plyr-control-spacing: 2.5rem
+  }
+}
+
 body {
   font-family: Raleway, Roboto, Arial, Helvetica, sans-serif !important;
   font-size: 1.6rem;
@@ -145,12 +163,13 @@ h4 {
 }
 
 .cuerpo-pagina {
-  padding-top: 86px;
+  padding-top: var(--espacio-superior-cuerpo-responsive);
+  min-height: 100vh;
 }
 
 @media (min-width: 768px) {
   .cuerpo-pagina {
-    padding-top: 116px;
+    padding-top: var(--espacio-superior-cuerpo);
   }
 }
 
@@ -262,6 +281,15 @@ h4 {
   margin-bottom: 2rem;
 }
 
+.requisitos-curso {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #646d7b;
+  margin-bottom: 2.5rem;
+  padding-left: 3rem;
+}
+
 .btn-rep-curso {
   font-size: 1.6rem;
   padding: 0.8rem 4rem;
@@ -301,9 +329,9 @@ h4 {
 .contenedor-curso-profesor h4 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
+  color: #0C2239;
   text-align: center;
   font-weight: 600;
-  color: #0C2239;
   margin-bottom: 1rem;
 }
 
@@ -311,6 +339,11 @@ h4 {
   .contenedor-curso-profesor h4 {
     text-align: left;
   }
+}
+
+.contenedor-curso-profesor h4 a {
+  text-decoration: none;
+  color: #0C2239;
 }
 
 @media (min-width: 768px) {
@@ -346,6 +379,14 @@ h4 {
 
 /*Reproductor curso*/
 
+#player {
+  max-height: 95%;
+}
+
+.plyr--video .plyr__controls {
+  padding: 0 !important;
+}
+
 .contenedor-reproductor {
   position: relative;
 }
@@ -353,34 +394,271 @@ h4 {
 @media (min-width: 768px) {
   .contenedor-reproductor {
     display: flex;
+    height: calc(100vh - var(--espacio-superior-cuerpo-responsive));
   }
 }
 
 .contenedor-reproductor .contenedor-video {
-  position: fixed;
-  height: 300px;
   width: 100%;
   background: #000;
-  z-index: 1;
 }
 
 @media (min-width: 768px) {
   .contenedor-reproductor .contenedor-video {
     position: relative;
-    min-height: 90vh;
     flex-basis: 75%;
   }
 }
 
 .contenedor-reproductor .contenedor-acordeon {
-  padding-top: 300px;
+  height: 300px;
+  overflow: auto;
 }
 
 @media (min-width: 768px) {
   .contenedor-reproductor .contenedor-acordeon {
     padding: 0;
     flex-basis: 25%;
-    max-height: 90vh;
+    height: 100%;
     overflow: auto;
+  }
+}
+
+/*Docentes*/
+
+.perfil-docente {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  margin: 10px;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.name-teacher {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 44px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .name-teacher {
+    text-align: left;
+  }
+}
+
+.contenedor-nacionalidad-profesor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .contenedor-nacionalidad-profesor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.contenedor-nacionalidad-profesor .pais-profesor {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 28px;
+  margin: 0 1rem 0 0;
+}
+
+@media (min-width: 768px) {
+  .contenedor-nacionalidad-profesor .pais-profesor {
+    font-size: 2.2rem;
+  }
+}
+
+.contenedor-nacionalidad-profesor .bandera-pais-profesor {
+  margin-left: 1rem;
+}
+
+.redes-docentes p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.redes-sociales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.redes-docentes>.red-social {
+  display: inline;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.redes-docentes>.red-usuario {
+  color: rgb(35, 156, 244);
+  font-size: 1.4rem;
+}
+
+.redes-docentes>i {
+  margin-right: .5rem;
+  font-size: 1.5rem;
+}
+
+.btn-toolbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 768px) {
+  .btn-toolbar {
+    justify-content: flex-start;
+  }
+}
+
+.btn-toolbar .etiquetas {
+  color: #4dc6f3;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid#4dc6f3;
+  border-radius: 30px;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .btn-toolbar .etiquetas {
+    margin-right: 2rem;
+  }
+  .btn-toolbar .etiquetas:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.btn-toolbar .etiquetas:hover {
+  background-color: #4dc6f3;
+  border: 2px solid #4dc6f3;
+  color: white;
+}
+
+.encabezado-perfil-docente {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .encabezado-perfil-docente {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.img-perfil-profesor {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1.6rem;
+}
+
+@media (min-width: 768px) {
+  .img-perfil-profesor {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+  }
+}
+
+.datos-perfil-docente {
+  text-align: center;
+}
+
+.titulo-carrera {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 10px;
+}
+
+@media (min-width: 768px) {
+  .titulo-carrera {
+    font-size: 2rem;
+    line-height: 15px;
+  }
+}
+
+.titulos-docente {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .titulos-docente {
+    text-align: left;
+  }
+}
+
+.Like-Perfil>h6 {
+  text-align: center;
+  font-family: "Roboto", cursive;
+  font-weight: 1000 !important;
+  font-size: 10rem !important;
+}
+
+.Like-Perfil>i {
+  font-size: 7rem !important;
+}
+
+.Like-Perfil {
+  margin: auto;
+  text-align: center;
+}
+
+.RedesSociales-Perfil {
+  margin: auto;
+  font-size: 2rem;
+}
+
+.userRedes {
+  font-size: 1.5rem !important;
+}
+
+div.contenedor-etiquetas-perfil {
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  div.contenedor-etiquetas-perfil {
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .Redes-Perfil {
+    margin-top: 5rem;
+  }
+  .RedesSociales-Perfil {
+    text-align: center;
   }
 }

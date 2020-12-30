@@ -1,9 +1,8 @@
 import React from "react"
+import { Link } from "gatsby"
 import "./course_teacher.css"
 
 export default function Card_Teacher(props) {
-  const starPorcentaje = (props.star / 5) * 100
-  const starPorcentajeRedondeado = `${Math.round(starPorcentaje / 10) * 10}%`
 
   return (
     <div className="card rounded-course">
@@ -13,42 +12,18 @@ export default function Card_Teacher(props) {
         </div>
         <div className="col-8 col-sm-8 col-lg-7 info-course">
           <h2>
-            <b>{props.name}</b>
+            <b>{props.titulo}</b>
           </h2>
-          <p>{props.description}</p>
-
-          <div className="row">
-            <div className="order-3 order-sm-1 col-sm-3 center mb-2">
-              <button type="button" className="ingresar-course">
-                Ingresar
-              </button>
-            </div>
-            <div className="order-2 order-sm-2 col-sm-3"></div>
-            <div className="order-1 order-sm-3 col-sm-6 center mb-2">
-              <div className="stars-outer">
-                <i className="far fa-star"></i>
-                <i className="far fa-star"></i>
-                <i className="far fa-star"></i>
-                <i className="far fa-star"></i>
-                <i className="far fa-star"></i>
-                <div
-                  className="stars-inner"
-                  style={{ width: starPorcentajeRedondeado }}
-                >
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                  <i className="fas fa-star"></i>
-                </div>
-              </div>
-            </div>
+          <p>{props.descripcion}</p>
+          <div className="contenedor-btn-ingresar">
+            <Link className="boton btn-principal d-block" to={`/course/?id=${props.id}`}>
+              Ingresar
+            </Link>
           </div>
         </div>
-        <div className="col-lg-1"></div>
-        <div className="col-lg-2">
+        <div className="col-lg-3">
           <img
-            src={props.rutafoto}
+            src={props.urlImg}
             className="card-img rounded-img"
             alt="..."
             style={{ height: "100%", width: "100%" }}

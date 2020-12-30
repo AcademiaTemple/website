@@ -1,7 +1,7 @@
 import React from 'react'
 import './card_episodio.css'
 
-const CardEpisodio = ({ idActivo, machucar, episodio }) => {
+const CardEpisodio = ({ indice, idActivo, machucar, episodio }) => {
 
     let estilos = "contenedor-episodio";
 
@@ -10,21 +10,21 @@ const CardEpisodio = ({ idActivo, machucar, episodio }) => {
     }
 
     return (
-        <div onClick={() => machucar(episodio.id)} className={estilos}>
+        <div onClick={() => machucar(episodio.id, episodio.urlVideo)} className={estilos}>
             <div className="titulo">
                 <span>
-                    1
+                    {indice + 1}
                 </span>
                 <h4>
-                    Nuestro primer hola mundo!
+                    {episodio.titulo ? episodio.titulo : 'Clase ' + (indice + 1)}
                 </h4>
             </div>
             <div className="descripcion">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend nibh vel blandit interdum.
+                    {episodio.descripcion ? episodio.descripcion : 'Sin descripción disponible'}
                 </p>
                 <span>
-                    9:28
+                    {episodio.duracion}
                 </span>
             </div>
         </div>

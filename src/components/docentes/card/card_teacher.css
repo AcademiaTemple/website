@@ -52,7 +52,7 @@
 }
 
 .center {
-  text-align: center;
+  text-align: left;
 }
 
 .rounded-circle {
@@ -78,7 +78,7 @@
 .redes-sociales {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: left;
 }
@@ -90,8 +90,12 @@
 }
 
 .redes-docentes>.red-usuario {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
   color: rgb(35, 156, 244);
   font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 .redes-docentes>i {
@@ -99,47 +103,17 @@
   font-size: 1.5rem;
 }
 
-.btn-toolbar {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-@media (min-width: 768px) {
-  .btn-toolbar {
-    justify-content: flex-start;
-  }
-}
-
-.btn-toolbar .etiquetas {
-  color: #4dc6f3;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  border: 2px solid#4dc6f3;
-  border-radius: 30px;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  background-color: white;
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-@media (min-width: 768px) {
-  .btn-toolbar .etiquetas {
-    margin-right: 2rem;
-  }
-  .btn-toolbar .etiquetas:last-of-type {
-    margin-right: 0;
-  }  
-}
-
-.btn-toolbar .etiquetas:hover {
-  background-color: #4dc6f3;
-  border: 2px solid #4dc6f3;
-  color: white;
-}
-
 .link {
   display: block;
 }
 
+.etiquetas-card-teacher {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+  .etiquetas-card-teacher {
+    justify-content: flex-start;
+  }
+}
