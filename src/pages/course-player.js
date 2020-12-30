@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, lazy, Suspense } from "react"
 import Plyr from 'plyr'
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
