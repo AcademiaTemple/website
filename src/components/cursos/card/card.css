@@ -4,8 +4,8 @@
     transition: all 500ms ease-in-out;
 }
 
-.card:hover{
-    box-shadow: 0 4px 8px 0#cfe6ff , 0 6px 20px 0#b3d7fc;
+.card:hover {
+    box-shadow: 0 4px 8px 0#cfe6ff, 0 6px 20px 0#b3d7fc;
 }
 
 .card-img-top {
@@ -20,8 +20,35 @@
 
 .card-text {
     font-size: 1.5rem;
+    height: 44px;
+    overflow: hidden;
 }
 
 .rounded-img-course {
     border-radius: .5rem !important;
+}
+
+.contenedor-tarjeta-curso {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-spinner-img {
+    position: relative;
+    min-height: 136px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-spinner-img {
+        min-height: 190px;
+    }
+}
+
+.contenedor-tarjeta-curso .spinner-border {
+    width: 50px;
+    height: 50px;
 }

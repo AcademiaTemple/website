@@ -43,7 +43,7 @@ const Navbar = ({ usarTransparencia }) => {
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav ml-auto mr-5">
               <li className="nav-item">
-                <Link to="/">Temple</Link>
+                <Link to="/">Inicio</Link>
               </li>
               <li className="nav-item">
                 <Link to="/courses">Cursos</Link>

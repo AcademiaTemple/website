@@ -2,9 +2,9 @@ import React, { useState } from "react"
 import "./parrafo_teacher.css"
 
 export default prop => {
-  const [mostrarMas, setMostrarMas] = useState(true)
-  const [mostrarMenos, setMostrarMenos] = useState(false)
-  console.log(!prop.parrafo)
+  const [mostrarMas, setMostrarMas] = useState(true);
+  const [mostrarMenos, setMostrarMenos] = useState(false);
+
   return (
     <div className="container-info">
       <div className="container-title">
@@ -26,8 +26,7 @@ export default prop => {
                 onClick={() => {
                   setMostrarMas(true)
                   setMostrarMenos(false)
-                }}
-              >
+                }}>
                 <i className="fa fa-angle-up"></i>
               </a>
             </div>
@@ -39,13 +38,10 @@ export default prop => {
           <p
             className={
               !mostrarMenos ? "Semi-Oculto text-content" : "text-content"
-            }
-          >
+            }>
             {prop.parrafo}
           </p>
-          <p
-            className={!mostrarMenos ? "Ocultar text-content" : "text-content"}
-          >
+          <p className={!mostrarMenos ? "Ocultar text-content" : "text-content"}>
             {prop.parrafo}
           </p>
         </div>

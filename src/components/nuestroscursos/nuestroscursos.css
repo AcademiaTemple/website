@@ -3,12 +3,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     background: linear-gradient(236.89deg, #FF171B -26.25%, #FF7779 252.45%);
-    ;
 }
 
 .curso-muestra {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
     height: 12.5rem;
     flex-basis: 100%;
     align-items: center;
@@ -19,6 +19,8 @@
 }
 
 .curso-muestra:hover {
+    color: white;
+    text-decoration: none;
     transform: scale(1.1);
 }
 
