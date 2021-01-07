@@ -23,7 +23,7 @@ export default function Home() {
   }
 
   useEffect(() => {
-    if (ancho == 0) {
+    if (ancho === 0) {
       estAncho(window.innerWidth);
     }
 
@@ -48,10 +48,10 @@ export default function Home() {
       <Estadisticas />
       <NuestrosCursos />
       <div className={clasesContenedorVerTodo}>
-        <a className="btn-alternador-vista" onClick={alternarVerTodo}>
+        <button className="btn-alternador-vista" onClick={alternarVerTodo}>
           {verTodo ? 'Viendo todo ' : 'Ver todo '}
           <img src={ImgFlechita} className={verTodo && 'rotacion-flechita'} alt="flechita" />
-        </a>
+        </button>
       </div>
       {
         verTodo &&

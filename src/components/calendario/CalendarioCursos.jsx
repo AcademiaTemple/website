@@ -22,26 +22,25 @@ const Calendario = () => {
   }, [])
 
   useEffect(() => {
+    const obtenerClasesPorFecha = () => {
+      const clases = cursos.filter(
+        curso =>
+          (moment(fecha).isBetween(
+            moment(curso.fInicioFin[0], "DD/MM/YYYY"),
+            moment(curso.fInicioFin[1], "DD/MM/YYYY")
+          ) && // Verifico si está en el rango de inicio fin
+            curso.dias.includes(diasSemana[moment(fecha).isoWeekday() - 1]) && // Verifico si incluye los días de la semana especificados
+            !curso.cancelaciones.includes(moment(fecha).format("DD/MM/YYYY"))) || // Y que no esté en una fecha cancelada
+          curso.excepciones.includes(moment(fecha).format("DD/MM/YYYY")) // Si no se cumple lo primero, otra opción es que esté agregada como excepción
+      )
+      return clases
+    }
     const clases = obtenerClasesPorFecha()
     estClasesActuales(clases)
-  }, [fecha])
+  }, [fecha, cursos])
 
   const navegar = (idCurso) => {
     navigate(`/course/?id=${idCurso}`);
-  }
-
-  const obtenerClasesPorFecha = () => {
-    const clases = cursos.filter(
-      curso =>
-        (moment(fecha).isBetween(
-          moment(curso.fInicioFin[0], "DD/MM/YYYY"),
-          moment(curso.fInicioFin[1], "DD/MM/YYYY")
-        ) && // Verifico si está en el rango de inicio fin
-          curso.dias.includes(diasSemana[moment(fecha).isoWeekday() - 1]) && // Verifico si incluye los días de la semana especificados
-          !curso.cancelaciones.includes(moment(fecha).format("DD/MM/YYYY"))) || // Y que no esté en una fecha cancelada
-        curso.excepciones.includes(moment(fecha).format("DD/MM/YYYY")) // Si no se cumple lo primero, otra opción es que esté agregada como excepción
-    )
-    return clases
   }
 
   const retrocederDia = () => {
@@ -55,7 +54,7 @@ const Calendario = () => {
   }
 
   const IconoCalendario = ({ value, onClick }) => (
-    <i onClick={onClick} className="fa fa-calendar-alt"></i>
+    <button onClick={onClick} className="fa fa-calendar-alt" aria-label="Icono"></button>
   )
 
   return (
@@ -72,7 +71,7 @@ const Calendario = () => {
               </p>
 
               <div className="controles-agenda d-md-none">
-                <i onClick={retrocederDia} className="fa fa-arrow-left"></i>
+                <button onClick={retrocederDia} className="fa fa-arrow-left" aria-label="Retroceder"></button>
                 <div>
                   <DatePicker
                     selected={fecha}
@@ -92,7 +91,7 @@ const Calendario = () => {
                     customInput={<IconoCalendario />}
                   />
                 </div>
-                <i onClick={avanzarDia} className="fa fa-arrow-right"></i>
+                <button onClick={avanzarDia} className="fa fa-arrow-right"aria-label="Avanzar"></button>
               </div>
             </div>
             <div className="cursos-calendario">
@@ -100,10 +99,10 @@ const Calendario = () => {
                 <div key={i} className="curso-calendario">
                   <p className="titulo-curso-calendario">{e.titulo}</p>
                   <div className="controles-curso">
-                    <a target="_blank" href={e.urlInscripcion}>
+                    <a target="_blank" rel="noreferrer" href={e.urlInscripcion}>
                       <i className="fa fa-clipboard-list"></i>
                     </a>
-                    <i onClick={() => navegar(e.id)} className="fa fa-eye"></i>
+                    <button onClick={() => navegar(e.id)} className="fa fa-eye" aria-label="Visualizar"></button>
                   </div>
                   <p className="horario-curso-calendario">
                     {moment(e.hInicioFin[0], "HH:mm").format("hh:mm a") +
@@ -112,7 +111,7 @@ const Calendario = () => {
                   </p>
                 </div>
               ))}
-              {clasesActuales == 0 && (
+              {clasesActuales === 0 && (
                 <p className="titulo-curso-calendario">
                   No hay clases para este día
                 </p>
