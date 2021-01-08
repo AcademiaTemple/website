@@ -5,12 +5,12 @@ const CardEpisodio = ({ indice, idActivo, machucar, episodio }) => {
 
     let estilos = "contenedor-episodio";
 
-    if (idActivo == episodio.id) {
+    if (idActivo === episodio.id) {
         estilos += " episodio-seleccionado";
     }
 
     return (
-        <div onClick={() => machucar(episodio.id, episodio.urlVideo)} className={estilos}>
+        <div onClick={() => machucar(episodio.id, episodio.urlVideo)} onKeyDown={() => machucar(episodio.id, episodio.urlVideo)} className={estilos} role="button" tabIndex={0}>
             <div className="titulo">
                 <span>
                     {indice + 1}

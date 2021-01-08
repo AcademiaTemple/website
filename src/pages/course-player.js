@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from "react"
+import React, { useState, useEffect } from "react"
 import Plyr from 'plyr'
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
@@ -19,7 +19,7 @@ export default function Course(props) {
     const [idVideo, estIdVideo] = useState(idEpisodio);
 
     const obtUrlPorIdVideo = (episodios, idEpisodio) => {
-        const encontrado = episodios.find(e => e.id == idEpisodio);
+        const encontrado = episodios.find(e => e.id === idEpisodio);
         return encontrado && encontrado.urlVideo;
     }
 
@@ -36,7 +36,7 @@ export default function Course(props) {
                 estUrlVideo(construirUrlVideo(obtUrlPorIdVideo(episodios, idEpisodio)));
                 estCargandoEpisodios(false);
             })
-    }, [idCurso])
+    }, [idCurso, idEpisodio])
 
     useEffect(() => {
         const player = new Plyr('#player', {
@@ -55,6 +55,7 @@ export default function Course(props) {
                     <div className="contenedor-video">
                         <div key={idVideo} className="plyr__video-embed" id="player">
                             <iframe
+                                title="..."
                                 width="100%"
                                 frameBorder="0"
                                 src={urlVideo}

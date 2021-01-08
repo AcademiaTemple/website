@@ -1,664 +1,680 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Raleway:wght@100;300;400;600;700&family=Roboto:wght@500;600&display=swap');
 :root {
-  --plyr-color-main: #4dc6f3;
-  --plyr-captions-background: #0C2239;
-  --plyr-control-icon-size: 1.5rem;
-  --plyr-control-spacing: 1rem;
-  --plyr-control-radius: 50px;
-  --plyr-video-controls-background: #0C2239;
-  --espacio-superior-cuerpo-responsive: 86px;
-  --espacio-superior-cuerpo: 116px;
+    --plyr-color-main: #4dc6f3;
+    --plyr-captions-background: #0C2239;
+    --plyr-control-icon-size: 1.5rem;
+    --plyr-control-spacing: 1rem;
+    --plyr-control-radius: 50px;
+    --plyr-video-controls-background: #0C2239;
+    --espacio-superior-cuerpo-responsive: 86px;
+    --espacio-superior-cuerpo: 116px;
 }
 
 @media (min-width: 768px) {
-  :root {
-    --plyr-control-icon-size: 2.5rem;
-    --plyr-control-spacing: 2.5rem
-  }
+     :root {
+        --plyr-control-icon-size: 2.5rem;
+        --plyr-control-spacing: 2.5rem
+    }
 }
 
 body {
-  font-family: Raleway, Roboto, Arial, Helvetica, sans-serif !important;
-  font-size: 1.6rem;
-  line-height: 2;
+    font-family: Raleway, Roboto, Arial, Helvetica, sans-serif !important;
+    font-size: 1.6rem;
+    line-height: 2;
 }
 
 html {
-  color: white;
-  background-color: #4dc6f3;
-  box-sizing: border-box;
-  font-size: 62.5%;
-  /** Reset para REMS - 62.5% = 10px de 16px **/
+    color: white;
+    background-color: #4dc6f3;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
 }
+
 
 /** Globales **/
 
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 .contenedor {
-  max-width: 144rem !important;
-  width: 90%;
-  margin: 0 auto;
+    max-width: 144rem !important;
+    width: 90%;
+    margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .contenedor {
-    width: 85%;
-  }
-  .contenedor-60 {
-    width: 60%;
-  }
+    .contenedor {
+        width: 85%;
+    }
+    .contenedor-60 {
+        width: 60%;
+    }
 }
 
 .contenedor-85 {
-  width: 85%;
+    width: 85%;
 }
 
-a, a:hover, a:focus {
-  text-decoration: none;
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
 }
 
 h1 {
-  font-size: 3.8rem;
+    font-size: 3.8rem;
 }
 
 h2 {
-  font-size: 3.4rem;
+    font-size: 3.4rem;
 }
 
 h3 {
-  font-size: 3rem;
+    font-size: 3rem;
 }
 
 h4 {
-  font-size: 2.6rem;
+    font-size: 2.6rem;
 }
+
 
 /** Utilidades **/
 
 .fw-300 {
-  font-weight: 300;
+    font-weight: 300;
 }
 
 .fw-600 {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 .fw-700 {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .centrar-texto {
-  text-align: center;
+    text-align: center;
 }
 
 .d-block {
-  display: block!important;
+    display: block!important;
 }
 
 .r-180 {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .boton {
-  color: white;
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.5rem;
-  padding: 0.4rem 4rem;
-  margin-top: 1rem;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50px;
-  transition: all 100ms ease-in-out;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 0.4rem 4rem;
+    margin-top: 1rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50px;
+    transition: all 100ms ease-in-out;
 }
 
 .btn-principal {
-  display: block;
-  margin: 0;
-  color: white;
-  text-align: center;
-  border: none;
-  user-select: none;
-  border-radius: 20px;
-  padding: .8rem 0;
-  background-color: #071727;
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0;
+    color: white;
+    text-align: center;
+    border: none;
+    user-select: none;
+    border-radius: 20px;
+    padding: .8rem 0;
+    background-color: #071727;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
-  .btn-principal {
-    display: inline-block;
-    padding: .8rem 3rem;
-  }
+    .btn-principal {
+        display: inline-block;
+        padding: .8rem 3rem;
+    }
 }
 
 .btn-principal:hover {
-  background-color: #4dc6f3;
-  color: white;
+    background-color: #4dc6f3;
+    color: white;
 }
 
 .boton:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .seccion {
-  padding: 2rem 0;
-  background: white;
-  color: black;
+    padding: 2rem 0;
+    background: white;
+    color: black;
 }
 
 @media (min-width: 768px) {
-  .seccion {
-    padding: 3rem 0 1.5rem 0;
-  }
+    .seccion {
+        padding: 3rem 0 1.5rem 0;
+    }
 }
 
 .cuerpo-pagina {
-  padding-top: var(--espacio-superior-cuerpo-responsive);
-  min-height: 100vh;
+    padding-top: var(--espacio-superior-cuerpo-responsive);
+    min-height: 100vh;
 }
 
 @media (min-width: 768px) {
-  .cuerpo-pagina {
-    padding-top: var(--espacio-superior-cuerpo);
-  }
+    .cuerpo-pagina {
+        padding-top: var(--espacio-superior-cuerpo);
+    }
 }
 
 .titulo-seccion {
-  font-size: 2.2rem;
-  color: #000;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  .titulo-seccion {
-    font-size: 2.6rem;
-    margin-bottom: 4rem;
-  }
+    .titulo-seccion {
+        font-size: 2.6rem;
+        margin-bottom: 4rem;
+    }
 }
+
 
 /*Inicio*/
 
 .btn-alternador-vista {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1.5rem;
-  color: #0C2239;
-  cursor: pointer;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #0C2239;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+.btn-alternador-vista:focus {
+    outline: none;
 }
 
 .btn-alternador-vista:hover {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 .btn-alternador-vista img {
-  transition: all 500ms ease;
-  width: 1rem;
-  height: 1.4rem;
+    transition: all 500ms ease;
+    width: 1rem;
+    height: 1.4rem;
 }
 
 .rotacion-flechita {
-  transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 
 .courses-container {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 
 .contact-form {
-  margin: 10rem auto;
-  margin-left: 40%;
+    margin: 10rem auto;
+    margin-left: 40%;
 }
 
 .teacher-container {
-  padding: 10%;
-  justify-content: space-between;
-  padding-bottom: 20%;
-  height: 100%;
-  width: 100%;
+    padding: 10%;
+    justify-content: space-between;
+    padding-bottom: 20%;
+    height: 100%;
+    width: 100%;
 }
 
 .header {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .carrusel {
-  background-color: rgb(149, 151, 46);
-  height: 100%;
-  width: 100%;
+    background-color: rgb(149, 151, 46);
+    height: 100%;
+    width: 100%;
 }
+
 
 /*Curso*/
 
 .titulo-curso {
-  font-size: 2.8rem;
+    font-size: 2.8rem;
 }
 
 .contenedor-controles-curso {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  .contenedor-controles-curso {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    .contenedor-controles-curso {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .descripcion-curso {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #646d7b;
-  margin-bottom: 1.8rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #646d7b;
+    margin-bottom: 1.8rem;
 }
 
 .descripcion-curso:last-of-type {
-  margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .subtitulo-descripcion-curso {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #3a4048;
-  margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #3a4048;
+    margin-bottom: 2rem;
 }
 
 .requisitos-curso {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #646d7b;
-  margin-bottom: 2.5rem;
-  padding-left: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #646d7b;
+    margin-bottom: 2.5rem;
+    padding-left: 3rem;
 }
 
 .btn-rep-curso {
-  font-size: 1.6rem;
-  padding: 0.8rem 4rem;
-  border-radius: 30px;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
+    font-size: 1.6rem;
+    padding: 0.8rem 4rem;
+    border-radius: 30px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  .contenedor-curso-profesor {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.8rem;
-  }
+    .contenedor-curso-profesor {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.8rem;
+    }
 }
 
 @media (min-width: 768px) {
-  .contenedor-curso-profesor .contenedor-img {
-    margin-right: 2rem;
-  }
+    .contenedor-curso-profesor .contenedor-img {
+        margin-right: 2rem;
+    }
 }
 
 .contenedor-curso-profesor .contenedor-img img {
-  border-radius: 50px;
-  width: 70px;
-  height: 70px;
-  display: block;
-  margin: 0 auto 1.4rem auto;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto 1.4rem auto;
 }
 
 @media (min-width: 768px) {
-  .contenedor-curso-profesor .contenedor-descripcion {
-    flex: 1
-  }
+    .contenedor-curso-profesor .contenedor-descripcion {
+        flex: 1
+    }
 }
 
 .contenedor-curso-profesor h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
-  color: #0C2239;
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: #0C2239;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
-  .contenedor-curso-profesor h4 {
-    text-align: left;
-  }
+    .contenedor-curso-profesor h4 {
+        text-align: left;
+    }
 }
 
 .contenedor-curso-profesor h4 a {
-  text-decoration: none;
-  color: #0C2239;
+    text-decoration: none;
+    color: #0C2239;
 }
 
 @media (min-width: 768px) {
-  .btn-rep-curso {
-    margin: 0;
-  }
+    .btn-rep-curso {
+        margin: 0;
+    }
 }
 
 .contenedor-data-cursos {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 @media (min-width: 768px) {
-  .contenedor-data-cursos {
-    flex-basis: 50%;
-    justify-content: flex-end;
-  }
+    .contenedor-data-cursos {
+        flex-basis: 50%;
+        justify-content: flex-end;
+    }
 }
 
 .contenedor-data-cursos>div {
-  font-size: 1.8rem;
-  color: #3a4048;
-  font-family: Roboto;
-  font-weight: 500;
-  text-transform: uppercase;
+    font-size: 1.8rem;
+    color: #3a4048;
+    font-family: Roboto;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 
 .contenedor-data-cursos>div i {
-  font-size: 1.8rem;
-  color: #071727;
+    font-size: 1.8rem;
+    color: #071727;
 }
+
 
 /*Reproductor curso*/
 
 #player {
-  max-height: 95%;
+    max-height: 95%;
 }
 
 .plyr--video .plyr__controls {
-  padding: 0 !important;
+    padding: 0 !important;
 }
 
 .contenedor-reproductor {
-  position: relative;
+    position: relative;
 }
 
 @media (min-width: 768px) {
-  .contenedor-reproductor {
-    display: flex;
-    height: calc(100vh - var(--espacio-superior-cuerpo-responsive));
-  }
+    .contenedor-reproductor {
+        display: flex;
+        height: calc(100vh - var(--espacio-superior-cuerpo-responsive));
+    }
 }
 
 .contenedor-reproductor .contenedor-video {
-  width: 100%;
-  background: #000;
+    width: 100%;
+    background: #000;
 }
 
 @media (min-width: 768px) {
-  .contenedor-reproductor .contenedor-video {
-    position: relative;
-    flex-basis: 75%;
-  }
+    .contenedor-reproductor .contenedor-video {
+        position: relative;
+        flex-basis: 75%;
+    }
 }
 
 .contenedor-reproductor .contenedor-acordeon {
-  height: 300px;
-  overflow: auto;
+    height: 300px;
+    overflow: auto;
 }
 
 @media (min-width: 768px) {
-  .contenedor-reproductor .contenedor-acordeon {
-    padding: 0;
-    flex-basis: 25%;
-    height: 100%;
-    overflow: auto;
-  }
+    .contenedor-reproductor .contenedor-acordeon {
+        padding: 0;
+        flex-basis: 25%;
+        height: 100%;
+        overflow: auto;
+    }
 }
+
 
 /*Docentes*/
 
 .perfil-docente {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border-radius: 0.25rem;
-  margin: 10px;
-  margin-top: 5rem;
-  margin-bottom: 10rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+    margin: 10px;
+    margin-top: 5rem;
+    margin-bottom: 10rem;
 }
 
 .name-teacher {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 3.5rem;
-  line-height: 44px;
-  text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 44px;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
-  .name-teacher {
-    text-align: left;
-  }
+    .name-teacher {
+        text-align: left;
+    }
 }
 
 .contenedor-nacionalidad-profesor {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 768px) {
-  .contenedor-nacionalidad-profesor {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
+    .contenedor-nacionalidad-profesor {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
 }
 
 .contenedor-nacionalidad-profesor .pais-profesor {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.8rem;
-  line-height: 28px;
-  margin: 0 1rem 0 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 28px;
+    margin: 0 1rem 0 0;
 }
 
 @media (min-width: 768px) {
-  .contenedor-nacionalidad-profesor .pais-profesor {
-    font-size: 2.2rem;
-  }
+    .contenedor-nacionalidad-profesor .pais-profesor {
+        font-size: 2.2rem;
+    }
 }
 
 .contenedor-nacionalidad-profesor .bandera-pais-profesor {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 .redes-docentes p {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
 }
 
 .redes-sociales {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
 }
 
 .redes-docentes>.red-social {
-  display: inline;
-  font-weight: 500;
-  font-size: 1.4rem;
+    display: inline;
+    font-weight: 500;
+    font-size: 1.4rem;
 }
 
 .redes-docentes>.red-usuario {
-  color: rgb(35, 156, 244);
-  font-size: 1.4rem;
+    color: rgb(35, 156, 244);
+    font-size: 1.4rem;
 }
 
 .redes-docentes>i {
-  margin-right: .5rem;
-  font-size: 1.5rem;
+    margin-right: .5rem;
+    font-size: 1.5rem;
 }
 
 .btn-toolbar {
-  display: flex;
-  justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 @media (min-width: 768px) {
-  .btn-toolbar {
-    justify-content: flex-start;
-  }
+    .btn-toolbar {
+        justify-content: flex-start;
+    }
 }
 
 .btn-toolbar .etiquetas {
-  color: #4dc6f3;
-  text-align: center;
-  vertical-align: middle;
-  user-select: none;
-  border: 2px solid#4dc6f3;
-  border-radius: 30px;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  background-color: white;
-  font-size: 1.3rem;
-  font-weight: 600;
+    color: #4dc6f3;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 2px solid#4dc6f3;
+    border-radius: 30px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 @media (min-width: 768px) {
-  .btn-toolbar .etiquetas {
-    margin-right: 2rem;
-  }
-  .btn-toolbar .etiquetas:last-of-type {
-    margin-right: 0;
-  }
+    .btn-toolbar .etiquetas {
+        margin-right: 2rem;
+    }
+    .btn-toolbar .etiquetas:last-of-type {
+        margin-right: 0;
+    }
 }
 
 .btn-toolbar .etiquetas:hover {
-  background-color: #4dc6f3;
-  border: 2px solid #4dc6f3;
-  color: white;
+    background-color: #4dc6f3;
+    border: 2px solid #4dc6f3;
+    color: white;
 }
 
 .encabezado-perfil-docente {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  .encabezado-perfil-docente {
-    margin-top: 5rem;
-    margin-bottom: 4rem;
-  }
+    .encabezado-perfil-docente {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+    }
 }
 
 .img-perfil-profesor {
-  display: block;
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 1.6rem;
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1.6rem;
 }
 
 @media (min-width: 768px) {
-  .img-perfil-profesor {
-    width: 200px;
-    height: 200px;
-    margin: 0;
-  }
+    .img-perfil-profesor {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
 }
 
 .datos-perfil-docente {
-  text-align: center;
+    text-align: center;
 }
 
 .titulo-carrera {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.8rem;
-  line-height: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 10px;
 }
 
 @media (min-width: 768px) {
-  .titulo-carrera {
-    font-size: 2rem;
-    line-height: 15px;
-  }
+    .titulo-carrera {
+        font-size: 2rem;
+        line-height: 15px;
+    }
 }
 
 .titulos-docente {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
-  .titulos-docente {
-    text-align: left;
-  }
+    .titulos-docente {
+        text-align: left;
+    }
 }
 
 .Like-Perfil>h6 {
-  text-align: center;
-  font-family: "Roboto", cursive;
-  font-weight: 1000 !important;
-  font-size: 10rem !important;
+    text-align: center;
+    font-family: "Roboto", cursive;
+    font-weight: 1000 !important;
+    font-size: 10rem !important;
 }
 
 .Like-Perfil>i {
-  font-size: 7rem !important;
+    font-size: 7rem !important;
 }
 
 .Like-Perfil {
-  margin: auto;
-  text-align: center;
+    margin: auto;
+    text-align: center;
 }
 
 .RedesSociales-Perfil {
-  margin: auto;
-  font-size: 2rem;
+    margin: auto;
+    font-size: 2rem;
 }
 
 .userRedes {
-  font-size: 1.5rem !important;
+    font-size: 1.5rem !important;
 }
 
 div.contenedor-etiquetas-perfil {
-  justify-content: space-around;
-  margin-bottom: 2rem;
+    justify-content: space-around;
+    margin-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  div.contenedor-etiquetas-perfil {
-    justify-content: flex-start;
-    margin-bottom: 3rem;
-  }
+    div.contenedor-etiquetas-perfil {
+        justify-content: flex-start;
+        margin-bottom: 3rem;
+    }
 }
 
 @media only screen and (max-width: 990px) {
-  .Redes-Perfil {
-    margin-top: 5rem;
-  }
-  .RedesSociales-Perfil {
-    text-align: center;
-  }
+    .Redes-Perfil {
+        margin-top: 5rem;
+    }
+    .RedesSociales-Perfil {
+        text-align: center;
+    }
 }

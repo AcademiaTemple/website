@@ -17,6 +17,7 @@ const calcularTotalHoras = (clases) => {
         const minutos = parseInt(hm[1], 10);
         totalMinutos += minutos;
         totalMinutos += (horas * 60);
+        return { totalMinutos}
     })
 
     // Obtengo las horas y minutos completos

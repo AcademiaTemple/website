@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import "./footer.css"
 import Logo from "../../../static/logo.png"
@@ -23,20 +23,20 @@ const Footer = () => {
           <ul className="iconos-redes">
             <li>
               <a
-                target="_blank"
+                target="_blank" rel="noreferrer"
                 href="https://www.facebook.com/groups/academiatemple/"
               >
                 <i className="fab fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a target="_blank" href="https://discord.gg/4Hzhwfb8Pf">
+              <a target="_blank" rel="noreferrer" href="https://discord.gg/4Hzhwfb8Pf">
                 <i className="fab fa-discord"></i>
               </a>
             </li>
             <li>
               <a
-                target="_blank"
+                target="_blank" rel="noreferrer"
                 href="https://t.me/joinchat/RjdRFRnHY0tR8vpkHxDNow"
               >
                 <i className="fab fa-telegram"></i>
@@ -46,7 +46,7 @@ const Footer = () => {
           <p>Redes</p>
           <ul className="iconos-redes">
             <li>
-              <a target="_blank" href="https://www.facebook.com/templealumnos/">
+              <a target="_blank" rel="noreferrer" href="https://www.facebook.com/templealumnos/">
                 <i className="fab fa-facebook"></i>
               </a>
             </li>

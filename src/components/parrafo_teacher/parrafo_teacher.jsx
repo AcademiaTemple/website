@@ -12,7 +12,7 @@ export default prop => {
           {prop.titulo}
           {prop.parrafo && (
             <div className="Detalle">
-              <a
+              <button
                 className={!mostrarMas ? "Ocultar" : ""}
                 onClick={() => {
                   setMostrarMas(false)
@@ -20,15 +20,15 @@ export default prop => {
                 }}
               >
                 <i className="fa fa-angle-down"></i>
-              </a>
-              <a
+              </button>
+              <button
                 className={!mostrarMenos ? "Ocultar" : ""}
                 onClick={() => {
                   setMostrarMas(true)
                   setMostrarMenos(false)
                 }}>
                 <i className="fa fa-angle-up"></i>
-              </a>
+              </button>
             </div>
           )}
         </h2>

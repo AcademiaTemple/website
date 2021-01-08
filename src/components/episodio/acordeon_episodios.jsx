@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import CardEpisodio from './card/card_episodio';
 
 const AcordeonEpisodio = ({ idActivo, machucar, episodios }) => {

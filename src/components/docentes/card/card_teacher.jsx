@@ -7,7 +7,7 @@ export default function Card_Teacher({ data }) {
     <div className="card card-teacher">
       <div className="row">
         <div className="col-12 col-md-2 contenedor-img pb-4 pb-md-0">
-          <img src={data.img} className="rounded-circle avatar-card-teacher" />
+          <img alt="..." src={data.img} className="rounded-circle avatar-card-teacher" />
         </div>
 
         <div className="col-12 col-md-6 pl-md-0">
@@ -38,7 +38,7 @@ export default function Card_Teacher({ data }) {
             <div className="redes-docentes">
               <i className="fab fa-patreon"></i>
               <p className="red-social">Patreon</p>
-              <a target="_blank" href={data.redes.pt} className="red-usuario">Visitar</a>
+              <a target="_blank" rel="noreferrer" href={data.redes.pt} className="red-usuario">Visitar</a>
             </div>
           }
           {
@@ -46,7 +46,7 @@ export default function Card_Teacher({ data }) {
             <div className="redes-docentes">
               <i className="fab fa-github"></i>
               <p className="red-social">Github</p>
-              <a target="_blank" href={data.redes.gh} className="red-usuario">Visitar</a>
+              <a target="_blank" rel="noreferrer" href={data.redes.gh} className="red-usuario">Visitar</a>
             </div>
           }
           {
@@ -54,7 +54,7 @@ export default function Card_Teacher({ data }) {
             <div className="redes-docentes">
               <i className="fab fa-youtube"></i>
               <p className="red-social">Youtube</p>
-              <a target="_blank" href={data.redes.yt} className="red-usuario">Visitar</a>
+              <a target="_blank" rel="noreferrer" href={data.redes.yt} className="red-usuario">Visitar</a>
             </div>
           }
         </div>

@@ -28,7 +28,7 @@ export default function Teacher_detail(props) {
           })
         estCargandoProfesor(true);
       })
-  }, []);
+  }, [idProfesor]);
 
   return (
     <div>
@@ -85,7 +85,7 @@ export default function Teacher_detail(props) {
               <div className="redes-docentes">
                 <i className="fab fa-patreon"></i>
                 <p className="red-social">Patreon</p>
-                <a target="_blank" href={profesor.redes.pt} className="red-usuario">Visitar</a>
+                <a target="_blank" rel="noreferrer" href={profesor.redes.pt} className="red-usuario">Visitar</a>
               </div>
             }
             {
@@ -93,7 +93,7 @@ export default function Teacher_detail(props) {
               <div className="redes-docentes">
                 <i className="fab fa-github"></i>
                 <p className="red-social">Github</p>
-                <a target="_blank" href={profesor.redes.gh} className="red-usuario">Visitar</a>
+                <a target="_blank" rel="noreferrer" href={profesor.redes.gh} className="red-usuario">Visitar</a>
               </div>
             }
             {
@@ -101,7 +101,7 @@ export default function Teacher_detail(props) {
               <div className="redes-docentes">
                 <i className="fab fa-youtube"></i>
                 <p className="red-social">Youtube</p>
-                <a target="_blank" href={profesor.redes.yt} className="red-usuario">Visitar</a>
+                <a target="_blank" rel="noreferrer" href={profesor.redes.yt} className="red-usuario">Visitar</a>
               </div>
             }
           </div>
