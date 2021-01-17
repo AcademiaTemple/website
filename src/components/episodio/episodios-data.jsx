@@ -15,10 +15,10 @@ export const episodios = [
             },
             {
                 id: 2,
-                titulo: 'Nuestro segundo hola mundo!',
-                descripcion: 'Veremos como hacer 2 hola mundo en C++',
-                urlVideo: '-NnI7WgCzQ8',
-                duracion: '2h 21m',
+                titulo: '',
+                descripcion: '',
+                urlVideo: 'Mt0ETFbspjU',
+                duracion: '1h 38m',
                 recursos: [{
                     nombre: 'Proyecto',
                     url: 'https://'
