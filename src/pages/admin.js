@@ -1,8 +1,12 @@
 import React, { useRef, useState, useEffect } from "react"
 import { navigate } from "gatsby"
 import { obtUsuarioStorage } from '../helpers/obtUsuarioStorage'
-import { obtProfesoresAdmin, obtCursosAdmin, actEstadoProfesorAdmin, actEstadoCursoAdmin } from '../api'
+import { obtProfesoresTablaAdmin, obtCursosTablaAdmin, actEstadoProfesorAdmin, actEstadoCursoAdmin } from '../api'
 import Pestanas from '../components/pestanas'
+import ModalConfirmacion from '../components/modal/confirmacion'
+import ModalEdicionProfesor from '../components/modal/edicionProfesor'
+import ModalEdicionCurso from '../components/modal/edicionCurso'
+
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 import $ from 'jquery';
@@ -21,6 +25,8 @@ export default function Admin({ location }) {
 
     // Modal
     const refModalEliminacion = useRef(null);
+    const refModalEdicionProfesor = useRef(null);
+    const refModalEdicionCurso = useRef(null);
 
     useEffect(() => {
         estCargandoProfesores(true);
@@ -37,8 +43,18 @@ export default function Admin({ location }) {
         $(refModalEliminacion.current).modal('show');
     }
 
+    const editarModalProfesor = (registro) => {
+        estRegistro(registro);
+        $(refModalEdicionProfesor.current).modal('show');
+    }
+
+    const editarModalCurso = (registro) => {
+        estRegistro(registro);
+        $(refModalEdicionCurso.current).modal('show');
+    }
+
     const obtenerCursos = () => {
-        obtCursosAdmin()
+        obtCursosTablaAdmin()
             .then(cursos => {
                 estCursos(cursos);
                 estCargandoCursos(false);
@@ -46,7 +62,7 @@ export default function Admin({ location }) {
     }
 
     const obtenerProfesores = () => {
-        obtProfesoresAdmin()
+        obtProfesoresTablaAdmin()
             .then(profesores => {
                 estProfesores(profesores);
                 estCargandoProfesores(false);
@@ -55,6 +71,19 @@ export default function Admin({ location }) {
 
     const cerrarModalConfirmacion = () => {
         $(refModalEliminacion.current).modal('hide');
+    }
+
+    const guardarCambiosEdicionProfesor = () => {
+        cerrarModalEdicionProfesor();
+        obtenerProfesores();
+    }
+
+    const cerrarModalEdicionProfesor = () => {
+        $(refModalEdicionProfesor.current).modal('hide');
+    }
+
+    const cerrarModalEdicionCurso = () => {
+        $(refModalEdicionCurso.current).modal('hide');
     }
 
     const actualizarEstadoRegistro = () => {
@@ -92,25 +121,24 @@ export default function Admin({ location }) {
 
     return (
         <div>
-            <div ref={refModalEliminacion} className="modal fade" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal">
-                <div className="modal-dialog" role="document">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Eliminar</h5>
-                            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div className="modal-body">
-                            ¿Quieres {registro?.activo ? ' desactivar' : ' activar'} este registro?
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-danger" onClick={actualizarEstadoRegistro}>Sí</button>
-                            <button type="button" className="btn btn-primary" onClick={cerrarModalConfirmacion}>No</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <ModalConfirmacion
+                ref={refModalEliminacion}
+                texto={`¿Quieres ${registro?.activo ? ' desactivar' : ' activar'} este registro?`}
+                confirmar={actualizarEstadoRegistro}
+                cancelar={cerrarModalConfirmacion} />
+
+            <ModalEdicionProfesor
+                data={registro}
+                ref={refModalEdicionProfesor}
+                guardarCambios={guardarCambiosEdicionProfesor}
+                cancelar={cerrarModalEdicionProfesor} />
+
+            <ModalEdicionCurso
+                data={registro}
+                ref={refModalEdicionCurso}
+                confirmar={() => { }}
+                cancelar={cerrarModalEdicionCurso} />
 
             <Navbar currentPage={location.pathname} />
             <div className="contenedor cuerpo-pagina">
@@ -145,7 +173,7 @@ export default function Admin({ location }) {
                                                                 <td>{profesor.apellidos}</td>
                                                                 <td>{profesor.activo ? 'Sí' : 'No'}</td>
                                                                 <td>
-                                                                    <button onClick={() => estRegistro(profesor)} className='btn btn-secondary'>
+                                                                    <button onClick={() => editarModalProfesor({ ...profesor, tipo: 'PROFESOR' })} className='btn btn-secondary'>
                                                                         <i className='fa fa-edit'></i>
                                                                     </button>
                                                                     {
@@ -175,7 +203,9 @@ export default function Admin({ location }) {
                                                         <tr>
                                                             <th scope="col">#</th>
                                                             <th scope="col">Título</th>
-                                                            <th scope="col">Profesor</th>
+                                                            <th scope="col">Días</th>
+                                                            <th scope="col">Horas</th>
+                                                            <th scope="col">Activo</th>
                                                             <th scope="col">Acciones</th>
                                                         </tr>
                                                     </thead>
@@ -185,9 +215,11 @@ export default function Admin({ location }) {
                                                                 <tr key={curso.id} className={curso.activo ? '' : 'table-danger'}>
                                                                     <th scope="row">{indice + 1}</th>
                                                                     <td>{curso.titulo}</td>
-                                                                    <td>{curso.profesor.nombres} {curso.profesor.apellidos}</td>
+                                                                    <td>{curso.dias.join(', ')}</td>
+                                                                    <td>{curso.hInicioFin.join(' a ')}</td>
+                                                                    <td>{curso.activo ? 'Sí' : 'No'}</td>
                                                                     <td>
-                                                                        <button onClick={() => estRegistro(curso)} className='btn btn-secondary'>
+                                                                        <button onClick={() => editarModalCurso({ ...curso, tipo: 'CURSO' })} className='btn btn-secondary'>
                                                                             <i className='fa fa-edit'></i>
                                                                         </button>
                                                                         {
