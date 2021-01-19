@@ -4,8 +4,7 @@ import Footer from "../components/footer/footer"
 import AcordeonEpisodio from "../components/episodio/acordeon_episodios"
 import queryString from 'query-string'
 import { obtCursoExtendido } from '../api'
-import { navigate } from "gatsby"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 const calcularTotalHoras = (clases) => {
     let totalMinutos = 0;
@@ -17,7 +16,7 @@ const calcularTotalHoras = (clases) => {
         const minutos = parseInt(hm[1], 10);
         totalMinutos += minutos;
         totalMinutos += (horas * 60);
-        return { totalMinutos}
+        return { totalMinutos }
     })
 
     // Obtengo las horas y minutos completos

@@ -10,9 +10,9 @@ export default function Courses() {
 
     useEffect(() => {
         obtCursosMuestra()
-            .then(cursos => {
-                estCursos(cursos);
-            })
+            .then(data => {
+                estCursos(data);
+            });
     }, []);
 
     return (

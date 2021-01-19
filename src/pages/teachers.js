@@ -3,7 +3,7 @@ import Carrusel from "../components/carrusel/carrusele"
 import Card_Teacher from "../components/docentes/card/card_teacher"
 import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
-import { obtProfesores } from '../api'
+import { obtProfesoresMuestra } from '../api'
 
 export default function Teachers({ data }) {
 
@@ -12,7 +12,7 @@ export default function Teachers({ data }) {
 
   useEffect(() => {
     estCargandoProfesores(true);
-    obtProfesores()
+    obtProfesoresMuestra()
       .then(profesores => {
         estProfesores(profesores);
         estCargandoProfesores(false);
