@@ -4,6 +4,10 @@ footer {
   color: white;
 }
 
+footer p {
+  color: white;
+}
+
 .contenedor-footer {
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +34,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }  
+  }
 }
 
 .redes p, .administrativo p {
@@ -42,7 +46,7 @@ footer {
 @media (min-width: 768px) {
   .redes p, .administrativo p {
     font-size: 1.3rem;
-  }  
+  }
 }
 
 .logo-contacto {
@@ -76,7 +80,7 @@ footer {
   .contacto-footer h4 {
     margin-top: 1.5rem;
     font-size: 1.5rem;
-  }  
+  }
 }
 
 .contacto-footer p {
@@ -89,7 +93,7 @@ footer {
 @media (min-width: 768px) {
   .contacto-footer p {
     font-size: 1.3rem;
-  }  
+  }
 }
 
 .contacto-footer p:last-of-type {
@@ -126,7 +130,7 @@ footer {
 @media (min-width: 768px) {
   .iconos-redes .fab {
     font-size: 3rem;
-  }  
+  }
 }
 
 .administrativo {

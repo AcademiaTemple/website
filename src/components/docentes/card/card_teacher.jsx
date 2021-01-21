@@ -1,13 +1,17 @@
-import React from "react"
-import "./card_teacher.css"
+import React, { useState } from "react"
 import { Link } from "gatsby"
+import ImgUsuarioGenerico from '../../../../static/usuario-generico.svg'
+import "./card_teacher.css"
 
-export default function Card_Teacher({ data }) {
+export default function Card({ data }) {
+
+  const [imgProfesor, estImgProfesor] = useState(data.img);
+
   return (
     <div className="card card-teacher">
       <div className="row">
         <div className="col-12 col-md-2 contenedor-img pb-4 pb-md-0">
-          <img alt="..." src={data.img} className="rounded-circle avatar-card-teacher" />
+          <img onError={() => estImgProfesor(ImgUsuarioGenerico)} alt='img-profesor' src={imgProfesor} className="rounded-circle avatar-card-teacher" />
         </div>
 
         <div className="col-12 col-md-6 pl-md-0">
@@ -17,7 +21,7 @@ export default function Card_Teacher({ data }) {
           <p className="mb-4">{data.sobreMi}</p>
           <div className="btn-toolbar mb-5 etiquetas-card-teacher">
             {
-              data.etiquetas.map((etiqueta,indice) => (
+              data.etiquetas.map((etiqueta, indice) => (
                 <button key={indice} type="button" className="etiquetas">
                   {etiqueta}
                 </button>

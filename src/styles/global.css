@@ -11,7 +11,7 @@
 }
 
 @media (min-width: 768px) {
-     :root {
+    :root {
         --plyr-control-icon-size: 2.5rem;
         --plyr-control-spacing: 2.5rem
     }
@@ -31,16 +31,20 @@ html {
     /** Reset para REMS - 62.5% = 10px de 16px **/
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: inherit;
     padding: 0;
     margin: 0;
 }
 
-
 /** Globales **/
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #212529;
+}
 
 img {
     max-width: 100%;
@@ -65,10 +69,8 @@ img {
     width: 85%;
 }
 
-a,
-a:hover,
-a:focus {
-    text-decoration: none;
+a, a:hover, a:focus {
+    text-decoration: none !important;
 }
 
 h1 {
@@ -86,7 +88,6 @@ h3 {
 h4 {
     font-size: 2.6rem;
 }
-
 
 /** Utilidades **/
 
@@ -108,6 +109,35 @@ h4 {
 
 .d-block {
     display: block!important;
+}
+
+.table, .modal {
+    font-size: 1.4rem;
+}
+
+.table tr {
+    transition: all 200ms ease-in-out;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #646d7b;
+    margin-bottom: .5rem;
+}
+
+.form-group.form-group-login {
+    margin-bottom: 2rem;
+}
+
+.form-group.form-group-login input {
+    font-size: 1.4rem;
+    padding: 1.5rem;
+}
+
+.form-group.form-group-login:last-of-type {
+    margin: 0;
 }
 
 .r-180 {
@@ -143,7 +173,7 @@ h4 {
 @media (min-width: 768px) {
     .btn-principal {
         display: inline-block;
-        padding: .8rem 3rem;
+        padding: .6rem 3rem;
     }
 }
 
@@ -193,7 +223,6 @@ h4 {
         margin-bottom: 4rem;
     }
 }
-
 
 /*Inicio*/
 
@@ -256,7 +285,6 @@ h4 {
     width: 100%;
 }
 
-
 /*Curso*/
 
 .titulo-curso {
@@ -305,8 +333,8 @@ h4 {
 }
 
 .btn-rep-curso {
-    font-size: 1.6rem;
-    padding: 0.8rem 4rem;
+    font-size: 1.5rem;
+    padding: .7rem 4rem;
     border-radius: 30px;
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -391,7 +419,6 @@ h4 {
     color: #071727;
 }
 
-
 /*Reproductor curso*/
 
 #player {
@@ -438,7 +465,6 @@ h4 {
         overflow: auto;
     }
 }
-
 
 /*Docentes*/
 
@@ -678,3 +704,5 @@ div.contenedor-etiquetas-perfil {
         text-align: center;
     }
 }
+
+/*Admin*/

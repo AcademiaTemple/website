@@ -3,9 +3,17 @@ import Navbar from "../components/navbar/navbar"
 import Footer from "../components/footer/footer"
 import AcordeonEpisodio from "../components/episodio/acordeon_episodios"
 import queryString from 'query-string'
+import GridLoader from "react-spinners/GridLoader"
+import Fade from 'react-reveal/Fade'
+import { css } from "@emotion/core"
 import { obtCursoExtendido } from '../api'
-import { navigate } from "gatsby"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
+
+const override = css`
+  display: block;
+  margin: 50px auto;
+  background-color: 'green';
+`;
 
 const calcularTotalHoras = (clases) => {
     let totalMinutos = 0;
@@ -17,7 +25,7 @@ const calcularTotalHoras = (clases) => {
         const minutos = parseInt(hm[1], 10);
         totalMinutos += minutos;
         totalMinutos += (horas * 60);
-        return { totalMinutos}
+        return { totalMinutos }
     })
 
     // Obtengo las horas y minutos completos
@@ -33,14 +41,14 @@ export default function Course(props) {
     const idCurso = queryString.parse(props.location.search).id;
 
     const [curso, estCurso] = useState({});
-    const [cargandoCurso, estCargandoCurso] = useState(true);
+    const [cargando, estCargando] = useState(true);
 
     useEffect(() => {
-        estCargandoCurso(true);
+        estCargando(true);
         obtCursoExtendido(idCurso)
             .then(curso => {
                 estCurso(curso);
-                estCargandoCurso(false);
+                estCargando(false);
             })
     }, [idCurso]);
 
@@ -52,70 +60,74 @@ export default function Course(props) {
         <div>
             <Navbar />
             <div className="contenedor contenedor-60 cuerpo-pagina">
+                <GridLoader css={override} loading={cargando} size={20} />
                 {
-                    cargandoCurso || !curso.id
-                        ?
-                        <>Cargando...</>
-                        :
-                        <>
-                            <h2 className="titulo-seccion mt-5 mb-5 text-left titulo-curso">{curso.titulo}</h2>
-                            <div className="contenedor-controles-curso">
-                                <Link target="_blank" className="boton btn-principal btn-rep-curso d-block" to={curso.urlInscripcion}>
-                                    <i className="fas fa-edit mr-3"></i>
+                    !cargando && curso.id
+                    &&
+                    <Fade bottom>
+                        <h2 className="titulo-seccion mt-5 mb-5 text-left titulo-curso">{curso.titulo}</h2>
+                        <div className="contenedor-controles-curso">
+                            <Link target="_blank" className="boton btn-principal btn-rep-curso d-block" to={curso.urlInscripcion}>
+                                <i className="fas fa-edit mr-3"></i>
                                     Inscribirme
                                 </Link>
-                                <div className="contenedor-data-cursos">
-                                    <div className="mr-md-5">
-                                        <i className="fas fa-layer-group"></i>{' '}
-                                        {curso.clases && curso.clases.length} Clases
+                            <div className="contenedor-data-cursos">
+                                <div className="mr-md-5">
+                                    <i className="fas fa-layer-group"></i>{' '}
+                                    {curso.clases && curso.clases.length} Clases
                                 </div>
-                                    <div>
-                                        <i className="far fa-clock"></i>{' '}
-                                        {calcularTotalHoras(curso.clases)}
-                                    </div>
-                                </div>
-                            </div>
-                            <p className="descripcion-curso">
-                                {curso.descExtendida}
-                            </p>
-                            <h3 className="subtitulo-descripcion-curso">¿Qué aprenderás?</h3>
-                            <p className="descripcion-curso">
-                                {curso.objetivo}
-                            </p>
-                            <h3 className="subtitulo-descripcion-curso">Requisitos</h3>
-                            <ul className="requisitos-curso">
-                                {
-                                    curso.requisitos.map(requisito => (
-                                        <li>{requisito}</li>
-                                    ))
-                                }
-                            </ul>
-                            <div className="contenedor-curso-profesor">
-                                <div className="contenedor-img">
-                                    <img src={curso.profesor.img} alt="img-profesor" />
-                                </div>
-                                <div className="contenedor-descripcion">
-                                    <h4>
-                                        <Link to={`/teacher_detail/?id=${curso.profesor.id}`}>
-                                            {curso.profesor.nombres + ' ' + curso.profesor.apellidos}
-                                        </Link>
-                                    </h4>
-                                    <p className="descripcion-curso">
-                                        {curso.profesor.sobreMi}
-                                    </p>
+                                <div>
+                                    <i className="far fa-clock"></i>{' '}
+                                    {calcularTotalHoras(curso.clases)}
                                 </div>
                             </div>
-                            <h3 className="subtitulo-descripcion-curso">Lista de clases</h3>
+                        </div>
+                        <p className="descripcion-curso">
+                            {curso.descExtendida}
+                        </p>
+                        <h3 className="subtitulo-descripcion-curso">¿Qué aprenderás?</h3>
+                        <p className="descripcion-curso">
+                            {curso.objetivo}
+                        </p>
+                        <h3 className="subtitulo-descripcion-curso">Requisitos</h3>
+                        <ul className="requisitos-curso">
                             {
-                                curso.clases && curso.clases.length > 0
-                                    ?
-                                    <AcordeonEpisodio
-                                        episodios={curso.clases}
-                                        machucar={navegar} />
-                                    :
-                                    <p className="descripcion-curso">Aún no hay videos</p>
+                                curso.requisitos.map(requisito => (
+                                    <li>{requisito}</li>
+                                ))
                             }
-                        </>
+                        </ul>
+                        <div className="contenedor-curso-profesor">
+                            <div className="contenedor-img">
+                                <img src={curso.profesor.img} alt="img-profesor" />
+                            </div>
+                            <div className="contenedor-descripcion">
+                                <h4>
+                                    <Link to={`/teacher_detail/?id=${curso.profesor.id}`}>
+                                        {curso.profesor.nombres + ' ' + curso.profesor.apellidos}
+                                    </Link>
+                                </h4>
+                                <p className="descripcion-curso">
+                                    {curso.profesor.sobreMi}
+                                </p>
+                            </div>
+                        </div>
+                        <h3 className="subtitulo-descripcion-curso">Lista de clases</h3>
+                        {
+                            curso.clases && curso.clases.length > 0
+                                ?
+                                <AcordeonEpisodio
+                                    episodios={curso.clases}
+                                    machucar={navegar} />
+                                :
+                                <p className="descripcion-curso">Aún no hay videos</p>
+                        }
+                    </Fade>
+                }
+                {
+                    !cargando && !curso.id
+                    &&
+                    <p>No se pudo cargar el curso</p>
                 }
             </div>
             <Footer />

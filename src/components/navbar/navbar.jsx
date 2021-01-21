@@ -1,10 +1,23 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
+import { obtUsuarioStorage } from '../../helpers/obtUsuarioStorage'
+import { cerrarSesion } from "../../api"
+import { Location } from '@reach/router'
 import Logo from "../../../static/logo.png"
 import "./navbar.css"
 
-const Navbar = ({ usarTransparencia }) => {
-  const [scrolled, setScrolled] = React.useState(false)
+const Navbar = ({ usarTransparencia, currentPage }) => {
+  const [scrolled, setScrolled] = React.useState(false);
+  const [usuario] = useState(obtUsuarioStorage());
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [scrolled])
+  let x = ["fixed-top"]
+  if (!usarTransparencia || scrolled) {
+    x.push("scrolled")
+  }
 
   const handleScroll = () => {
     const offset = window.scrollY
@@ -15,13 +28,14 @@ const Navbar = ({ usarTransparencia }) => {
     }
   }
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [scrolled])
-  let x = ["fixed-top"]
-  if (!usarTransparencia || scrolled) {
-    x.push("scrolled")
+  const salir = (e) => {
+    e.preventDefault();
+    cerrarSesion()
+      .then(res => {
+        if (res) {
+          localStorage.removeItem('usuario');
+        }
+      })
   }
 
   return (
@@ -42,15 +56,25 @@ const Navbar = ({ usarTransparencia }) => {
 
           <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <ul className="navbar-nav ml-auto mr-5">
-              <li className="nav-item">
-                <Link to="/">Inicio</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/courses">Cursos</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/teachers">Docentes</Link>
-              </li>
+              {
+                usuario && currentPage && currentPage == '/admin'
+                  ?
+                  <li className="nav-item">
+                    <a onClick={salir}>Salir</a>
+                  </li>
+                  :
+                  <>
+                    <li className="nav-item">
+                      <Link to="/">Inicio</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/courses">Cursos</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/teachers">Docentes</Link>
+                    </li>
+                  </>
+              }
             </ul>
           </div>
         </nav>
