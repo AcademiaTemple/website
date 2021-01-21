@@ -1,7 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { subirImagen, actProfesorAdmin } from '../../api'
+import React, { useRef, useState, useEffect } from 'react'
+import { subirImagen, actProfesorAdmin, guardarProfesorAdmin } from '../../api'
+import PropTypes from 'prop-types';
 
-const Confirmacion = React.forwardRef((props, ref) => {
+const Edicion = React.forwardRef((props, ref) => {
+
+    let reftxtNombres = useRef();
 
     const [nombres, estNombres] = useState('');
     const [apellidos, estApellidos] = useState('');
@@ -9,6 +12,7 @@ const Confirmacion = React.forwardRef((props, ref) => {
     const [pais, estPais] = useState('');
     const [likes, estLikes] = useState(0);
     const [etiquetas, estEtiquetas] = useState('');
+    const [logros, estLogros] = useState('');
     const [sobreMi, estSobreMi] = useState('');
     const [experiencia, estExperiencia] = useState('');
     const [github, estGithub] = useState('');
@@ -16,16 +20,21 @@ const Confirmacion = React.forwardRef((props, ref) => {
     const [youtube, estYoutube] = useState('');
 
     useEffect(() => {
+        reftxtNombres.current.focus();
+    }, [])
+
+    useEffect(() => {
         estNombres(props.data?.nombres);
         estApellidos(props.data?.apellidos);
-        estPais(props.data?.pais)
-        estLikes(props.data?.likes)
-        estEtiquetas(props.data?.etiquetas.join(', '))
-        estSobreMi(props.data?.sobreMi)
-        estExperiencia(props.data?.experiencia)
-        estGithub(props.data?.redes?.gh)
-        estPatreon(props.data?.redes?.pt)
-        estYoutube(props.data?.redes?.yt)
+        estPais(props.data?.pais);
+        estLikes(props.data?.likes);
+        estEtiquetas(props.data?.etiquetas?.join(', '));
+        estLogros(props.data?.logros?.join(', '));
+        estSobreMi(props.data?.sobreMi);
+        estExperiencia(props.data?.experiencia);
+        estGithub(props.data?.redes?.gh);
+        estPatreon(props.data?.redes?.pt);
+        estYoutube(props.data?.redes?.yt);
     }, [props.data]);
 
     const actNombres = (ev) => {
@@ -46,6 +55,9 @@ const Confirmacion = React.forwardRef((props, ref) => {
     const actEtiquetas = (ev) => {
         estEtiquetas(ev.target.value);
     }
+    const actLogros = (ev) => {
+        estLogros(ev.target.value);
+    }
     const actSobreMi = (ev) => {
         estSobreMi(ev.target.value);
     }
@@ -62,14 +74,16 @@ const Confirmacion = React.forwardRef((props, ref) => {
         estYoutube(ev.target.value);
     }
 
-    const actPerfil = (url) => {
-        actProfesorAdmin({
+    const guardarPerfil = (url) => {
+
+        const dataNueva = {
             ...props.data,
             nombres,
             apellidos,
             pais,
             likes,
             etiquetas: etiquetas.split(','),
+            logros: logros.split(','),
             sobreMi,
             experiencia,
             img: url,
@@ -78,32 +92,49 @@ const Confirmacion = React.forwardRef((props, ref) => {
                 pt: patreon,
                 yt: youtube
             },
-        }).then(() => {
-            props.guardarCambios();
-        })
+        };
+
+        switch (props.modo) {
+            case 'CREACION':
+                guardarProfesorAdmin(dataNueva).then(() => {
+                    props.guardarCambios();
+                })
+                break;
+
+            case 'EDICION':
+                actProfesorAdmin({
+                    ...props.data,
+                    ...dataNueva
+                }).then(() => {
+                    props.guardarCambios();
+                })
+                break;
+        }
     }
 
-    const guardar = () => {
-        if (img){
+    const guardarCambios = () => {
+        if (img) {
             subirImagen(props.data.id, img)
-            .then(url => {
-                actPerfil(url);
-            })
-            .catch(error => {
-                alert('Error al subir la imagen. Reintente')
-                console.log(error);
-            })
+                .then(url => {
+                    guardarPerfil(url);
+                })
+                .catch(error => {
+                    alert('Error al subir la imagen. Reintente')
+                    console.log(error);
+                })
         } else {
-            actPerfil(props.data.img);
-        }        
+            guardarPerfil(props.data.img);
+        }
     }
+
+    const titulo = props.modo == 'CREACION' ? 'Crear profesor' : 'Editar profesor';
 
     return (
         <div ref={ref} className="modal fade" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal">
             <div className="modal-dialog modal-xl" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">Editar profesor</h5>
+                        <h5 className="modal-title" id="exampleModalLabel">{titulo}</h5>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -112,7 +143,7 @@ const Confirmacion = React.forwardRef((props, ref) => {
                         <form>
                             <div className="form-group">
                                 <label htmlFor="txtNombres">Nombres</label>
-                                <input type="text" value={nombres} onChange={actNombres} className="form-control form-control-lg" id="txtNombres" placeholder="Ingresa los nombres" />
+                                <input ref={reftxtNombres} type="text" value={nombres} onChange={actNombres} className="form-control form-control-lg" id="txtNombre" placeholder="Ingresa los nombres" />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="txtApellidos">Apellidos</label>
@@ -133,6 +164,10 @@ const Confirmacion = React.forwardRef((props, ref) => {
                             <div className="form-group">
                                 <label htmlFor="txtEtiquetas">Etiquetas</label>
                                 <input type="text" value={etiquetas} onChange={actEtiquetas} className="form-control form-control-lg" id="txtEtiquetas" placeholder="Ejemplo: C++, Java, Javascript" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="txtLogros">Logros</label>
+                                <input type="text" value={logros} onChange={actLogros} className="form-control form-control-lg" id="txtLogros" placeholder="Logro 1, Logro 2, Logro 3" />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="txtSobreMi">Sobre mí</label>
@@ -157,8 +192,11 @@ const Confirmacion = React.forwardRef((props, ref) => {
                         </form>
                     </div>
                     <div className="modal-footer">
-                        <button type="button" className="btn btn-primary" onClick={guardar}>Guardar</button>
+                        <button type="button" className="btn btn-primary" onClick={guardarCambios}>Guardar</button>
                         <button type="button" className="btn btn-danger" onClick={props.cancelar}>Cancelar</button>
+                        {/*
+                        <button onClick={() => { reftxtNombres.current.focus() }}>Enfócame</button>
+                        */}
                     </div>
                 </div>
             </div>
@@ -166,4 +204,44 @@ const Confirmacion = React.forwardRef((props, ref) => {
     )
 })
 
-export default Confirmacion;
+Edicion.propTypes = {
+    data: PropTypes.shape({
+        id: PropTypes.string,
+        nombres: PropTypes.string,
+        apellidos: PropTypes.string,
+        pais: PropTypes.string,
+        likes: PropTypes.number,
+        etiquetas: PropTypes.arrayOf(PropTypes.string),
+        logros: PropTypes.arrayOf(PropTypes.string),
+        sobreMi: PropTypes.string,
+        experiencia: PropTypes.string,
+        img: PropTypes.string,
+        redes: PropTypes.shape({
+            github: PropTypes.string,
+            patreon: PropTypes.string,
+            youtube: PropTypes.string,
+        })
+    })
+}
+
+Edicion.defaultProps = {
+    data: {
+        id: null,
+        nombres: '',
+        apellidos: '',
+        pais: '',
+        likes: 0,
+        etiquetas: [],
+        logros: [],
+        sobreMi: '',
+        experiencia: '',
+        img: '',
+        redes: {
+            gh: '',
+            pt: '',
+            yt: ''
+        }
+    }
+}
+
+export default Edicion;

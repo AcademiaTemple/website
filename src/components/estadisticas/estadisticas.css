@@ -36,6 +36,10 @@
     text-align: left;
 }
 
+.contenedor-estadisticas p {
+    color:white;
+}
+
 @media (min-width: 768px) {
     .contenedor-estadisticas p {
         font-size: 1.8rem;

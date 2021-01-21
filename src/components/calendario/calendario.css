@@ -46,6 +46,10 @@
     }
 }
 
+.contenedor-cursos-calendario p {
+    color: white;
+}
+
 @media (min-width: 768px) {
     .contenedor-calendario {
         flex-basis: 60%;

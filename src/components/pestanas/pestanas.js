@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import './pestanas.css'
 
-const Pestanas = ({ data, indice, seleccionar, children }) => {
+const Pestanas = ({ data, indice, seleccionar, cargando, children }) => {
 
     const cambiarPestana = (indice) => {
         seleccionar(indice);
     }
 
     const porcAnchoPestana = 100 / data.length;
+
+    const hijos = React.Children.toArray(children);
 
     return (
         <div>
@@ -20,7 +22,11 @@ const Pestanas = ({ data, indice, seleccionar, children }) => {
                 <span className="tab-bar" style={{ width: `${porcAnchoPestana}%`, left: `${porcAnchoPestana * indice}%` }}></span>
             </div>
             {
-                React.Children.toArray(children)
+                cargando
+                    ?
+                    'Cargando...'
+                    :
+                    hijos[indice]
             }
         </div>
     )

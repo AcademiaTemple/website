@@ -16,7 +16,7 @@
   .card-teacher {
     background: #FFFFFF;
     border: 1px solid rgba(117, 117, 117, 0.6);
-    padding: 3.8rem 0;
+    padding: 2.5rem 0;
     box-sizing: border-box;
   }
 }
@@ -56,7 +56,7 @@
 }
 
 .rounded-circle {
-  border: 2px solid rgb(71, 178, 255) !important;
+  /*border: 1px solid #071727 !important;*/
 }
 
 .likes {

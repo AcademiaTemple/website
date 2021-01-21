@@ -3,7 +3,7 @@ import { navigate } from "gatsby"
 
 // Profesor
 export const obtProfesoresMuestra = async () => {
-    return firebase.firestore().collection('docentes').where('activo', '==', 1).get()
+    return firebase.firestore().collection('docentes').where('activo', '==', 1).orderBy('nombres', 'asc').get()
         .then(qsn => {
             let lista = [];
             qsn.forEach(doc => {
@@ -195,21 +195,63 @@ export const obtUsuario = async () => {
     return firebase.auth().currentUser;
 }
 
+// País
+export const obtPais = (prefijo) => {
+    return fetch('https://restcountries.eu/rest/v2/alpha/' + prefijo)
+        .then(response => response.json())
+        .then(pais => pais);
+}
+
 // Admin
 
 // Profesor
-export const obtProfesoresTablaAdmin = async () => {
-    return firebase.firestore().collection('docentes').get()
+export const obtProfesoresTablaAdmin = async (limite = 10, antesDe, despuesDe, incluirRegistro) => {
+
+    const campoConsulta = 'nombres';
+
+    let ref = firebase.firestore().collection('docentes').orderBy(campoConsulta).limit(limite + 1);
+
+    if (antesDe) {
+        ref = ref.endBefore(antesDe[campoConsulta]).limitToLast(limite + 1);
+    }
+
+    if (despuesDe) {
+        if (incluirRegistro) {
+            ref = ref.startAt(despuesDe[campoConsulta]);
+        } else {
+            ref = ref.startAfter(despuesDe[campoConsulta]);
+        }
+
+    }
+
+    return ref
+        .get()
         .then(qsn => {
             let lista = [];
             qsn.forEach(doc => {
                 lista.push({ ...doc.data(), id: doc.id });
             });
-            return lista;
+
+            let haySiguiente = false;
+            if (lista.length == limite + 1) { // Esto significa que hay siguiente
+                haySiguiente = true;
+                if (antesDe) {
+                    lista.shift(); // Elimino el primero, porque he retrocedido
+                }
+                else {
+                    lista.pop(); // Elimino el último
+                }
+            }
+            return {
+                lista,
+                haySiguiente
+            };
         })
         .catch(error => {
             console.log(error);
-            return [];
+            return {
+                lista: []
+            };
         });
 }
 
@@ -225,9 +267,14 @@ export const actProfesorAdmin = async (profesor) => {
         profesor, { merge: true });
 }
 
+export const guardarProfesorAdmin = async (profesor) => {
+    return firebase.firestore().collection('docentes').add({ ...profesor, activo: 1 });
+}
+
 // Curso
 export const obtCursosTablaAdmin = async () => {
-    return firebase.firestore().collection('cursos').get()
+    return firebase.firestore().collection('cursos')
+        .get()
         .then(qsn => {
             let lista = [];
             qsn.forEach(doc => {
