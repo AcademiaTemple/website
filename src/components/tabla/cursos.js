@@ -1,7 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react'
 import ModalEdicion from '../../components/modal/edicionCurso'
 import ModalConfirmacion from '../../components/modal/confirmacion'
-import { obtRegistrosPaginadosAdmin, actEstadoCursoAdmin } from '../../api'
+import ModalClases from '../../components/modal/edicionClases'
+import { obtClasesCurso, obtRegistrosPaginadosAdmin, actEstadoCursoAdmin } from '../../api'
 import $ from 'jquery';
 
 const regMaximo = 3;
@@ -10,9 +11,17 @@ const campo = 'titulo';
 
 const Cursos = () => {
 
+    // Página
     const [pagina, estPagina] = useState(1);
+
+    // Cursos
     const [cursos, estCursos] = useState([]);
     const [cargando, estCargando] = useState(false);
+
+    // Clases por curso
+    const [clases, estClases] = useState([]);
+    const [cargandoClases, estCargandoClases] = useState(false);
+
     const [registro, estRegistro] = useState(null); // Establece el registro seleecionado para hacer ediciones o eliminaciones
     const [modo, estModo] = useState(null); // Establece si se está editando o creando un registro
     const [haySiguiente, estHaySiguiente] = useState(false); // Para la paginación
@@ -20,56 +29,12 @@ const Cursos = () => {
     // Refs
     const refModalEdicion = useRef(null);
     const refModalConfirmacion = useRef(null);
+    const refModalClases = useRef(null);
 
     useEffect(() => {
         estCargando(true);
         obtenerCursos();
     }, []);
-
-    const obtenerCursos = (reinicio) => {
-        // El parámetro reinicio se usa después de editar o crear un registro, para que empiece
-        // a mostrar todo desde la primera página
-        obtRegistrosPaginadosAdmin(coleccion, campo, regMaximo, null, reinicio ? null : cursos[0], true) // Este parámetro true es para que no se cambien las posiciones cuando haga un cambio de estado
-            .then(({ lista, haySiguiente }) => {
-                if (reinicio) {
-                    estPagina(1);
-                }
-                estHaySiguiente(haySiguiente);
-                estCursos(lista);
-                estCargando(false);
-            })
-    }
-
-    const editarModal = (registro) => {
-        estRegistro(registro);
-        estModo('EDICION');
-        $(refModalEdicion.current).modal('show');
-    }
-
-    const crearModal = (e) => {
-        e.preventDefault();
-        estRegistro(undefined);
-        estModo('CREACION');
-        $(refModalEdicion.current).modal('show');
-    }
-
-    const confirmarModal = (registro) => {
-        estRegistro(registro);
-        $(refModalConfirmacion.current).modal('show');
-    }
-
-    const cerrarModalConfirmacion = () => {
-        $(refModalConfirmacion.current).modal('hide');
-    }
-
-    const guardarCambiosEdicion = () => {
-        cerrarModalEdicion();
-        obtenerCursos(true);
-    }
-
-    const cerrarModalEdicion = () => {
-        $(refModalEdicion.current).modal('hide');
-    }
 
     const actualizarEstado = () => {
         cerrarModalConfirmacion();
@@ -88,6 +53,79 @@ const Cursos = () => {
             })
     }
 
+    const obtenerCursos = (reinicio) => {
+        // El parámetro reinicio se usa después de editar o crear un registro, para que empiece
+        // a mostrar todo desde la primera página
+        obtRegistrosPaginadosAdmin(coleccion, campo, regMaximo, null, reinicio ? null : cursos[0], true) // Este parámetro true es para que no se cambien las posiciones cuando haga un cambio de estado
+            .then(({ lista, haySiguiente }) => {
+                if (reinicio) {
+                    estPagina(1);
+                }
+                estHaySiguiente(haySiguiente);
+                estCursos(lista);
+                estCargando(false);
+            })
+    }
+
+    const obtClases = (curso) => {
+        estCargandoClases(true);
+        obtClasesCurso(curso.id)
+            .then(clases => {
+                estClases(clases);
+                estCargandoClases(false);
+            })
+            .catch(error => {
+                estClases([]);
+                estCargandoClases(false);
+            })
+    }
+
+    // Modal creación/edicion
+    const abrirModalEdicion = (registro) => {
+        estRegistro(registro);
+        estModo('EDICION');
+        $(refModalEdicion.current).modal('show');
+    }
+    const cerrarModalEdicion = () => {
+        $(refModalEdicion.current).modal('hide');
+    }
+    const abrirModalCreacion = (e) => {
+        e.preventDefault();
+        estRegistro(undefined);
+        estModo('CREACION');
+        $(refModalEdicion.current).modal('show');
+    }
+    const guardarCambiosEdicion = () => {
+        cerrarModalEdicion();
+        obtenerCursos(true);
+    }
+
+    // Modal confirmación
+    const abrirModalConfirmacion = (registro) => {
+        estRegistro(registro);
+        $(refModalConfirmacion.current).modal('show');
+    }
+
+    const cerrarModalConfirmacion = () => {
+        $(refModalConfirmacion.current).modal('hide');
+    }
+
+    // Modal clases
+    const abrirModalClases = (curso) => {
+        estRegistro(curso);
+        obtClases(curso);
+        $(refModalClases.current).modal('show');
+    }
+
+    const cerrarModalClases = (e) => {
+        $(refModalClases.current).modal('hide');
+    }
+
+    const guardarCambiosClases = () => {
+        obtClases(registro);
+    }
+
+    // Funciones
     const avanzar = () => {
         obtRegistrosPaginadosAdmin(coleccion, campo, regMaximo, null, cursos[cursos.length - 1])
             .then(({ lista, haySiguiente }) => {
@@ -112,6 +150,14 @@ const Cursos = () => {
                 guardarCambios={guardarCambiosEdicion}
                 cancelar={cerrarModalEdicion} />
 
+            <ModalClases
+                idCurso={registro?.id}
+                clases={clases}
+                cargandoClases={cargandoClases}
+                ref={refModalClases}
+                guardarCambios={guardarCambiosClases}
+                cancelar={cerrarModalClases} />
+
             <div className="table-responsive-md">
                 <table className="table table-hover">
                     <thead>
@@ -134,20 +180,20 @@ const Cursos = () => {
                                     <td>{curso.hInicioFin.join(' a ')}</td>
                                     <td>{curso.activo ? 'Sí' : 'No'}</td>
                                     <td>
-                                        <button onClick={() => editarModal(curso)} className='btn btn-secondary'>
+                                        <button onClick={() => abrirModalEdicion(curso)} className='btn btn-secondary'>
                                             <i className='fa fa-edit'></i>
                                         </button>
-                                        <button onClick={() => { }} className='btn btn-primary ml-3'>
+                                        <button onClick={() => abrirModalClases(curso)} className='btn btn-primary ml-3'>
                                             <i className='fas fa-video'></i>
                                         </button>
                                         {
                                             curso.activo
                                                 ?
-                                                <button onClick={() => confirmarModal(curso)} className='btn btn-danger ml-3'>
+                                                <button onClick={() => abrirModalConfirmacion(curso)} className='btn btn-danger ml-3'>
                                                     <i className='fa fa-power-off'></i>
                                                 </button>
                                                 :
-                                                <button onClick={() => confirmarModal(curso)} className='btn btn-success ml-3'>
+                                                <button onClick={() => abrirModalConfirmacion(curso)} className='btn btn-success ml-3'>
                                                     <i className='fa fa-power-off'></i>
                                                 </button>
                                         }
@@ -158,7 +204,7 @@ const Cursos = () => {
                     </tbody>
                 </table>
             </div>
-            <a onClick={crearModal} className="boton btn-principal d-block mt-4">
+            <a onClick={abrirModalCreacion} className="boton btn-principal d-block mt-4">
                 {'Agregar '}<i className="fas fa-plus" style={{ fontSize: '12px' }}></i>
             </a>
             <ul className="pagination pagination-lg justify-content-center mt-4">
@@ -173,7 +219,7 @@ const Cursos = () => {
                     <li className="page-item"><a className="page-link" onClick={avanzar}>Siguiente</a></li>
                 }
             </ul>
-        </div>
+        </div >
     )
 }
 

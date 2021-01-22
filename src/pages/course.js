@@ -93,8 +93,8 @@ export default function Course(props) {
                         <h3 className="subtitulo-descripcion-curso">Requisitos</h3>
                         <ul className="requisitos-curso">
                             {
-                                curso.requisitos.map(requisito => (
-                                    <li>{requisito}</li>
+                                curso.requisitos.map((requisito, indice) => (
+                                    <li key={indice}>{requisito}</li>
                                 ))
                             }
                         </ul>

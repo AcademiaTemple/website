@@ -166,13 +166,17 @@ const obtCursosPorProfesor = async (idProfesor) => {
 
 // Clase
 export const obtClasesCurso = async (idCurso) => {
-    return firebase.firestore().collection('episodios').doc(idCurso).get()
-        .then(doc => {
-            if (doc.exists) {
-                return doc.data().lista;
-            } else {
-                return [];
-            }
+    return firebase.firestore().collection('episodios')
+        .where('idCurso', '==', idCurso)
+        .orderBy('orden', 'desc')
+        .get()
+        .then(qsn => {
+            let lista = [];
+            qsn.forEach(doc => {
+                const data = doc.data();
+                lista.push({ id: doc.id, ...data });
+            });
+            return lista;
         })
         .catch(error => {
             console.log(error);
@@ -302,6 +306,20 @@ export const actCursoAdmin = async (curso) => {
 
 export const guardarCursoAdmin = async (curso) => {
     return firebase.firestore().collection('cursos').add({ ...curso, activo: 1 });
+}
+
+// Clase
+export const guardarClaseAdmin = async (clase) => {
+    return firebase.firestore().collection('episodios').add(clase);
+}
+
+export const actClaseAdmin = async (clase) => {
+    return firebase.firestore().collection('episodios').doc(clase.id).set(
+        clase, { merge: true });
+}
+
+export const eliminarClaseAdmin = async(idClase)=> {
+    return firebase.firestore().collection('episodios').doc(idClase).delete();
 }
 
 // Archivos

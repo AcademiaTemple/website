@@ -13,7 +13,7 @@ const CardEpisodio = ({ indice, idActivo, machucar, episodio }) => {
         <div onClick={() => machucar(episodio.id, episodio.urlVideo)} onKeyDown={() => machucar(episodio.id, episodio.urlVideo)} className={estilos} role="button" tabIndex={0}>
             <div className="titulo">
                 <span>
-                    {indice + 1}
+                    {episodio.orden}
                 </span>
                 <h4>
                     {episodio.titulo ? episodio.titulo : 'Clase ' + (indice + 1)}

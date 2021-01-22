@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { guardarCursoAdmin, actCursoAdmin, obtProfesoresCombo, subirImagen } from '../../api'
+import { arrayToStringList, stringToArray } from '../../helpers/funcionesArreglo'
 import PropTypes from 'prop-types';
 
 const Edicion = React.forwardRef((props, ref) => {
@@ -22,7 +23,6 @@ const Edicion = React.forwardRef((props, ref) => {
     const [excepciones, estExcepciones] = useState('');
     const [cancelaciones, estCancelaciones] = useState('');
     const [idProfesor, estIdProfesor] = useState('');
-    const [clases, estClases] = useState([]);
 
     useEffect(() => {
         refTxtTitulo.current.focus();
@@ -37,14 +37,13 @@ const Edicion = React.forwardRef((props, ref) => {
         estObjetivo(props.data?.objetivo);
         estDescBreve(props.data?.descBreve);
         estDescExtendida(props.data?.descExtendida);
-        estRequisitos(props.data?.requisitos?.join(', '));
-        estDias(props.data?.dias?.join(', '));
-        estFInicioFin(props.data?.fInicioFin.join(', '));
-        estHInicioFin(props.data?.hInicioFin.join(', '));
-        estExcepciones(props.data?.excepciones.join(', '));
-        estCancelaciones(props.data?.cancelaciones.join(', '));
+        estRequisitos(arrayToStringList(props.data?.requisitos));
+        estDias(arrayToStringList(props.data?.dias));
+        estFInicioFin(arrayToStringList(props.data?.fInicioFin));
+        estHInicioFin(arrayToStringList(props.data?.hInicioFin));
+        estExcepciones(arrayToStringList(props.data?.excepciones));
+        estCancelaciones(arrayToStringList(props.data?.cancelaciones));
         estIdProfesor(props.data?.idProfesor);
-        estClases([]);
     }, [props.data]);
 
     const actTitulo = (ev) => {
@@ -97,12 +96,12 @@ const Edicion = React.forwardRef((props, ref) => {
             objetivo,
             descBreve,
             descExtendida,
-            requisitos: requisitos.split(','),
-            dias: dias.split(','),
-            fInicioFin: fInicioFin.split(','),
-            hInicioFin: hInicioFin.split(','),
-            excepciones: excepciones.split(','),
-            cancelaciones: cancelaciones.split(','),
+            requisitos: stringToArray(requisitos),
+            dias: stringToArray(dias),
+            fInicioFin: stringToArray(fInicioFin),
+            hInicioFin: stringToArray(hInicioFin),
+            excepciones: stringToArray(excepciones),
+            cancelaciones: stringToArray(cancelaciones),
             idProfesor
         };
 
@@ -217,7 +216,7 @@ const Edicion = React.forwardRef((props, ref) => {
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-primary" onClick={guardarCambios}>Guardar</button>
-                        <button type="button" className="btn btn-danger" onClick={props.cancelar}>Cancelar</button>
+                        <button type="button" className="btn btn-danger" onClick={props.cancelar}>Cerrar</button>
                         {/*
                         <button onClick={() => { refTxtTitulo.current.focus() }}>Enfócame</button>
                         */}

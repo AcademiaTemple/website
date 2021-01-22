@@ -40,35 +40,34 @@ const Docentes = () => {
             })
     }
 
-    const editarModal = (registro) => {
+    // Modal creación/edicion
+    const abrirModalEdicion = (registro) => {
         estRegistro(registro);
         estModo('EDICION');
         $(refModalEdicion.current).modal('show');
     }
-
-    const crearModal = (e) => {
+    const cerrarModalEdicion = () => {
+        $(refModalEdicion.current).modal('hide');
+    }
+    const abrirModalCreacion = (e) => {
         e.preventDefault();
         estRegistro(undefined);
         estModo('CREACION');
         $(refModalEdicion.current).modal('show');
     }
+    const guardarCambiosEdicion = () => {
+        cerrarModalEdicion();
+        obtenerProfesores(true);
+    }
 
-    const confirmarModal = (registro) => {
+    // Modal confirmación
+    const abrirModalConfirmacion = (registro) => {
         estRegistro(registro);
         $(refModalConfirmacion.current).modal('show');
     }
 
     const cerrarModalConfirmacion = () => {
         $(refModalConfirmacion.current).modal('hide');
-    }
-
-    const guardarCambiosEdicion = () => {
-        cerrarModalEdicion();
-        obtenerProfesores(true);
-    }
-
-    const cerrarModalEdicion = () => {
-        $(refModalEdicion.current).modal('hide');
     }
 
     const actualizarEstado = () => {
@@ -132,17 +131,17 @@ const Docentes = () => {
                                     <td>{profesor.apellidos}</td>
                                     <td>{profesor.activo ? 'Sí' : 'No'}</td>
                                     <td>
-                                        <button onClick={() => editarModal(profesor)} className='btn btn-secondary'>
+                                        <button onClick={() => abrirModalEdicion(profesor)} className='btn btn-secondary'>
                                             <i className='fa fa-edit'></i>
                                         </button>
                                         {
                                             profesor.activo
                                                 ?
-                                                <button onClick={() => confirmarModal(profesor)} className='btn btn-danger ml-3'>
+                                                <button onClick={() => abrirModalConfirmacion(profesor)} className='btn btn-danger ml-3'>
                                                     <i className='fa fa-power-off'></i>
                                                 </button>
                                                 :
-                                                <button onClick={() => confirmarModal(profesor)} className='btn btn-success ml-3'>
+                                                <button onClick={() => abrirModalConfirmacion(profesor)} className='btn btn-success ml-3'>
                                                     <i className='fa fa-power-off'></i>
                                                 </button>
                                         }
@@ -153,7 +152,7 @@ const Docentes = () => {
                     </tbody>
                 </table>
             </div>
-            <a onClick={crearModal} className="boton btn-principal d-block mt-4">
+            <a onClick={abrirModalCreacion} className="boton btn-principal d-block mt-4">
                 {'Agregar '}<i className="fas fa-plus" style={{ fontSize: '12px' }}></i>
             </a>
             <ul className="pagination pagination-lg justify-content-center mt-4">
