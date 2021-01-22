@@ -114,7 +114,7 @@ const Edicion = React.forwardRef((props, ref) => {
 
     const guardarCambios = () => {
         if (img) {
-            subirImagen(props.data.id, img)
+            subirImagen('profesores', props.data.id, img)
                 .then(url => {
                     guardarPerfil(url);
                 })
@@ -127,14 +127,14 @@ const Edicion = React.forwardRef((props, ref) => {
         }
     }
 
-    const titulo = props.modo == 'CREACION' ? 'Crear profesor' : 'Editar profesor';
+    const encabezado = props.modo == 'CREACION' ? 'Crear profesor' : 'Editar profesor';
 
     return (
         <div ref={ref} className="modal fade" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal">
             <div className="modal-dialog modal-xl" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">{titulo}</h5>
+                        <h5 className="modal-title" id="exampleModalLabel">{encabezado}</h5>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -143,7 +143,7 @@ const Edicion = React.forwardRef((props, ref) => {
                         <form>
                             <div className="form-group">
                                 <label htmlFor="txtNombres">Nombres</label>
-                                <input ref={reftxtNombres} type="text" value={nombres} onChange={actNombres} className="form-control form-control-lg" id="txtNombre" placeholder="Ingresa los nombres" />
+                                <input ref={reftxtNombres} type="text" value={nombres} onChange={actNombres} className="form-control form-control-lg" id="txtNombres" placeholder="Ingresa los nombres" />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="txtApellidos">Apellidos</label>

@@ -18,6 +18,22 @@ export const obtProfesoresMuestra = async () => {
         });
 }
 
+export const obtProfesoresCombo = async () => {
+    return firebase.firestore().collection('docentes').where('activo', '==', 1).orderBy('nombres', 'asc').get()
+        .then(qsn => {
+            let lista = [];
+            qsn.forEach(doc => {
+                const { img, nombres, apellidos } = doc.data();
+                lista.push({ id: doc.id, nombres, apellidos });
+            });
+            return lista;
+        })
+        .catch(error => {
+            console.log(error);
+            return [];
+        });
+}
+
 export const obtPerfilProfesor = async idProfesor => {
     return firebase.firestore().collection('docentes').doc(idProfesor).get()
         .then(async doc => {
@@ -205,11 +221,11 @@ export const obtPais = (prefijo) => {
 // Admin
 
 // Profesor
-export const obtProfesoresTablaAdmin = async (limite = 10, antesDe, despuesDe, incluirRegistro) => {
+export const obtRegistrosPaginadosAdmin = async (coleccion, campo, limite = 10, antesDe, despuesDe, incluirRegistro) => {
 
-    const campoConsulta = 'nombres';
+    const campoConsulta = campo;
 
-    let ref = firebase.firestore().collection('docentes').orderBy(campoConsulta).limit(limite + 1);
+    let ref = firebase.firestore().collection(coleccion).orderBy(campoConsulta).limit(limite + 1);
 
     if (antesDe) {
         ref = ref.endBefore(antesDe[campoConsulta]).limitToLast(limite + 1);
@@ -272,22 +288,6 @@ export const guardarProfesorAdmin = async (profesor) => {
 }
 
 // Curso
-export const obtCursosTablaAdmin = async () => {
-    return firebase.firestore().collection('cursos')
-        .get()
-        .then(qsn => {
-            let lista = [];
-            qsn.forEach(doc => {
-                lista.push({ ...doc.data(), id: doc.id });
-            });
-            return lista;
-        })
-        .catch(error => {
-            console.log(error);
-            return [];
-        });
-}
-
 export const actEstadoCursoAdmin = async (id, estado) => {
     return firebase.firestore().collection('cursos').doc(id).set(
         {
@@ -295,11 +295,20 @@ export const actEstadoCursoAdmin = async (id, estado) => {
         }, { merge: true });
 }
 
+export const actCursoAdmin = async (curso) => {
+    return firebase.firestore().collection('cursos').doc(curso.id).set(
+        curso, { merge: true });
+}
+
+export const guardarCursoAdmin = async (curso) => {
+    return firebase.firestore().collection('cursos').add({ ...curso, activo: 1 });
+}
+
 // Archivos
-export const subirImagen = async (id, archivo) => {
+export const subirImagen = async (ruta, id, archivo) => {
     return new Promise((resolve, reject) => {
         let storageRef = firebase.storage().ref();
-        let imgRef = storageRef.child(`profesores/${id}`);
+        let imgRef = storageRef.child(`${ruta}/${id}`);
         const task = imgRef.put(archivo);
 
         task.on('state_changed', function (snapshot) {
