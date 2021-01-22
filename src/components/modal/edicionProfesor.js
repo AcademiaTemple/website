@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { subirImagen, actProfesorAdmin, guardarProfesorAdmin } from '../../api'
+import { arrayToStringList, stringToArray } from '../../helpers/funcionesArreglo'
 import PropTypes from 'prop-types';
 
 const Edicion = React.forwardRef((props, ref) => {
@@ -27,9 +28,9 @@ const Edicion = React.forwardRef((props, ref) => {
         estNombres(props.data?.nombres);
         estApellidos(props.data?.apellidos);
         estPais(props.data?.pais);
-        estLikes(props.data?.likes);
-        estEtiquetas(props.data?.etiquetas?.join(', '));
-        estLogros(props.data?.logros?.join(', '));
+        estLikes(parseInt(props.data?.likes));
+        estEtiquetas(arrayToStringList(props.data?.etiquetas));
+        estLogros(arrayToStringList(props.data?.logros));
         estSobreMi(props.data?.sobreMi);
         estExperiencia(props.data?.experiencia);
         estGithub(props.data?.redes?.gh);
@@ -82,8 +83,8 @@ const Edicion = React.forwardRef((props, ref) => {
             apellidos,
             pais,
             likes,
-            etiquetas: etiquetas.split(','),
-            logros: logros.split(','),
+            etiquetas: stringToArray(etiquetas),
+            logros: stringToArray(logros),
             sobreMi,
             experiencia,
             img: url,
@@ -114,7 +115,7 @@ const Edicion = React.forwardRef((props, ref) => {
 
     const guardarCambios = () => {
         if (img) {
-            subirImagen(props.data.id, img)
+            subirImagen('profesores', props.data.id, img)
                 .then(url => {
                     guardarPerfil(url);
                 })
@@ -127,14 +128,14 @@ const Edicion = React.forwardRef((props, ref) => {
         }
     }
 
-    const titulo = props.modo == 'CREACION' ? 'Crear profesor' : 'Editar profesor';
+    const encabezado = props.modo == 'CREACION' ? 'Crear profesor' : 'Editar profesor';
 
     return (
         <div ref={ref} className="modal fade" tabIndex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="mi-modal">
             <div className="modal-dialog modal-xl" role="document">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h5 className="modal-title" id="exampleModalLabel">{titulo}</h5>
+                        <h5 className="modal-title" id="exampleModalLabel">{encabezado}</h5>
                         <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -143,7 +144,7 @@ const Edicion = React.forwardRef((props, ref) => {
                         <form>
                             <div className="form-group">
                                 <label htmlFor="txtNombres">Nombres</label>
-                                <input ref={reftxtNombres} type="text" value={nombres} onChange={actNombres} className="form-control form-control-lg" id="txtNombre" placeholder="Ingresa los nombres" />
+                                <input ref={reftxtNombres} type="text" value={nombres} onChange={actNombres} className="form-control form-control-lg" id="txtNombres" placeholder="Ingresa los nombres" />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="txtApellidos">Apellidos</label>
@@ -154,8 +155,8 @@ const Edicion = React.forwardRef((props, ref) => {
                                 <input type="file" accept="image/*" onChange={actImg} className="form-control-file" id="imgProfesor" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="txtPais">País</label>
-                                <input type="text" value={pais} onChange={actPais} className="form-control form-control-lg" id="txtPais" placeholder="Ejemplo: Perú" />
+                                <label htmlFor="txtPais">País (Prefijo)</label>
+                                <input type="text" value={pais} onChange={actPais} className="form-control form-control-lg" id="txtPais" placeholder="Ejemplo: MX, PE, SV" />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="txtLikes">Likes</label>
@@ -193,7 +194,7 @@ const Edicion = React.forwardRef((props, ref) => {
                     </div>
                     <div className="modal-footer">
                         <button type="button" className="btn btn-primary" onClick={guardarCambios}>Guardar</button>
-                        <button type="button" className="btn btn-danger" onClick={props.cancelar}>Cancelar</button>
+                        <button type="button" className="btn btn-danger" onClick={props.cancelar}>Cerrar</button>
                         {/*
                         <button onClick={() => { reftxtNombres.current.focus() }}>Enfócame</button>
                         */}

@@ -11,9 +11,9 @@ function Card(props) {
       <div className="contenedor-spinner-img">
         {
           cargandoImg &&
-          <div class="contenedor-tarjeta-curso">
-            <div class="spinner-border" role="status">
-              <span class="sr-only">Loading...</span>
+          <div className="contenedor-tarjeta-curso">
+            <div className="spinner-border" role="status">
+              <span className="sr-only">Loading...</span>
             </div>
           </div>
         }

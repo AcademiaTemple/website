@@ -6,7 +6,7 @@ import ParrafoTeacher from "../components/parrafo_teacher/parrafo_teacher"
 import queryString from 'query-string'
 import Fade from 'react-reveal/Fade'
 import GridLoader from "react-spinners/GridLoader"
-import ImgUsuarioGenerico from '../../static/usuario-generico.svg'
+import Avatar from "../components/avatar"
 import { css } from "@emotion/core"
 import { obtPerfilProfesor, obtPais } from '../api'
 
@@ -20,7 +20,6 @@ export default function Teacher_detail(props) {
   const idProfesor = queryString.parse(props.location.search).id;
 
   const [profesor, estProfesor] = useState({});
-  const [imgProfesor, estImgProfesor] = useState(ImgUsuarioGenerico);
   const [cargando, estCargando] = useState(true);
   const [pais, estPais] = useState({ name: 'País no encontrado' });
 
@@ -29,7 +28,6 @@ export default function Teacher_detail(props) {
     obtPerfilProfesor(idProfesor)
       .then(profesor => {
         estProfesor(profesor);
-        estImgProfesor(profesor.img);
         obtPais(profesor.pais)
           .then(pais => {
             if (pais.name) {
@@ -54,12 +52,7 @@ export default function Teacher_detail(props) {
           <Fade bottom>
             <div className="row encabezado-perfil-docente">
               <div className="col-12 col-md-2">
-                <img
-                  onError={() => estImgProfesor(ImgUsuarioGenerico)}
-                  src={imgProfesor}
-                  className="rounded-circle img-perfil-profesor"
-                  alt="foto-perfil"
-                />
+                <Avatar img={profesor.img} clases={'rounded-circle img-perfil-profesor'} />
               </div>
               <div className="col-12 col-md-5 datos-perfil-docente">
                 <h2 className="name-teacher">

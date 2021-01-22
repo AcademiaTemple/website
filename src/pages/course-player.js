@@ -32,7 +32,7 @@ export default function Course(props) {
         estCargandoEpisodios(true);
         obtClasesCurso(idCurso)
             .then(episodios => {
-                estEpisodios(episodios);
+                estEpisodios(episodios.reverse());
                 estUrlVideo(construirUrlVideo(obtUrlPorIdVideo(episodios, idEpisodio)));
                 estCargandoEpisodios(false);
             })
@@ -65,6 +65,7 @@ export default function Course(props) {
                     </div>
                     <div className="contenedor-acordeon">
                         <AcordeonEpisodio
+                            invertir={true}
                             episodios={episodios}
                             idActivo={idVideo}
                             machucar={seleccionarEpisodio} />

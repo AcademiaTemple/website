@@ -5,6 +5,7 @@ import AcordeonEpisodio from "../components/episodio/acordeon_episodios"
 import queryString from 'query-string'
 import GridLoader from "react-spinners/GridLoader"
 import Fade from 'react-reveal/Fade'
+import Avatar from "../components/avatar"
 import { css } from "@emotion/core"
 import { obtCursoExtendido } from '../api'
 import { Link, navigate } from "gatsby"
@@ -92,14 +93,14 @@ export default function Course(props) {
                         <h3 className="subtitulo-descripcion-curso">Requisitos</h3>
                         <ul className="requisitos-curso">
                             {
-                                curso.requisitos.map(requisito => (
-                                    <li>{requisito}</li>
+                                curso.requisitos.map((requisito, indice) => (
+                                    <li key={indice}>{requisito}</li>
                                 ))
                             }
                         </ul>
                         <div className="contenedor-curso-profesor">
                             <div className="contenedor-img">
-                                <img src={curso.profesor.img} alt="img-profesor" />
+                                <Avatar img={curso.profesor.img} />
                             </div>
                             <div className="contenedor-descripcion">
                                 <h4>

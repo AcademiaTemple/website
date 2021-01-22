@@ -1,15 +1,18 @@
 import React, { useRef, useState, useEffect } from 'react'
-import ModalEdicionProfesor from '../../components/modal/edicionProfesor'
+import ModalEdicion from '../../components/modal/edicionProfesor'
 import ModalConfirmacion from '../../components/modal/confirmacion'
-import { obtProfesoresTablaAdmin, actEstadoProfesorAdmin } from '../../api'
+import { obtRegistrosPaginadosAdmin, actEstadoProfesorAdmin } from '../../api'
 import $ from 'jquery';
 
 const regMaximo = 3;
+const coleccion = 'docentes';
+const campo = 'nombres';
+
 const Docentes = () => {
 
     const [pagina, estPagina] = useState(1);
     const [profesores, estProfesores] = useState([]);
-    const [cargandoProfesores, estCargandoProfesores] = useState(false);
+    const [cargando, estCargando] = useState(false);
     const [registro, estRegistro] = useState(null); // Establece el registro seleecionado para hacer ediciones o eliminaciones
     const [modo, estModo] = useState(null); // Establece si se está editando o creando un registro
     const [haySiguiente, estHaySiguiente] = useState(false); // Para la paginación
@@ -19,53 +22,52 @@ const Docentes = () => {
     const refModalConfirmacion = useRef(null);
 
     useEffect(() => {
-        estCargandoProfesores(true);
+        estCargando(true);
         obtenerProfesores();
     }, []);
 
     const obtenerProfesores = (reinicio) => {
         // El parámetro reinicio se usa después de editar o crear un registro, para que empiece
         // a mostrar todo desde la primera página
-        obtProfesoresTablaAdmin(regMaximo, null, reinicio ? null : profesores[0], true) // Este parámetro true es para que no se cambien las posiciones cuando haga un cambio de estado
+        obtRegistrosPaginadosAdmin(coleccion, campo, regMaximo, null, reinicio ? null : profesores[0], true) // Este parámetro true es para que no se cambien las posiciones cuando haga un cambio de estado
             .then(({ lista, haySiguiente }) => {
                 if (reinicio) {
                     estPagina(1);
                 }
                 estHaySiguiente(haySiguiente);
                 estProfesores(lista);
-                estCargandoProfesores(false);
+                estCargando(false);
             })
     }
 
-    const editarModal = (registro) => {
+    // Modal creación/edicion
+    const abrirModalEdicion = (registro) => {
         estRegistro(registro);
         estModo('EDICION');
         $(refModalEdicion.current).modal('show');
     }
-
-    const crearModal = (e) => {
+    const cerrarModalEdicion = () => {
+        $(refModalEdicion.current).modal('hide');
+    }
+    const abrirModalCreacion = (e) => {
         e.preventDefault();
         estRegistro(undefined);
         estModo('CREACION');
         $(refModalEdicion.current).modal('show');
     }
+    const guardarCambiosEdicion = () => {
+        cerrarModalEdicion();
+        obtenerProfesores(true);
+    }
 
-    const confirmarModal = (registro) => {
+    // Modal confirmación
+    const abrirModalConfirmacion = (registro) => {
         estRegistro(registro);
         $(refModalConfirmacion.current).modal('show');
     }
 
     const cerrarModalConfirmacion = () => {
         $(refModalConfirmacion.current).modal('hide');
-    }
-
-    const guardarCambiosEdicion = () => {
-        cerrarModalEdicion();
-        obtenerProfesores(true);
-    }
-
-    const cerrarModalEdicion = () => {
-        $(refModalEdicion.current).modal('hide');
     }
 
     const actualizarEstado = () => {
@@ -77,7 +79,7 @@ const Docentes = () => {
     }
 
     const retroceder = () => {
-        obtProfesoresTablaAdmin(regMaximo, profesores[0])
+        obtRegistrosPaginadosAdmin(coleccion, campo, regMaximo, profesores[0])
             .then(({ lista }) => {
                 estHaySiguiente(true); // Si retrocedo, es porque siempre hay un siguiente
                 estProfesores(lista);
@@ -86,7 +88,7 @@ const Docentes = () => {
     }
 
     const avanzar = () => {
-        obtProfesoresTablaAdmin(regMaximo, null, profesores[profesores.length - 1])
+        obtRegistrosPaginadosAdmin(coleccion, campo, regMaximo, null, profesores[profesores.length - 1])
             .then(({ lista, haySiguiente }) => {
                 estHaySiguiente(haySiguiente);
                 estProfesores(lista);
@@ -98,11 +100,11 @@ const Docentes = () => {
         <div>
             <ModalConfirmacion
                 ref={refModalConfirmacion}
-                texto={`¿Quieres ${registro?.activo ? ' desactivar' : ' activar'} este registro?`}
+                texto={`¿Quieres ${registro?.activo ? ' desactivar' : ' activar'} este profesor?`}
                 confirmar={actualizarEstado}
                 cancelar={cerrarModalConfirmacion} />
 
-            <ModalEdicionProfesor
+            <ModalEdicion
                 modo={modo}
                 data={registro}
                 ref={refModalEdicion}
@@ -129,17 +131,17 @@ const Docentes = () => {
                                     <td>{profesor.apellidos}</td>
                                     <td>{profesor.activo ? 'Sí' : 'No'}</td>
                                     <td>
-                                        <button onClick={() => editarModal(profesor)} className='btn btn-secondary'>
+                                        <button onClick={() => abrirModalEdicion(profesor)} className='btn btn-secondary'>
                                             <i className='fa fa-edit'></i>
                                         </button>
                                         {
                                             profesor.activo
                                                 ?
-                                                <button onClick={() => confirmarModal(profesor)} className='btn btn-danger ml-3'>
+                                                <button onClick={() => abrirModalConfirmacion(profesor)} className='btn btn-danger ml-3'>
                                                     <i className='fa fa-power-off'></i>
                                                 </button>
                                                 :
-                                                <button onClick={() => confirmarModal(profesor)} className='btn btn-success ml-3'>
+                                                <button onClick={() => abrirModalConfirmacion(profesor)} className='btn btn-success ml-3'>
                                                     <i className='fa fa-power-off'></i>
                                                 </button>
                                         }
@@ -150,7 +152,7 @@ const Docentes = () => {
                     </tbody>
                 </table>
             </div>
-            <a onClick={crearModal} className="boton btn-principal d-block mt-4">
+            <a onClick={abrirModalCreacion} className="boton btn-principal d-block mt-4">
                 {'Agregar '}<i className="fas fa-plus" style={{ fontSize: '12px' }}></i>
             </a>
             <ul className="pagination pagination-lg justify-content-center mt-4">

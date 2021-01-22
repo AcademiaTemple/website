@@ -27,7 +27,9 @@ const Calendario = () => {
         curso =>
           (moment(fecha).isBetween(
             moment(curso.fInicioFin[0], "DD/MM/YYYY"),
-            moment(curso.fInicioFin[1], "DD/MM/YYYY")
+            moment(curso.fInicioFin[1], "DD/MM/YYYY"),
+            undefined,
+            '[]'
           ) && // Verifico si está en el rango de inicio fin
             curso.dias.includes(diasSemana[moment(fecha).isoWeekday() - 1]) && // Verifico si incluye los días de la semana especificados
             !curso.cancelaciones.includes(moment(fecha).format("DD/MM/YYYY"))) || // Y que no esté en una fecha cancelada

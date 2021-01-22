@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 
 // Componentes
-import CalendarioCursos from "../components/calendario/CalendarioCursos"
+import CalendarioCursos from "../components/calendario"
 import PanoramaInicio from "../components/PanoramaInicio/panorama"
 import Estadisticas from "../components/estadisticas/estadisticas"
 import NuestrosCursos from "../components/nuestroscursos/nuestroscursos"

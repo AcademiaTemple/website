@@ -1,17 +1,15 @@
-import React, { useState } from "react"
+import React from "react"
+import Avatar from '../../avatar'
 import { Link } from "gatsby"
-import ImgUsuarioGenerico from '../../../../static/usuario-generico.svg'
 import "./card_teacher.css"
 
 export default function Card({ data }) {
-
-  const [imgProfesor, estImgProfesor] = useState(data.img);
 
   return (
     <div className="card card-teacher">
       <div className="row">
         <div className="col-12 col-md-2 contenedor-img pb-4 pb-md-0">
-          <img onError={() => estImgProfesor(ImgUsuarioGenerico)} alt='img-profesor' src={imgProfesor} className="rounded-circle avatar-card-teacher" />
+          <Avatar img={data.img} clases={'rounded-circle avatar-card-teacher'} />
         </div>
 
         <div className="col-12 col-md-6 pl-md-0">

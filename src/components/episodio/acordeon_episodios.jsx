@@ -6,7 +6,6 @@ const AcordeonEpisodio = ({ idActivo, machucar, episodios }) => {
     const seleccionarEpisodio = (id, urlVideo) => {
         machucar(id, urlVideo);
     }
-
     return episodios.map((episodio, index) => (
         <CardEpisodio
             key={episodio.id}
