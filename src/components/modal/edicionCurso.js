@@ -28,6 +28,7 @@ const Edicion = React.forwardRef((props, ref) => {
         refTxtTitulo.current.focus();
         obtProfesoresCombo().then((profesores) => {
             estProfesores(profesores);
+            estIdProfesor(profesores[0].id);
         })
     }, [])
 
@@ -87,7 +88,6 @@ const Edicion = React.forwardRef((props, ref) => {
     }
 
     const guardarCurso = (url) => {
-
         const dataNueva = {
             ...props.data,
             titulo,
@@ -102,7 +102,7 @@ const Edicion = React.forwardRef((props, ref) => {
             hInicioFin: stringToArray(hInicioFin),
             excepciones: stringToArray(excepciones),
             cancelaciones: stringToArray(cancelaciones),
-            idProfesor
+            idProfesor: idProfesor ? idProfesor : profesores[0].id
         };
 
         switch (props.modo) {
